@@ -1,0 +1,398 @@
+.openvidu-tag {
+  pointer-events: none;
+  display: inline-block;
+  margin: 0 3px 0 3px;
+  color: white;
+  font-weight: bold;
+  padding: 0px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  line-height: 1.8em;
+  font-family: var(--md-text-font-family);
+  font-feature-settings: "kern", "liga";
+}
+
+.openvidu-community-tag {
+  background-color: rgb(6 211 98 / 80%);
+}
+
+.openvidu-pro-tag {
+  background-color: rgb(0 136 170 / 80%);
+}
+
+span:has(> .openvidu-tag) {
+  display: inline-block;
+}
+
+span:has(> a > .openvidu-tag) {
+  display: inline-block;
+}
+
+.md-grid {
+  max-width: 70rem;
+}
+
+.md-header__topic .md-ellipsis {
+  font-family: Arciform;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.md-typeset .md-button:not(.md-button--primary) {
+  color: var(--md-typeset-color);
+}
+
+.md-typeset .md-button:hover:not(.md-button--primary) {
+  color: var(--md-accent-bg-color);
+  background-color: var(--md-typeset-color);
+  border-color: var(--md-typeset-color);
+}
+
+.md-typeset .md-button:focus:not(.md-button--primary) {
+  color: var(--md-accent-bg-color);
+  background-color: var(--md-typeset-color);
+  border-color: var(--md-typeset-color);
+}
+
+.md-typeset figcaption {
+  max-width: 25rem;
+  font-size: 0.74rem;
+}
+
+.md-copyright {
+  padding-top: 0.6rem;
+}
+
+.md-social {
+  padding: 0;
+}
+
+.md-social__link {
+  height: 2.8rem;
+  width: 2.8rem;
+  line-height: 2.8;
+}
+
+.md-social__link svg {
+  max-height: 1.4rem;
+}
+
+.footer-grid {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.8rem;
+}
+
+.footer-conditions-list {
+  font-size: 12px;
+  padding: 0.6rem 0;
+  text-align: left;
+}
+
+.register-container {
+  margin: 0 6vw 0 6vw;
+}
+
+.sign-btn-out-styles {
+  font-size: 14px !important;
+  padding: 8px !important;
+  line-height: 10px !important;
+}
+
+@font-face {
+  font-family: "Arciform";
+  src: url("/assets/fonts/Arciform.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Arciform.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/Arciform.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/Arciform.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/Arciform.svg#svgFontName")
+      format("svg");
+  /* Legacy iOS */
+}
+
+img.mkdocs-img {
+  width: 80%;
+  margin: auto;
+}
+
+img.svg-img {
+  border-radius: 7px;
+}
+
+.node-img {
+  width: 80%;
+}
+
+.grid-nodes {
+  display: flex;
+  align-items: center;
+}
+
+.gslide-image img {
+  background: transparent !important;
+}
+
+.glightbox-clean .gslide-video {
+  background: transparent !important;
+}
+
+.glightbox-clean .gslide-video video {
+  background: transparent !important;
+}
+
+/* GLightbox animations */
+
+.gzoomIn {
+  animation: gzoomIn 0.4s ease !important;
+}
+
+.gzoomOut {
+  animation: gzoomOut 0.2s ease !important;
+}
+
+.gfadeOut {
+  animation: gfadeOut 0.2s ease !important;
+}
+
+/* Home page */
+
+.top-home-section {
+  height: 100%;
+  padding: 3em;
+  background: var(--top-home-section-color);
+}
+
+.center-align {
+  text-align: center;
+}
+
+.top-home-img {
+  width: 40%;
+}
+
+.slogan {
+  font-size: 2.5em !important;
+  text-align: center;
+}
+
+.second-slogan {
+  padding: 0 3em;
+}
+
+.second-slogan h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.home-description {
+  font-size: 18px;
+}
+
+.home-buttons {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.home-buttons a {
+  margin: 0.5em 0.25em 0 0.25em;
+  margin-left: 0.25em;
+}
+
+.features-list:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.feature-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.feature-title {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title-livekit {
+  align-items: flex-end;
+  padding-bottom: 12.5px;
+}
+
+.feature-title h4 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.home-icon {
+  width: 3em;
+  margin-right: 8px;
+}
+
+.livekit-icon {
+  width: 100px;
+  margin-right: 12px;
+  flex-shrink: 0.05;
+}
+
+.livekit-title {
+  line-height: 1;
+}
+
+/* Tablet */
+@media (min-width: 960px) and (max-width: 1219px) {
+  .footer-conditions-list {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 959px) {
+  .top-home-img {
+    width: 85%;
+  }
+
+  .slogan {
+    font-size: 1.5em !important;
+  }
+
+  .second-slogan h2 {
+    font-size: 1.5em !important;
+  }
+
+  .home-description {
+    font-size: 16px !important;
+  }
+
+  img.mkdocs-img {
+    width: 100%;
+  }
+
+  .footer-conditions-list {
+    text-align: center;
+  }
+
+  .footer-conditions-list div:first-child {
+    text-align: right;
+  }
+
+  .footer-conditions-list div:last-child {
+    text-align: left;
+  }
+}
+
+/* Mobile extra small */
+@media (max-width: 500px) {
+  #account-btn .user-name {
+    display: none;
+  }
+
+  nav {
+    overflow-x: auto;
+  }
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+video::-internal-media-controls-overlay-cast-button {
+  display: none;
+}
+
+#pricing-table th,
+#pricing-table td {
+  text-align: center;
+  vertical-align: middle;
+  width: 29%;
+  font-size: 0.7rem;
+}
+
+#pricing-table[name="big-pricing-table"] {
+  width: auto;
+  margin: 0 8vw;
+}
+
+#pricing-table th:first-child,
+#pricing-table td:first-child {
+  width: 13%;
+}
+
+#pricing-table .title {
+  font-size: 0.74rem;
+}
+
+#pricing-table .title .openvidu-tag {
+  font-size: 0.7rem;
+}
+
+#pricing-table[name="big-pricing-table"] .title {
+  font-size: 0.85rem;
+}
+
+#pricing-table[name="big-pricing-table"] .title .openvidu-tag {
+  font-size: 0.8rem;
+}
+
+#pricing-table .first-column {
+  font-weight: 700;
+}
+
+#pricing-table .border-right {
+  border-right: 0.05rem solid var(--md-typeset-table-color);
+}
+
+#pricing-table .border-left {
+  border-left: 0.05rem solid var(--md-typeset-table-color);
+}
+
+.price-cell {
+  font-size: 0.8rem;
+}
+
+img.mediasoup-icon {
+  max-width: 6rem !important;
+  margin: 0 0.5rem -5px 0.5rem;
+}
