@@ -6,6 +6,8 @@ repo_url: https://github.com/openvidu/openvidu-livekit-tutorials
 
 nav:
   - index.md
+  - What is OpenVidu?: about-openvidu.md
+  - OpenVidu vs LiveKit: openvidu-vs-livekit.md
   - Application Client:
       - tutorials/application-client/index.md
       - JavaScript: tutorials/application-client/javascript.md
@@ -30,8 +32,6 @@ nav:
       - tutorials/advanced-features/index.md
       - Recording Basic: tutorials/advanced-features/recording-basic.md
       - Recording Advanced: tutorials/advanced-features/recording-advanced.md
-  - What is OpenVidu?: about-openvidu.md
-  - OpenVidu vs LiveKit: openvidu-vs-livekit.md
 
 validation:
   omitted_files: warn
