@@ -8,11 +8,11 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
 === "Deploy OpenVidu"
 
-    To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/){target="_blank"}.
+    To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step){target="_blank"}.
 
     !!! info "Configure Webhooks"
 
-        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](http://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/#send-webhooks-to-a-local-application-server){:target="\_blank"} section for more information.
+        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](http://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server){:target="\_blank"} section for more information.
 
 === "Run LiveKit locally"
 

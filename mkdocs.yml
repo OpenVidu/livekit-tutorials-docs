@@ -43,6 +43,7 @@ theme:
   custom_dir: docs/overrides
   language: en
   features:
+    - announce.dismiss
     - content.code.copy
     - content.code.annotate
     - content.tabs.link

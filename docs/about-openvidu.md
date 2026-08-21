@@ -2,7 +2,7 @@
 description: OpenVidu is a powerful platform to develop WebRTC real-time applications. Based on LiveKit and mediasoup, performant, fault-tolerant, scalable and observable.
 ---
 
-[OpenVidu](https://openvidu.io){target=\_blank} is a powerful platform to develop WebRTC real-time applications. With it you can add real-time audio and video capabilities to your application: build any kind of videoconference experience, serve ultra-low latency livestreams to thousands of users, manage real-time videos from your drones or camera feeds and record them... The possibilities are truly endless!
+[OpenVidu](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page){target=\_blank} is a powerful platform to develop WebRTC real-time applications. With it you can add real-time audio and video capabilities to your application: build any kind of videoconference experience, serve ultra-low latency livestreams to thousands of users, manage real-time videos from your drones or camera feeds and record them... The possibilities are truly endless!
 
 It is based on [LiveKit](https://livekit.io/){target=\_blank} and [mediasoup](https://mediasoup.org/){target=\_blank}, bringing the best of both worlds to provide a performant, fault-tolerant, scalable and observable solution.
 
@@ -42,7 +42,7 @@ d="M4,1H20A1,1 0 0,1 21,2V6A1,1 0 0,1 20,7H4A1,1 0 0,1 3,6V2A1,1 0 0,1 4,1M4,9H2
 <h4>On-Premises</h4>
 </div>
 <p class="feature-description">
-OpenVidu is provided as a software that you install <strong><a href="https://openvidu.io/latest/docs/self-hosting/production-ready/" target="_blank">on your own
+OpenVidu is provided as a software that you install <strong><a href="https://openvidu.io/latest/docs/self-hosting/production-ready/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page" target="_blank">on your own
 servers</a></strong>. You can easily deploy and manage a fully fledged live-video solution
 in your own infrastructure, including the most popular cloud providers.</p>
 </div>
@@ -59,7 +59,7 @@ in your own infrastructure, including the most popular cloud providers.</p>
 </div>
 <p class="feature-description">
 OpenVidu is built to be incredibly powerful. It uses LiveKit at its core, but it goes much further
-providing up to <strong><a href="https://openvidu.io/latest/docs/self-hosting/production-ready/performance/" target="_blank">2x performance</a></strong> of LiveKit. You can
+providing up to <strong><a href="https://openvidu.io/latest/docs/self-hosting/production-ready/performance/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page" target="_blank">2x performance</a></strong> of LiveKit. You can
 host double the users in your video rooms just by using OpenVidu.
 </p>
 </div>
@@ -77,7 +77,7 @@ d="M21 8C19.5 8 18.7 9.4 19.1 10.5L15.5 14.1C15.2 14 14.8 14 14.5 14.1L11.9 11.5
 </div>
 <p class="feature-description">
 OpenVidu has been designed from the outset with <strong><a
-href="https://openvidu.io/latest/docs/self-hosting/production-ready/scalability/" target="_blank">scalability</a></strong>
+href="https://openvidu.io/latest/docs/self-hosting/production-ready/scalability/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page" target="_blank">scalability</a></strong>
 in mind. Add nodes to increase the capacity of
 your cluster when necessary and remove them when no longer needed to optimize your resources.
 </p>
@@ -95,7 +95,7 @@ d="M18 12C19 12 20 12.2 20.9 12.7C21 12.1 21 11.6 21 11V5L12 1L3 5V11C3 16.5 6.8
 <h4>Fault Tolerant</h4>
 </div>
 <p class="feature-description">
-OpenVidu offers <strong><a href="https://openvidu.io/latest/docs/self-hosting/production-ready/fault-tolerance/" target="_blank">fault tolerance</a></strong> in all its
+OpenVidu offers <strong><a href="https://openvidu.io/latest/docs/self-hosting/production-ready/fault-tolerance/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page" target="_blank">fault tolerance</a></strong> in all its
 components. Deploy a reliable cluster knowing that if one of your node goes down, others will be
 able to continue working with no downtime.
 </p>
@@ -112,7 +112,7 @@ d="M9.46,6.28L11.05,9C8.47,9.26 6.5,11.41 6.5,14A5,5 0 0,0 11.5,19C13.55,19 15.3
 </div>
 <p class="feature-description">
 OpenVidu provides different tools and APIs to <strong><a
-href="https://openvidu.io/latest/docs/self-hosting/production-ready/observability/" target="_blank">monitor</a></strong>
+href="https://openvidu.io/latest/docs/self-hosting/production-ready/observability/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page" target="_blank">monitor</a></strong>
 the status, health, performance and history of
 your deployment. It automatically collects logs and metrics and offers a dashboard to visualize
 them.
@@ -128,6 +128,6 @@ OpenVidu is available in two editions:
 - **OpenVidu** <span class="openvidu-tag openvidu-community-tag">COMMUNITY</span>: free to use. It is a single-server deployment and provides a custom LiveKit distribution with Egress, Ingress, S3 storage and monitoring. Ideal for development and testing, but also for small-scale production deployments. You can host hundreds of simultaneous participants in your rooms by running OpenVidu Community in a sufficiently powerful server!
 - **OpenVidu** <span class="openvidu-tag openvidu-pro-tag">PRO</span>: OpenVidu commercial edition. It is a multi-server deployment with all the features of OpenVidu Community plus 2x performance, scalability, fault tolerance and improved monitoring and observability. Ideal for large-scale production deployments with heavy traffic that require the highest standards. You can start with OpenVidu Community and upgrade to OpenVidu Pro when needed.
 
-Visit [openvidu.io](https://openvidu.io) to learn more about what OpenVidu has to offer.
+Visit [openvidu.io](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page) to learn more about what OpenVidu has to offer.
 
 <br>

@@ -1,6 +1,12 @@
 <!-- Elements added to main will be displayed on all pages -->
 {% extends "base.html" %}
 
+{% block announce %}
+<a href="https://openvidu.io/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=announce-cta" target="_blank" style="color: inherit;">
+  These are vanilla LiveKit tutorials. Want the same LiveKit-compatible API, self-hosted and production-ready out of the box? <strong>Try OpenVidu &rarr;</strong>
+</a>
+{% endblock %}
+
 {% block libs %}
 
 {{ super() }}
