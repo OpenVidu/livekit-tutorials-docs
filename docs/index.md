@@ -73,7 +73,7 @@ Every application client below is interchangeable with the others, because:
 Every application server below has two specific purposes:
 
 - Generate LiveKit tokens on demand for any [application client](#application-client-tutorials).
-- Receive LiveKit [webhook events](https://docs.livekit.io/home/server/webhooks/){target=\_blank}.
+- Receive LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){target=\_blank}.
 
 To do so they all define two REST endpoints:
 

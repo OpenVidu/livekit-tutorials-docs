@@ -127,7 +127,7 @@ There are three new environment variables:
 
 Besides, the `index.js` file configures the server to serve static files from the `public` directory.
 
-It also initializes the `EgressClient`, which will help interacting with [Egress API](https://docs.livekit.io/home/egress/api/){:target="\_blank"} to manage recordings, and the `S3Service`, which will help interacting with the S3 bucket:
+It also initializes the `EgressClient`, which will help interacting with [Egress API](https://openvidu.io/latest/docs/reference/egress/){:target="\_blank"} to manage recordings, and the `S3Service`, which will help interacting with the S3 bucket:
 
 ```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L34-L39' target='_blank'>index.js</a>" linenums="34"
 const egressClient = new EgressClient(

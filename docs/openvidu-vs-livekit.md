@@ -20,13 +20,13 @@ Whenever you are ready to deploy your real-time application, OpenVidu for produc
 
 ## Egress and Ingress out of the box
 
-LiveKit allows you to export media from a Room (for example recording it) or import media into a Room (for example ingesting a video file), using [Egress](https://docs.livekit.io/home/egress/overview/){target="_blank"} and [Ingress](https://docs.livekit.io/home/ingress/overview/){target="_blank"} services respectively. These modules are independent of LiveKit Server and must be correctly configured and connected via a shared Redis.
+LiveKit allows you to export media from a Room (for example recording it) or import media into a Room (for example ingesting a video file), using [Egress](https://openvidu.io/latest/docs/reference/egress/){target="_blank"} and [Ingress](https://openvidu.io/latest/docs/reference/ingress/){target="_blank"} services respectively. These modules are independent of LiveKit Server and must be correctly configured and connected via a shared Redis.
 
 When running OpenVidu locally you will have all these services properly integrated, so you can focus on developing your app without worrying about anything else.
 
 ## S3 compatible storage
 
-If you are planning to make use of the [Egress](https://docs.livekit.io/home/egress/overview/){target="_blank"} service to export media out of your Rooms, you will need an S3 compatible bucket to store the generated files, and configure your LiveKit deployment to use it.
+If you are planning to make use of the [Egress](https://openvidu.io/latest/docs/reference/egress/){target="_blank"} service to export media out of your Rooms, you will need an S3 compatible bucket to store the generated files, and configure your LiveKit deployment to use it.
 
 When running OpenVidu locally you will have an S3 compatible storage available right away ([MinIO](https://min.io/){target="_blank"}).
 

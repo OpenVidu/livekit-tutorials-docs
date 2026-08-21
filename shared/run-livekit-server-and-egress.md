@@ -20,7 +20,7 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
     !!! info "Configure Webhooks"
 
-        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://docs.livekit.io/home/server/webhooks/){target="\_blank"} section from the official documentation and follow the instructions to configure webhooks.
+        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/){target="\_blank"} section from the official documentation and follow the instructions to configure webhooks.
 
 === "Use LiveKit Cloud"
 
@@ -28,7 +28,7 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
     !!! info "Configure Webhooks"
 
-        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://docs.livekit.io/home/server/webhooks/){target="\_blank"} section from the official documentation and follow the instructions to configure webhooks.
+        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/){target="\_blank"} section from the official documentation and follow the instructions to configure webhooks.
 
     !!! warning "Expose your local application server"
 
