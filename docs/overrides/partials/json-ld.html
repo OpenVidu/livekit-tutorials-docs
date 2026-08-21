@@ -1,0 +1,65 @@
+{#-
+  JSON-LD structured data (schema.org) for search engines and AI crawlers.
+
+  Emits Organization + WebSite + WebPage on every page. The Organization
+  node deliberately reuses the exact same @id, name, description, logo,
+  sameAs and contactPoint as the main openvidu.io site's own JSON-LD
+  (docs/overrides/partials/json-ld.html there) rather than declaring a
+  separate one for this subdomain — the whole point is that this LiveKit
+  tutorial content gets attributed to the same publisher as openvidu.io,
+  not read as an unrelated LiveKit fan site (openvidu-marketing issue #39).
+
+  Per-page-type richness (TechArticle/HowTo step markup, BreadcrumbList,
+  FAQPage) is a deliberate follow-up, not attempted here.
+-#}
+
+{%- if page and page.canonical_url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://openvidu.io/#organization",
+      "name": "OpenVidu",
+      "url": "https://openvidu.io/",
+      "description": "Self-hosted videoconferencing and custom WebRTC solutions: OpenVidu Meet, a ready-to-use video calling solution, and OpenVidu Platform, SDKs to build custom real-time applications. Self-hosted, performant, scalable and fault tolerant.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://openvidu.io/assets/images/openvidu_vert_white_bg_trans_cropped2.png"
+      },
+      "sameAs": [
+        "https://github.com/OpenVidu",
+        "https://x.com/openvidu",
+        "https://openvidu.medium.com/",
+        "https://www.youtube.com/@openvidu"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://openvidu.io/support/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://livekit-tutorials.openvidu.io/#website",
+      "name": {{ config.site_name | tojson }},
+      "url": "https://livekit-tutorials.openvidu.io/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://openvidu.io/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": {{ page.canonical_url | tojson }},
+      "url": {{ page.canonical_url | tojson }},
+      "name": {{ (page.meta.title if page.meta and page.meta.title else page.title) | string | tojson }},
+      {%- if page.meta and page.meta.description %}
+      "description": {{ page.meta.description | tojson }},
+      {%- endif %}
+      "isPartOf": { "@id": "https://livekit-tutorials.openvidu.io/#website" },
+      "publisher": { "@id": "https://openvidu.io/#organization" }
+    }
+  ]
+}
+</script>
+{%- endif %}
