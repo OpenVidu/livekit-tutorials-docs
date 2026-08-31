@@ -33,6 +33,9 @@ nav:
       - Recording Basic: tutorials/advanced-features/recording-basic.md
       - Recording Advanced: tutorials/advanced-features/recording-advanced.md
 
+not_in_nav: |
+  /conditions/
+
 validation:
   omitted_files: warn
   absolute_links: warn
@@ -91,7 +94,6 @@ plugins:
   - glightbox:
       touchNavigation: true
       loop: false
-      autoplayVideos: true
       effect: zoom
       slide_effect: slide
       width: 100%
