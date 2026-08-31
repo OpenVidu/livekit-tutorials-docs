@@ -2,13 +2,13 @@
 title: LiveKit tutorials
 ---
 
-This site contains **simple**, **functional** and **comprehensible** guided tutorials for [**LiveKit**](https://livekit.io/){target=\_blank} applications. They all offer basically the same functionality, but built with different platforms in the client side and the server side, all compatible with each other. Just choose the ones that better fit your needs.
+This site contains **simple**, **functional** and **comprehensible** guided tutorials for [**LiveKit**](https://livekit.com/){target=\_blank} applications. They all offer basically the same functionality, but built with different platforms in the client side and the server side, all compatible with each other. Just choose the ones that better fit your needs.
 
 You can use them purely for didactic purposes, but also as a solid starting point to build your own application.
 
 ## What is LiveKit?
 
-[LiveKit](https://livekit.io/){target=\_blank} is an open source, cutting edge, end-to-end WebRTC stack with which you can build ultra-low latency real-time audio and video applications. It offers the latest technologies in terms of real-time media, and a fantastic collection of [SDKs](https://docs.livekit.io/reference/){target=\_blank} for both your application's server and client.
+[LiveKit](https://livekit.com/){target=\_blank} is an open source, cutting edge, end-to-end WebRTC stack with which you can build ultra-low latency real-time audio and video applications. It offers the latest technologies in terms of real-time media, and a fantastic collection of [SDKs](https://docs.livekit.io/reference/){target=\_blank} for both your application's server and client.
 
 With the power of LiveKit you can add video conferencing capabilities to your platform, build the next big live streaming application or even add AI processing to your media flow (such as AI conversational agents or computer-vision recognition). The possibilities are truly endless!
 
@@ -136,7 +136,7 @@ As the years went by, we continued to improve OpenVidu, making it more efficient
 
 We have helped thousands of developers, companies and organizations to build their real-time applications. Over the years we have seen a myriad of successful use cases built on top of OpenVidu: e-learning, telemedicine, video conferencing, live streaming, proctoring, real-time surveillance, remote assistance... The list goes on and on.
 
-We are now bringing our expertise to [LiveKit](https://livekit.io/){target=\_blank}, and integrating its amazing WebRTC stack directly into OpenVidu.
+We are now bringing our expertise to [LiveKit](https://livekit.com/){target=\_blank}, and integrating its amazing WebRTC stack directly into OpenVidu.
 
 <figure markdown="span">
   ![Image title](./assets/images/livekit.png){ .do-not-include-in-gallery width="500" style="border-radius: 8px; margin: 12px 0;" }

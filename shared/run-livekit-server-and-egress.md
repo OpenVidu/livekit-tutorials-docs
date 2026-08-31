@@ -1,4 +1,4 @@
-You can run [LiveKit](https://docs.livekit.io/home/self-hosting/local/){target="\_blank"} and [Egress](https://docs.livekit.io/home/self-hosting/egress/){target="\_blank"} locally or you can use their free tier of [LiveKit Cloud](https://cloud.livekit.io/){target="\_blank"}, which already includes both services.
+You can run [LiveKit](https://docs.livekit.io/transport/self-hosting/local/){target="\_blank"} and [Egress](https://docs.livekit.io/transport/self-hosting/egress/){target="\_blank"} locally or you can use their free tier of [LiveKit Cloud](https://cloud.livekit.io/){target="\_blank"}, which already includes both services.
 
 Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distribution designed specifically for on-premises environments. It brings notable improvements in terms of performance, observability and development experience. For more information, visit [What is OpenVidu?](../../about-openvidu.md){target="\_blank"}.
 
@@ -12,11 +12,11 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
     !!! info "Configure Webhooks"
 
-        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](http://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server){:target="\_blank"} section for more information.
+        This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server){:target="\_blank"} section for more information.
 
 === "Run LiveKit locally"
 
-    Follow the official instructions to run [LiveKit](https://docs.livekit.io/home/self-hosting/local/){target="_blank"} and [Egress](https://docs.livekit.io/home/self-hosting/egress/){target="_blank"} locally.
+    Follow the official instructions to run [LiveKit](https://docs.livekit.io/transport/self-hosting/local/){target="_blank"} and [Egress](https://docs.livekit.io/transport/self-hosting/egress/){target="_blank"} locally.
 
     !!! info "Configure Webhooks"
 
