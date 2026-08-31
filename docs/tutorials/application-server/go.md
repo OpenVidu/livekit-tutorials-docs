@@ -7,7 +7,7 @@ description: Learn how to build a minimal Go application server with Gin to gene
 
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/go){ .md-button target=\_blank }
 
-This is a minimal server application built for Go with [Gin](https://gin-gonic.com/){:target="\_blank"}  that allows:
+This is a minimal server application built for Go with [Gin](https://gin-gonic.com/){:target="\_blank"} that allows:
 
 - Generating LiveKit tokens on demand for any [application client](../application-client/index.md).
 - Receiving LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){target=\_blank}.
@@ -43,7 +43,7 @@ The application is a simple Go app with a single file `main.go` that exports two
 
 Let's see the code of the `main.go` file:
 
-```go title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/go/main.go/#L15-L17' target='_blank'>main.go</a>" linenums="15"
+```go title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/go/main.go#L15-L17' target='_blank'>main.go</a>" linenums="15"
 var SERVER_PORT string // (1)!
 var LIVEKIT_API_KEY string // (2)!
 var LIVEKIT_API_SECRET string // (3)!

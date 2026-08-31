@@ -14,6 +14,12 @@ This tutorial improves the [basic recording tutorial](./recording-basic.md){targ
 -   **Recording deletion notification**: Implement a custom notification system that alerts all participants of a recording's deletion by sending data messages.
 -   **Direct access to recording files**: Add an additional method to allow access to recording files directly from the S3 bucket by creating a presigned URL.
 
+Recordings are always persisted in some kind of S3 compatible storage, which the tutorial reads from and writes to. If you are running the tutorial against OpenVidu, this storage depends on your deployment:
+
+-   When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
+-   When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.
+-   When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Advanced Azure tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-azure/){target="_blank"} on openvidu.io instead.
+
 ## Running this tutorial
 
 ### 1. Run LiveKit Server and Egress
@@ -62,7 +68,7 @@ Once the server is up and running, you can test the application by visiting [`ht
 
     One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application with other devices in your local network very easily without worrying about SSL certificates.
 
-    Access your application client through [`https://xxx-yyy-zzz-www.openvidu-local.dev:6443`](https://xxx-yyy-zzz-www.openvidu-local.dev:6443){target="_blank"}, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
+    Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
 
     **Limitation**: Playing recordings with the `S3` strategy from other devices in your local network is not possible due to MinIO not being exposed. To play recordings from other devices, you need to change the environment variable `RECORDING_PLAYBACK_STRATEGY` to `PROXY`.
 

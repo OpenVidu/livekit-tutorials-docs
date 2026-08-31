@@ -15,6 +15,12 @@ This tutorial is a simple video-call application, built upon [Node.js server](..
 - Delete a recording.
 - List all available recordings.
 
+Recordings are always persisted in some kind of S3 compatible storage, which the tutorial reads from and writes to. If you are running the tutorial against OpenVidu, this storage depends on your deployment:
+
+- When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
+- When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.
+- When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Basic Azure tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-basic-azure/){target="_blank"} on openvidu.io instead.
+
 ## Running this tutorial
 
 ### 1. Run LiveKit Server and Egress
@@ -63,7 +69,7 @@ Once the server is up and running, you can test the application by visiting [`ht
 
     One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application with other devices in your local network very easily without worrying about SSL certificates.
 
-    Access your application client through [`https://xxx-yyy-zzz-www.openvidu-local.dev:6443`](https://xxx-yyy-zzz-www.openvidu-local.dev:6443){target="_blank"}, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
+    Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
 
 ## Understanding the code
 
@@ -252,7 +258,7 @@ This endpoint does the following:
 
 The `POST /recordings/stop` endpoint stops the recording of a room. It receives the room name of the room to stop recording as a parameter and returns the updated recording metadata:
 
-```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/3.0.0/advanced-features/openvidu-recording-basic-node/src/index.js#L121-L149' target='_blank'>index.js</a>" linenums="121"
+```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L121-L149' target='_blank'>index.js</a>" linenums="121"
 app.post("/recordings/stop", async (req, res) => {
   const { roomName } = req.body;
 
@@ -485,7 +491,7 @@ This endpoint does the following:
 
 Finally, let's take a look at the `s3.service.js` file, which encapsulates the operations to interact with the S3 bucket:
 
-```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/3.0.0/advanced-features/openvidu-recording-basic-node/src/s3.service.js' target='_blank'>s3.service.js</a>" linenums="9"
+```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/s3.service.js' target='_blank'>s3.service.js</a>" linenums="9"
 // S3 configuration
 const S3_ENDPOINT = process.env.S3_ENDPOINT || "http://localhost:9000"; // (1)!
 const S3_ACCESS_KEY = process.env.S3_ACCESS_KEY || "minioadmin"; // (2)!

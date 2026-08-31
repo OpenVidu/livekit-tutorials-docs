@@ -7,7 +7,7 @@ description: Learn how to build a minimal PHP server to generate LiveKit tokens 
 
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/php){ .md-button target=\_blank }
 
-This is a minimal server application built for PHP  that allows:
+This is a minimal server application built for PHP that allows:
 
 - Generating LiveKit tokens on demand for any [application client](../application-client/index.md).
 - Receiving LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){target=\_blank}.
