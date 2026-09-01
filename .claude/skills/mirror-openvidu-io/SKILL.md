@@ -16,22 +16,25 @@ The same tutorials are published twice: LiveKit-first here, OpenVidu-first on op
 | `docs/tutorials/application-server/*.md` | `docs/docs/tutorials/application-server/*.md` |
 | `docs/tutorials/advanced-features/recording-basic.md` | `…/advanced-features/recording-basic-s3.md` |
 | `docs/tutorials/advanced-features/recording-advanced.md` | `…/advanced-features/recording-advanced-s3.md` |
-| `shared/application-client/*.md`, `shared/application-server/*.md` | `shared/tutorials/…` (`tabs.md` = `application-*-tabs.md` here) |
-| `shared/{configure-urls,testing-other-devices,webhook-local-server,run-openvidu-locally}.md` | `shared/tutorials/…` |
-| `shared/run-livekit-server*.md` | no counterpart — this site's own step 1 |
+| `shared/tutorials/**` | the **same path** in both repos |
+| `shared/tutorials/run-livekit-server*.md` | no counterpart — this site's own step 1 (theirs is `run-openvidu-server.md`) |
 
 ## What to change when carrying a hunk
 
 Translate, do not copy verbatim:
 
 - **Frontmatter** — keep each side's own `title`/`description` (LiveKit-first vs OpenVidu-first).
+  Budgets differ: title ≤45 chars here (Material appends `" - LiveKit Tutorials"`), ≤57 there;
+  description 100–160 on both.
 - **Source links** — `blob/master/…` here, `blob/<version>/…` there. Line ranges are the same.
 - **Links to openvidu.io** — absolute `https://openvidu.io/latest/docs/…` here (with
   `{:target="_blank"}` and the external-link icon), repo-relative `.md` there.
-- **Snippet includes** — `shared/x.md` here, `tutorials/x.md` there.
+- **Snippet includes** — identical on both sides (`--8<-- "tutorials/x.md"`, resolved against
+  `shared/`); only step 1's snippet name differs.
 - **Step 1** — this site includes `run-livekit-server*.md`; openvidu.io runs OpenVidu. Do not
   carry that block either way.
-- **Image paths** — `/assets/images/…` here, `/assets/images/platform/tutorials/…` there.
+- **Image paths** — `/assets/images/tutorials/…` here, `/assets/images/platform/tutorials/…`
+  there. The filenames and attributes (`alt`, `.round-corners`, `loading=lazy`) are the same.
 - **"Accessing your app from other devices"** — this site links its own comparison page,
   openvidu.io links its self-hosting docs.
 
@@ -41,7 +44,9 @@ Translate, do not copy verbatim:
 tools/sync-check.py --openvidu-io ../openvidu.io
 ```
 
-It must report every pair in sync. If a difference is genuinely deliberate, add it to the script's
-rules **with a comment saying why**, and to the table in `README.md` — never leave it reported.
+It must report every pair in sync — CI (`validate-web.yaml`) runs the same check on every PR
+against a fresh openvidu.io checkout, so drift blocks the merge. If a difference is genuinely
+deliberate, add it to the script's rules **with a comment saying why**, and to the table in
+`README.md` — never leave it reported.
 
 Then remember both sites publish separately, by hand: see `/publish`.

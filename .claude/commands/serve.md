@@ -19,4 +19,9 @@ Expected local behaviour, not to be "fixed": canonicals and JSON-LD show the loc
 the `privacy` plugin is off unless `CI` is set, so the font loads from Google rather than from
 `assets/external/`.
 
+- `--dirty` is on (fast, rebuilds only the edited page): after editing a shared snippet, a hook
+  or an override, touch the including page (or restart) to see the change everywhere. For a
+  full-fidelity serve, override the CMD to drop it:
+  `docker run --name=mkdocs --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material serve --dev-addr=0.0.0.0:8000 --livereload`
+
 Stop it with `docker stop mkdocs`.

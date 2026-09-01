@@ -21,14 +21,21 @@ caller.
    - **Link form.** Relative-with-`.md` inside the site; absolute version-less `/latest/` to
      openvidu.io; `master` for tutorial source links; `/assets/…` root-absolute in `shared/`
      snippets, relative in pages. Every off-site link needs `{:target="_blank"}` and the
-     external-link icon; `.md-button` links take the attribute but not the icon. Conversion links
-     to openvidu.io need their UTM triple; plain reference links must not have one.
+     external-link icon; `.md-button` links take the attribute but not the icon, and local links
+     (`http://localhost:…`) take neither. Conversion links to openvidu.io need their UTM triple;
+     plain reference links must not have one.
    - **Frontmatter.** Unique `title` ≤45 chars and `description` 100–160 on every new page
      (`tools/sync-check.py --frontmatter`).
-   - **Registration.** A new page appears in `mkdocs.yml` `nav` or `not_in_nav`.
+   - **Registration.** A new page appears in `mkdocs.yml` `nav` or `not_in_nav`, and in an
+     `llmstxt` section unless a glob already covers it (the tutorial folders are globbed; root
+     pages are listed one by one). A listed page without `title` and `description` fails the
+     build.
    - **Images.** Markdown images with alt text and `loading=lazy`, `.round-corners` on screen
-     captures, grids as `/// html | div.grid-*` blocks — never raw `<a class="glightbox">`.
-   - **Build.** `GOOGLE_ANALYTICS_KEY=G-XXXXXXXX CI=false mkdocs build` with zero WARNINGs.
+     captures (never on logos, transparent art or SVG diagrams), grids as
+     `<div class="grid-*" markdown>` at page level — `/// html | div.grid-*` only inside
+     snippets, which render nested in content tabs — never raw `<a class="glightbox">`.
+   - **Build.** `GOOGLE_ANALYTICS_KEY=G-XXXXXXXX CI=false mkdocs build --strict` (zero
+     WARNINGs); `validate-web.yaml` runs the same gates on the PR.
 4. Report: a verdict line, then findings grouped by severity, each with file:line and the
    convention it breaks. Say explicitly what you could not check (for example, no openvidu.io
    checkout available).
