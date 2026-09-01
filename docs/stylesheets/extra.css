@@ -255,3 +255,10 @@ img.mediasoup-icon {
 .no-width {
   width: inherit;
 }
+
+/* theme.font is false (main.html loads the one Google Fonts stylesheet), so
+   Material's font variables are declared here instead. */
+:root {
+  --md-text-font: "Tomorrow";
+  --md-code-font: "Roboto Mono";
+}

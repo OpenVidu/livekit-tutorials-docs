@@ -68,9 +68,8 @@ theme:
     - search.suggest
     - search.highlight
     # - header.autohide
-  font:
-    text: Tomorrow # Nunito Sans, Rubik, Barlow, Raleway, Open Sans, Tomorrow, IBM Plex Sans
-    code: Roboto Mono
+  # main.html loads the one font stylesheet; --md-text-font/--md-code-font are in extra.css.
+  font: false
   favicon: assets/images/logo.png
   logo: assets/images/openvidu_globe_bg_transp_cropped.png
   palette:
