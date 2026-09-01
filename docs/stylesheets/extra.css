@@ -116,10 +116,42 @@ span:has(> a > .openvidu-tag) {
 .gfadeOut {
   animation: gfadeOut 0.2s ease !important;
 }
-/* The LiveKit wordmark in the about-page card header: a wide glyph, sized to
-   read at the height of the header text beside it. */
+/* The about-page feature cards, in the style of openvidu.io's home features:
+   borderless tiles, a flex header with a big icon beside the name, and three
+   columns where the width allows. */
+.feature-cards .grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+.feature-cards .grid.cards > ul > li {
+  border: solid transparent !important;
+  margin: 0.5rem !important;
+  padding: 0.9rem !important;
+}
+.feature-cards .grid.cards > ul > li:hover,
+.feature-cards .grid.cards > ul > li:focus-within {
+  box-shadow: none !important;
+}
+.feature-cards .grid.cards > ul > li > p:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.4em;
+}
+.feature-cards .grid.cards > ul > li .feature-icon {
+  font-size: 3em;
+  flex-shrink: 0;
+}
+.feature-cards .grid.cards > ul > li .feature-name {
+  font-size: 1.25em;
+  margin-left: 12px;
+  font-weight: 600;
+}
+/* The two brand wordmarks in the first card's header: wide glyphs, sized to
+   read at the height of the names beside them. */
 .md-typeset .livekit-icon {
-  --md-icon-size: 4.6em;
+  --md-icon-size: 4.8em;
+  height: auto;
+  flex-shrink: 0;
 }
 
 /* Tablet */
@@ -152,8 +184,8 @@ span:has(> a > .openvidu-tag) {
 }
 
 img.mediasoup-icon {
-  max-width: 4.6rem !important;
-  margin: 0 0.2rem -4px 0.2rem;
+  max-width: 4.8rem !important;
+  margin-left: 12px;
 }
 /* Content tabs (pymdownx.tabbed) */
 
