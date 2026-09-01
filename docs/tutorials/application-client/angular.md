@@ -24,7 +24,7 @@ It uses the [LiveKit JS SDK :fontawesome-solid-external-link:{.external-link-ico
 
 ### 1. Run LiveKit Server
 
---8<-- "shared/run-livekit-server.md"
+--8<-- "tutorials/run-livekit-server.md"
 
 ### 2. Download the tutorial code
 
@@ -34,11 +34,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run a server application
 
---8<-- "shared/application-server/application-server-tabs.md"
+--8<-- "tutorials/application-server/tabs.md"
 
 ### 4. Run the client application
 
---8<-- "shared/application-client/angular.md"
+--8<-- "tutorials/application-client/angular.md"
 
 ## Understanding the code
 
@@ -129,7 +129,7 @@ The `app.component.ts` file defines the following variables:
 -   `localTrack`: The local video track, which represents the user's camera.
 -   `remoteTracksMap`: A map that links track SIDs with `TrackInfo` objects. This map is used to store remote tracks and their associated participant identities.
 
---8<-- "shared/configure-urls.md"
+--8<-- "tutorials/configure-urls.md"
 
 ---
 

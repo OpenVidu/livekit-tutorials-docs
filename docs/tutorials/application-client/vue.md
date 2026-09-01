@@ -24,7 +24,7 @@ It uses the [LiveKit JS SDK :fontawesome-solid-external-link:{.external-link-ico
 
 ### 1. Run LiveKit Server
 
---8<-- "shared/run-livekit-server.md"
+--8<-- "tutorials/run-livekit-server.md"
 
 ### 2. Download the tutorial code
 
@@ -34,11 +34,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run a server application
 
---8<-- "shared/application-server/application-server-tabs.md"
+--8<-- "tutorials/application-server/tabs.md"
 
 ### 4. Run the client application
 
---8<-- "shared/application-client/vue.md"
+--8<-- "tutorials/application-client/vue.md"
 
 ## Understanding the code
 
@@ -117,7 +117,7 @@ The `App.vue` file defines the following variables:
 -   `participantName`: The participant's name.
 -   `roomName`: The room name.
 
---8<-- "shared/configure-urls.md"
+--8<-- "tutorials/configure-urls.md"
 
 ---
 

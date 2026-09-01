@@ -22,7 +22,7 @@ It internally uses the [LiveKit Go SDK :fontawesome-solid-external-link:{.extern
 
 ### 1. Run LiveKit Server
 
---8<-- "shared/run-livekit-server.md"
+--8<-- "tutorials/run-livekit-server.md"
 
 ### 2. Download the tutorial code
 
@@ -32,11 +32,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run the server application
 
---8<-- "shared/application-server/go.md"
+--8<-- "tutorials/application-server/go.md"
 
 ### 4. Run a client application to test against this server
 
---8<-- "shared/application-client/application-client-tabs.md"
+--8<-- "tutorials/application-client/tabs.md"
 
 ## Understanding the code
 
@@ -170,6 +170,6 @@ func receiveWebhook(context *gin.Context) {
 2. Receive the webhook event providing the `http.Request` in the Gin context and the `SimpleKeyProvider` we just created. This will validate and decode the incoming [webhook event :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
 3. Consume the event as you whish.
 
---8<-- "shared/webhook-local-server.md"
+--8<-- "tutorials/webhook-local-server.md"
 
 <br>

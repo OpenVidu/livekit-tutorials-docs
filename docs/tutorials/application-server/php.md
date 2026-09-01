@@ -22,7 +22,7 @@ It internally uses [LiveKit PHP SDK :fontawesome-solid-external-link:{.external-
 
 ### 1. Run LiveKit Server
 
---8<-- "shared/run-livekit-server.md"
+--8<-- "tutorials/run-livekit-server.md"
 
 ### 2. Download the tutorial code
 
@@ -32,11 +32,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run the server application
 
---8<-- "shared/application-server/php.md"
+--8<-- "tutorials/application-server/php.md"
 
 ### 4. Run a client application to test against this server
 
---8<-- "shared/application-client/application-client-tabs.md"
+--8<-- "tutorials/application-client/tabs.md"
 
 ## Understanding the code
 
@@ -167,6 +167,6 @@ We first create a `WebhookReceiver` object using the `LIVEKIT_API_KEY` and `LIVE
 
 Finally, we obtain the `WebhookEvent` object using the `WebhookReceiver#receive` method. It takes the raw body as a String and the Authorization header of the request. We can consume the event as we wish (in this case, we just log it using the error output).
 
---8<-- "shared/webhook-local-server.md"
+--8<-- "tutorials/webhook-local-server.md"
 
 <br>

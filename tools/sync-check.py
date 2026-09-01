@@ -60,18 +60,13 @@ PAIRS += [
     ("docs/tutorials/advanced-features/recording-advanced.md",
      "docs/docs/tutorials/advanced-features/recording-advanced-s3.md"),
 ]
-for _f in ["android", "angular", "electron", "ionic", "ios", "javascript", "react", "vue"]:
-    PAIRS.append((f"shared/application-client/{_f}.md",
-                  f"shared/tutorials/application-client/{_f}.md"))
-PAIRS.append(("shared/application-client/application-client-tabs.md",
-              "shared/tutorials/application-client/tabs.md"))
-for _f in ["dotnet", "go", "java", "node", "php", "python", "ruby", "rust"]:
-    PAIRS.append((f"shared/application-server/{_f}.md",
-                  f"shared/tutorials/application-server/{_f}.md"))
-PAIRS.append(("shared/application-server/application-server-tabs.md",
-              "shared/tutorials/application-server/tabs.md"))
+# The shared snippets live at the same path in both repos.
+for _f in ["android", "angular", "electron", "ionic", "ios", "javascript", "react", "vue", "tabs"]:
+    PAIRS.append((f"shared/tutorials/application-client/{_f}.md",) * 2)
+for _f in ["dotnet", "go", "java", "node", "php", "python", "ruby", "rust", "tabs"]:
+    PAIRS.append((f"shared/tutorials/application-server/{_f}.md",) * 2)
 for _f in ["configure-urls", "testing-other-devices", "webhook-local-server", "run-openvidu-locally"]:
-    PAIRS.append((f"shared/{_f}.md", f"shared/tutorials/{_f}.md"))
+    PAIRS.append((f"shared/tutorials/{_f}.md",) * 2)
 
 # Pages whose step 1 differs by design (see note 4): skip that region.
 SKIP_STEP1 = {"docs/tutorials/advanced-features/recording-basic.md",
@@ -104,11 +99,11 @@ AZURE_TAIL = re.compile(r" on openvidu\.io instead\.$")
 
 
 def canon_snip(path: str) -> str:
-    p = re.sub(r"^(tutorials|shared)/", "", path)
-    p = re.sub(r"application-(client|server)/(application-\1-)?tabs\.md", r"application-\1/TABS", p)
-    if p in ("run-openvidu-server.md", "run-livekit-server.md", "run-livekit-server-and-egress.md"):
-        p = "SERVER-STEP"
-    return p
+    # Step 1's snippet is the only one whose name still differs between the sides (note 4).
+    if path in ("tutorials/run-openvidu-server.md", "tutorials/run-livekit-server.md",
+                "tutorials/run-livekit-server-and-egress.md"):
+        return "SERVER-STEP"
+    return path
 
 
 def logical(target: str, page_dir: str | None, side: str) -> str:

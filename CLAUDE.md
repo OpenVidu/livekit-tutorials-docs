@@ -8,9 +8,10 @@ thinking of [openvidu.io](https://github.com/OpenVidu/openvidu.io).
 ## The one rule that matters
 
 **The tutorials are published twice.** Every page under `docs/tutorials/` and every snippet in
-`shared/` also exists in openvidu.io's repo (`docs/docs/tutorials/`, `shared/tutorials/`). This
-site is LiveKit-first, because it exists to win LiveKit-brand search traffic; openvidu.io is
-OpenVidu-first. **Everything else must match**, and a script checks it:
+`shared/tutorials/` also exists in openvidu.io's repo (`docs/docs/tutorials/`, and the same
+`shared/tutorials/` path — snippet includes resolve against `shared/`, so the `--8<--` lines
+match verbatim). This site is LiveKit-first, because it exists to win LiveKit-brand search
+traffic; openvidu.io is OpenVidu-first. **Everything else must match**, and a script checks it:
 
 ```bash
 tools/sync-check.py --openvidu-io ../openvidu.io

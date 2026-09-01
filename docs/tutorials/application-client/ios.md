@@ -24,7 +24,7 @@ It uses the [LiveKit Swift SDK :fontawesome-solid-external-link:{.external-link-
 
 ### 1. Run LiveKit Server
 
---8<-- "shared/run-livekit-server.md"
+--8<-- "tutorials/run-livekit-server.md"
 
 ### 2. Download the tutorial code
 
@@ -34,11 +34,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run a server application
 
---8<-- "shared/application-server/application-server-tabs.md"
+--8<-- "tutorials/application-server/tabs.md"
 
 ### 4. Run the client application
 
---8<-- "shared/application-client/ios.md"
+--8<-- "tutorials/application-client/ios.md"
 
 ## Understanding the Code
 

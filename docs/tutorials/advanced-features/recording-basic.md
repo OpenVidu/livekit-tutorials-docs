@@ -29,7 +29,7 @@ Recordings are always persisted in some kind of storage system. This type of sto
 
 ### 1. Run LiveKit Server and Egress
 
---8<-- "shared/run-livekit-server-and-egress.md"
+--8<-- "tutorials/run-livekit-server-and-egress.md"
 
 ### 2. Download the tutorial code
 

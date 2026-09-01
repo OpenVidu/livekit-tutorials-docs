@@ -38,7 +38,7 @@ To run the client application tutorial, you need [Node.js :fontawesome-solid-ext
         ![Video call room of the Ionic tutorial app in a browser](/assets/images/application-client/room-ionic-web.png){ .round-corners loading=lazy }
         ///
 
-        --8<-- "shared/testing-other-devices.md"
+        --8<-- "tutorials/testing-other-devices.md"
 
     === ":fontawesome-solid-mobile-screen-button:{.icon .lg-icon .tab-icon} Mobile"
 

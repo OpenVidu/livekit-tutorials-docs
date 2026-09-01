@@ -17,7 +17,7 @@ Whenever you are ready to deploy your real-time application, OpenVidu for produc
 
 === "Run OpenVidu locally"
 
-	--8<-- "shared/run-openvidu-locally.md"
+	--8<-- "tutorials/run-openvidu-locally.md"
 
 ## Egress and Ingress out of the box
 

@@ -22,7 +22,7 @@ It internally uses [LiveKit Kotlin SDK :fontawesome-solid-external-link:{.extern
 
 ### 1. Run LiveKit Server
 
---8<-- "shared/run-livekit-server.md"
+--8<-- "tutorials/run-livekit-server.md"
 
 ### 2. Download the tutorial code
 
@@ -32,11 +32,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run the server application
 
---8<-- "shared/application-server/java.md"
+--8<-- "tutorials/application-server/java.md"
 
 ### 4. Run a client application to test against this server
 
---8<-- "shared/application-client/application-client-tabs.md"
+--8<-- "tutorials/application-client/tabs.md"
 
 ## Understanding the code
 
@@ -152,6 +152,6 @@ Finally we obtain a `WebhookEvent` object calling method `WebhookReceiver#receiv
 
 Remember to return a `200` OK response at the end to let LiveKit Server know that the webhook was received correctly.
 
---8<-- "shared/webhook-local-server.md"
+--8<-- "tutorials/webhook-local-server.md"
 
 <br>
