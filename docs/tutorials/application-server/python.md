@@ -1,6 +1,6 @@
 ---
-title: Python Server Tutorial
-description: Learn how to build a minimal Python application server with Flask to generate LiveKit tokens and receive webhook events using the LiveKit Python SDK.
+title: "Python Server Tutorial"
+description: "Learn how to build a minimal Python application server with Flask to generate LiveKit tokens and receive webhook events using the LiveKit Python SDK."
 ---
 
 # Python Server Tutorial

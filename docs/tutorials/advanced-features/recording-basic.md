@@ -1,6 +1,6 @@
 ---
-title: Basic Recording Tutorial
-description: Learn how to record a room and manage recordings by extending a simple video-call application built upon Node.js server and JavaScript client.
+title: "Basic Recording Tutorial"
+description: "Learn how to record a room and manage recordings by extending a simple video-call application built upon Node.js server and JavaScript client."
 ---
 
 # Basic Recording Tutorial

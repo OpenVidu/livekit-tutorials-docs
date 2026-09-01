@@ -1,6 +1,6 @@
 ---
-title: LiveKit tutorials
-description: Hands-on LiveKit tutorials for real-time audio and video apps: client and server guides for eight platforms, plus recording, all interoperable.
+title: "LiveKit tutorials"
+description: "Hands-on LiveKit tutorials for real-time audio and video apps: client and server guides for eight platforms, plus recording, all interoperable."
 ---
 
 This site contains **simple**, **functional** and **comprehensible** guided tutorials for [**LiveKit** :fontawesome-solid-external-link:{.external-link-icon}](https://livekit.com/){:target="_blank"} applications. They all offer basically the same functionality, but built with different platforms in the client side and the server side, all compatible with each other. Just choose the ones that better fit your needs.

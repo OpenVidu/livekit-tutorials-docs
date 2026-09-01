@@ -1,6 +1,6 @@
 ---
-title: React Tutorial
-description: Learn how to build a simple video-call app using React with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+title: "React Tutorial"
+description: "Learn how to build a simple video-call app using React with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media."
 ---
 
 # React Tutorial

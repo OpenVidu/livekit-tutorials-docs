@@ -1,6 +1,6 @@
 ---
-title: OpenVidu vs LiveKit for local development
-description: Compare OpenVidu and LiveKit for local development: HTTPS on your LAN, bundled Egress and S3 storage, and testing a WebRTC app from real devices.
+title: "OpenVidu vs LiveKit for local development"
+description: "Compare OpenVidu and LiveKit for local development: HTTPS on your LAN, bundled Egress and S3 storage, and testing a WebRTC app from real devices."
 ---
 
 # Running OpenVidu vs LiveKit locally

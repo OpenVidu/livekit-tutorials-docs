@@ -1,6 +1,6 @@
 ---
-title: Go Server Tutorial
-description: Learn how to build a minimal Go application server with Gin to generate LiveKit tokens and receive webhook events using the LiveKit Go SDK.
+title: "Go Server Tutorial"
+description: "Learn how to build a minimal Go application server with Gin to generate LiveKit tokens and receive webhook events using the LiveKit Go SDK."
 ---
 
 # Go Server Tutorial

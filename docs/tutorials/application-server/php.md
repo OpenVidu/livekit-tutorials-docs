@@ -1,6 +1,6 @@
 ---
-title: PHP Server Tutorial
-description: Learn how to build a minimal PHP server to generate LiveKit tokens and receive webhook events using the LiveKit PHP SDK.
+title: "PHP Server Tutorial"
+description: "Learn how to build a minimal PHP server to generate LiveKit tokens and receive webhook events using the LiveKit PHP SDK."
 ---
 
 # PHP Server Tutorial

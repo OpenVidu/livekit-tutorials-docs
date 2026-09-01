@@ -1,6 +1,6 @@
 ---
-title: Electron Tutorial
-description: Learn how to build a simple video-call app using Electron with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+title: "Electron Tutorial"
+description: "Learn how to build a simple video-call app using Electron with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media."
 ---
 
 # Electron Tutorial

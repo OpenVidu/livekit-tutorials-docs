@@ -1,6 +1,6 @@
 ---
-title: Advanced Recording Tutorial
-description: Learn how to improve the basic recording tutorial by adding complete recording metadata, real time recording status notification and more.
+title: "Advanced Recording Tutorial"
+description: "Learn how to improve the basic recording tutorial by adding complete recording metadata, real time recording status notification and more."
 ---
 
 # Advanced Recording Tutorial

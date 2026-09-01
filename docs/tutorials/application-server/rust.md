@@ -1,6 +1,6 @@
 ---
-title: Rust Server Tutorial
-description: Learn how to build a minimal Rust application server with Axum to generate LiveKit tokens and receive webhook events using the LiveKit Rust SDK.
+title: "Rust Server Tutorial"
+description: "Learn how to build a minimal Rust application server with Axum to generate LiveKit tokens and receive webhook events using the LiveKit Rust SDK."
 ---
 
 # Rust Server Tutorial

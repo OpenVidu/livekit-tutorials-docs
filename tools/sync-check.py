@@ -20,6 +20,8 @@ import posixpath
 import re
 import sys
 
+import yaml
+
 # --- What is intentionally different -----------------------------------------
 #
 # 1. Frontmatter title/description: written for each site's own audience.
@@ -203,19 +205,33 @@ DESC_RANGE = (100, 160)
 
 
 def check_frontmatter(root: pathlib.Path) -> int:
-    """Every page needs a unique title and description, within the SERP budgets."""
+    """Every page needs a unique title and description, within the SERP budgets.
+
+    Parsed with the YAML loader MkDocs uses, not a regex: an unquoted value
+    containing ": " is invalid YAML, and MkDocs answers that by silently
+    dropping the whole frontmatter — the page then inherits `site_description`
+    and nothing warns.
+    """
     problems, seen = [], {}
     pages = sorted((root / "docs").rglob("*.md"))
     for page in pages:
         m = re.match(r"^---\n(.*?)\n---\n", page.read_text(), re.S)
-        fm = m.group(1) if m else ""
         rel = page.relative_to(root)
+        try:
+            meta = yaml.safe_load(m.group(1)) if m else None
+        except yaml.YAMLError as exc:
+            problems.append(f"{rel}: frontmatter is not valid YAML ({exc.__class__.__name__})"
+                            " — MkDocs would ignore all of it")
+            continue
+        if not isinstance(meta, dict):
+            problems.append(f"{rel}: no frontmatter mapping")
+            continue
         for key, limits in (("title", (1, TITLE_MAX)), ("description", DESC_RANGE)):
-            found = re.search(rf'^{key}:\s*"?(.*?)"?\s*$', fm, re.M)
-            if not found:
+            value = meta.get(key)
+            if not value:
                 problems.append(f"{rel}: no {key}")
                 continue
-            value = found.group(1)
+            value = str(value)
             low, high = limits
             if not low <= len(value) <= high:
                 problems.append(f"{rel}: {key} is {len(value)} chars, wanted {low}-{high}")
