@@ -1,0 +1,38 @@
+# Configuration for the weekly external-link check (check-external-links.yaml).
+# Internal links are validate-web.yaml's job (mkdocs build --strict); this run covers
+# only remote URLs. Kept in step with openvidu.io's .github/lychee.toml.
+
+scheme = ["https", "http"]
+include_mail = false
+
+max_retries = 3
+# docs.livekit.io carries many links; a modest ceiling keeps WAFs from throttling us.
+max_concurrency = 8
+timeout = 30
+
+cache = true
+max_cache_age = "3d"
+
+# 429 means "slow down", not "broken" — the link is alive.
+accept = ["200..=204", "206", "301..=308", "429"]
+
+exclude = [
+    # Placeholders and local-only URLs that appear in copy-pasteable instructions.
+    "^https?://localhost",
+    "^https?://127\\.0\\.0\\.1",
+    "^https?://0\\.0\\.0\\.0",
+    "^https?://([^/]*\\.)?example\\.[a-z]+",
+    "openvidu-local\\.dev",
+    # Bot-hostile hosts that answer link checkers with 403/999 regardless of link health.
+    "^https?://(www\\.)?(twitter|x)\\.com",
+    "^https?://(www\\.)?linkedin\\.com",
+    "^https?://(www\\.)?npmjs\\.com",
+    # Every publication is a subdomain, so match those too (openvidu.medium.com).
+    "^https?://([^/]*\\.)?medium\\.com",
+    # Our own unversioned URLs: every page's canonical, og:url and JSON-LD point at
+    # livekit-tutorials.openvidu.io, so a validation build hands lychee hundreds of
+    # self-references, and a new or renamed page would report a false 404 until the next
+    # publish. Links to openvidu.io stay checked — the version-less /latest/ deep links
+    # are exactly what rots when openvidu.io restructures a path.
+    "^https?://livekit-tutorials\\.openvidu\\.io",
+]

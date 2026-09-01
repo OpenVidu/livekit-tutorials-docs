@@ -1,0 +1,65 @@
+name: Validate Web
+
+# Fast feedback guard: on every PR and push to main, check that the tutorials still agree
+# with their openvidu.io counterparts, that every page keeps its SERP budgets, and that the
+# site builds with --strict (every MkDocs WARNING becomes an error). Anchor issues stay at
+# INFO level (see mkdocs.yml validation.links.anchors) because pymdownx.tabbed generates tab
+# anchors MkDocs's validator can't see.
+#
+# This is NOT the real deployed build: the production-only optimize (image compression) and
+# privacy (external-asset self-hosting) plugins are disabled via CI=false, so it runs fast
+# and offline. The full build with those plugins runs in publish-web.yaml.
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-web-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Checkout openvidu.io
+        # The same tutorials are published OpenVidu-first from this repo;
+        # tools/sync-check.py compares the two copies pair by pair.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: OpenVidu/openvidu.io
+          path: openvidu.io
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+
+      - name: Install safe-chain
+        uses: OpenVidu/actions/install-safe-chain@070fb73fda8fe7a08e28991b1c2d276f12a009ef # v1.0.22
+
+      - name: Install dependencies
+        # The imaging stack is not needed here — the plugins that use it are off (CI=false).
+        run: pip install mkdocs==1.6.1 mkdocs-material==9.7.6 pymdown-extensions==11.0.1 pygments==2.19.2 mkdocs-glightbox==0.5.2 mkdocs-llmstxt==0.5.0
+
+      - name: Check the two tutorial copies agree
+        run: python3 tools/sync-check.py --openvidu-io openvidu.io
+
+      - name: Check every page's title and description budgets
+        run: python3 tools/sync-check.py --frontmatter
+
+      - name: Build documentation (strict)
+        env:
+          GOOGLE_ANALYTICS_KEY: G-XXXXXXXX
+          # Override GitHub's default CI=true so the optimize and privacy plugins stay OFF
+          # (they are gated on CI in mkdocs.yml). The real build runs them in publish-web.yaml.
+          CI: "false"
+        run: mkdocs build --strict --site-dir /tmp/mkdocs-strict-validation

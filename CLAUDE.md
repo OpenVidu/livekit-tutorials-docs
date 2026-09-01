@@ -68,8 +68,10 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
 
 ## The build rule
 
-`mkdocs build --strict` must pass with **zero WARNINGs** (the publish workflow deploys with
-`--strict`). Anchor `INFO` lines about
+`mkdocs build --strict` must pass with **zero WARNINGs** — CI enforces it on every PR
+(`validate-web.yaml`, which also runs the sync and frontmatter checks against a fresh
+openvidu.io checkout), and the publish workflow deploys with `--strict`. Anchor `INFO` lines
+about
 `#run-openvidu-locally` and `#deploy-openvidu` are `pymdownx.tabbed` tab anchors that MkDocs'
 validator cannot see — expected, do not chase them.
 
