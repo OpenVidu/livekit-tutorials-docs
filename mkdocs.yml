@@ -160,7 +160,6 @@ extra_css:
   - stylesheets/colors.css
   - stylesheets/extra.css
   - stylesheets/unsemantic-grid.css
-  - stylesheets/livekit-tutorials.css
 
 copyright: >
   2025 &copy; OpenVidu –
