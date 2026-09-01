@@ -7,60 +7,11 @@
 </a>
 {% endblock %}
 
-{% block libs %}
-
-{{ super() }}
-
-<!-- GLightbox -->
-<script>
-  window.setupGallery = function () {
-    const gallery = 'gallery';
-    var lightbox = GLightbox({
-      touchNavigation: true,
-      loop: false,
-      autoplayVideos: true,
-      zoomable: false,
-      draggable: true,
-      preload: true,
-      width: "50%",
-      closeEffect: 'fade',
-      plyr: {
-        config: {
-          controls: [],
-          autoplay: true,
-          playsinline: true,
-          muted: true,
-          volume: 0,
-          hideControls: true,
-          loop: { active: true },
-          clickToPlay: false,
-          disableContextMenu: true,
-          resetOnEnd: true,
-          keyboard: { focused: false, global: false },
-          tooltips: { controls: false, seek: false },
-          displayDuration: false,
-          fullscreen: { enabled: false, fallback: false, iosNative: false, container: null },
-        }
-      }
-    });
-    console.debug('Gallery setup');
-  }
-  //# sourceURL=setupgallery.js
-</script>
-
-{% endblock %}
-
 {% block extrahead %}
 <!-- Add head tags that need to be applied before here -->
 {{ super() }}
 {% include "partials/json-ld.html" %}
 <!-- Add head tags that need to be applied afterwards here -->
-{% endblock %}
-
-{% block scripts %}
-<!-- Add scripts that need to run before here -->
-{{ super() }}
-<!-- Add scripts that need to run afterwards here -->
 {% endblock %}
 
 {% block styles %}
