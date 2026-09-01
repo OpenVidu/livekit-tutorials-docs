@@ -3,6 +3,7 @@ title: Cookie Policy
 hide:
   - navigation
   - toc
+description: How livekit-tutorials.openvidu.io uses cookies, which ones it sets, what they are for, and how to change or withdraw your consent at any time.
 ---
 
 ## What are cookies?

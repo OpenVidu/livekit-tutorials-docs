@@ -1,6 +1,6 @@
 ---
 title: Advanced Features Tutorials
-description: Explore more advanced features of LiveKit with our tutorials on recording and more.
+description: Tutorials for LiveKit's advanced features: record a room, then manage, play and delete the recordings from your own application.
 ---
 
 # Advanced Features Tutorials

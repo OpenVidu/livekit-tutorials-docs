@@ -1,4 +1,5 @@
 ---
+title: What is OpenVidu?
 description: OpenVidu is a powerful platform to develop WebRTC real-time applications. Based on LiveKit and mediasoup, performant, fault-tolerant, scalable and observable.
 ---
 

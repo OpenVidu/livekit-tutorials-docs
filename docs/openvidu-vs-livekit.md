@@ -1,5 +1,6 @@
 ---
-description: Compare OpenVidu and LiveKit for local development. Discover the advantages of running OpenVidu locally and how it can help you develop your real-time application.
+title: OpenVidu vs LiveKit for local development
+description: Compare OpenVidu and LiveKit for local development: HTTPS on your LAN, bundled Egress and S3 storage, and testing a WebRTC app from real devices.
 ---
 
 # Running OpenVidu vs LiveKit locally

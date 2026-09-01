@@ -1,6 +1,6 @@
 ---
 title: Application Server Tutorials
-description: Learn how to build an application server that generates LiveKit tokens and receives webhook events.
+description: Build the backend of a LiveKit app in Node.js, Java, Python, Go, .NET, PHP, Ruby or Rust: issue access tokens and receive webhook events.
 ---
 
 # Application Server Tutorials

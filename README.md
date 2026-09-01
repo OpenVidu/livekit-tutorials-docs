@@ -29,7 +29,8 @@ is OpenVidu-first. **Any change to a tutorial must be made on both sides.**
 Check it with:
 
 ```bash
-tools/sync-check.py [--openvidu-io ../openvidu.io]
+tools/sync-check.py [--openvidu-io ../openvidu.io]   # the two copies still agree
+tools/sync-check.py --frontmatter                    # titles <=45, descriptions 100-160, both unique
 ```
 
 It compares every tutorial page and snippet against its openvidu.io counterpart, normalizing away
@@ -44,7 +45,8 @@ differences, all listed at the top of the script:
 | Step 1 | `run-livekit-server*.md`: LiveKit local, LiveKit Cloud or OpenVidu | runs OpenVidu |
 | "Accessing your app from other devices" | this site's own comparison page | openvidu.io self-hosting docs |
 | Recording tutorials | S3 only; the Azure case links openvidu.io's Azure tutorials | S3 and Azure variants |
-| External-link icons, `/// html` image blocks | not used (they need openvidu.io's CSS and extensions) | used |
+| Image paths | `/assets/images/…` | `/assets/images/platform/tutorials/…` |
+| The external-link icon | on links to openvidu.io too — from here they leave the site | only on third-party links |
 
 When a real difference is meant to stay, add it to the script's rules with a comment saying why —
 never leave it reported.
