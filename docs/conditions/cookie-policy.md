@@ -2,9 +2,13 @@
 title: "Cookie Policy"
 hide:
   - navigation
+  - footer
   - toc
+  - search-bar
 description: "How livekit-tutorials.openvidu.io uses cookies, which ones it sets, what they are for, and how to change or withdraw your consent at any time."
 robots: "noindex, follow"
+search:
+  exclude: true
 ---
 
 ## What are cookies?

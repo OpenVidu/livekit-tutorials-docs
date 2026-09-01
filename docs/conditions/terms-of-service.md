@@ -2,9 +2,13 @@
 title: "Terms of Service"
 hide:
   - navigation
+  - footer
   - toc
+  - search-bar
 description: "The terms governing the use of OpenVidu's services and of this site, including licensing, payment, liability and applicable law."
 robots: "noindex, follow"
+search:
+  exclude: true
 ---
 
 The purpose of the following terms and conditions is to explain our obligations as providers of the service, as well as your obligations as a client. Please read them carefully. 
