@@ -36,9 +36,6 @@
     background-color: var(--md-accent-fg-color--transparent);
     border-color: var(--md-accent-fg-color--transparent);
 }
-svg.home-icon {
-    filter: brightness(33%);
-}
 img.mediasoup-icon {
     filter: brightness(0.5) saturate(2.5);
 }

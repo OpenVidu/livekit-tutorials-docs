@@ -135,14 +135,24 @@ span:has(> a > .openvidu-tag) {
   font-size: 0.9rem;
   font-weight: 700;
 }
-.home-icon {
-  width: 3em;
+/* Card icons are emoji shortcodes (attr_list lands on the .twemoji span);
+   the theme's 1.125em icon slot is overridden to the card size, and
+   fill: currentcolor colors them in both palettes. */
+.feature-title .twemoji {
+  height: auto;
   margin-right: 8px;
 }
-.livekit-icon {
-  width: 100px;
+.feature-title .twemoji svg {
+  width: 3em;
+  height: auto;
+  max-height: none;
+}
+.feature-title .livekit-icon {
   margin-right: 12px;
   flex-shrink: 0.05;
+}
+.feature-title .livekit-icon svg {
+  width: 100px;
 }
 .livekit-title {
   line-height: 1;
