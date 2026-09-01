@@ -8,7 +8,7 @@ It is based on [LiveKit](https://livekit.com/){:target="_blank"} and [mediasoup]
 
 <div class="grid-container features-grid">
 
-<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 wow animated animatedFadeInUp fadeInUp">
+<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 animated animatedFadeInUp fadeInUp">
 <div class="feature-title feature-title-livekit">
 <svg class="home-icon livekit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 28" role="img">
 <title id="title" lang="en">LiveKit Logo</title>
@@ -32,7 +32,7 @@ It is based on [LiveKit](https://livekit.com/){:target="_blank"} and [mediasoup]
 </strong>, the best open source, cutting edge, end-to-end WebRTC stacks. OpenVidu takes the best of LiveKit and the best of mediasoup and mix them together in the ultimate real-time solution.</p>
 </div>
 
-<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 wow animated animatedFadeInUp fadeInUp">
+<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 animated animatedFadeInUp fadeInUp">
 <div class="feature-title">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="home-icon">
 <title>server</title>
@@ -49,7 +49,7 @@ in your own infrastructure, including the most popular cloud providers.</p>
 
 <span class="clear hide-on-desktop hide-on-mobile"></span>
 
-<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 wow animated animatedFadeInUp fadeInUp">
+<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 animated animatedFadeInUp fadeInUp">
 <div class="feature-title">
 <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 <title>lightning-bolt</title>
@@ -66,7 +66,7 @@ host double the users in your video rooms just by using OpenVidu.
 
 <span class="clear hide-on-tablet hide-on-mobile"></span>
 
-<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 wow animated animatedFadeInUp fadeInUp">
+<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 animated animatedFadeInUp fadeInUp">
 <div class="feature-title">
 <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 <title>chart-timeline-variant-shimmer</title>
@@ -85,7 +85,7 @@ your cluster when necessary and remove them when no longer needed to optimize yo
 
 <span class="clear hide-on-desktop hide-on-mobile"></span>
 
-<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 wow animated animatedFadeInUp fadeInUp">
+<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 animated animatedFadeInUp fadeInUp">
 <div class="feature-title">
 <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 <title>shield-refresh</title>
@@ -101,7 +101,7 @@ able to continue working with no downtime.
 </p>
 </div>
 
-<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 wow animated animatedFadeInUp fadeInUp">
+<div class="feature-info grid-33 tablet-grid-50 mobile-grid-100 animated animatedFadeInUp fadeInUp">
 <div class="feature-title">
 <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 <title>microscope</title>

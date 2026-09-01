@@ -48,22 +48,6 @@
   //# sourceURL=setupgallery.js
 </script>
 
-<!-- wow -->
-<script>
-  window.setupWow = function () {
-    if (!document.getElementById('wowjs')) {
-      const jsScript = document.createElement('script')
-      jsScript.src = "javascripts/wow.min.js"
-      jsScript.id = "wowjs"
-      jsScript.addEventListener('load', () => {
-        new WOW().init();
-        console.debug('wow loaded');
-      })
-      document.head.appendChild(jsScript);
-    }
-  }
-</script>
-
 {% endblock %}
 
 {% block extrahead %}
