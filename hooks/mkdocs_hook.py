@@ -141,10 +141,43 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
 
 _GLIGHTBOX_JS = re.compile(r'<script src="([^"]*glightbox\.min\.js)"></script>')
 _GLIGHTBOX_INIT = '<script id="init-glightbox">'
+_GLIGHTBOX_HREF_MARKER = "element.setAttribute('href', img.src)"
+_GLIGHTBOX_HREF_LOOP = re.compile(
+    r"document\.querySelectorAll\('\.glightbox'\)\.forEach\(function\(element\) \{.*?\}\);\n",
+    re.S,
+)
+_GLIGHTBOX_SUBSCRIBE = "document$.subscribe(()=>{ lightbox.reload(); });"
+
+
+def _instant_safe_hrefs(output: str) -> str:
+    """Refill the lightbox hrefs on every instant navigation.
+
+    With the privacy plugin enabled (every build except `CI=false` ones), mkdocs-glightbox
+    emits its `.glightbox` anchors without `href` and fills them from each image's `src` in
+    a loop that runs once per full page load. `navigation.instant` swaps the content in
+    without a page load, so pages navigated to had bare anchors and opened empty slides.
+    The loop moves into the `document$` subscription, which fires on the initial load and
+    on every instant navigation, before the plugin's own `lightbox.reload()` rescan.
+    """
+    if _GLIGHTBOX_HREF_MARKER not in output:
+        return output  # privacy disabled: the anchors carry their hrefs from the build
+    loop = _GLIGHTBOX_HREF_LOOP.search(output)
+    if loop is None or _GLIGHTBOX_SUBSCRIBE not in output:
+        raise PluginError(
+            "mkdocs-glightbox changed the shape of its privacy-mode init script, so its "
+            "href-filling no longer survives instant navigation. Update _instant_safe_hrefs "
+            "in hooks/mkdocs_hook.py to the new shape."
+        )
+    wrapped = f"const fillGlightboxHrefs = () => {{\n{loop.group(0)}}};\n"
+    output = output[: loop.start()] + wrapped + output[loop.end():]
+    return output.replace(
+        _GLIGHTBOX_SUBSCRIBE,
+        "document$.subscribe(()=>{ fillGlightboxHrefs(); lightbox.reload(); });",
+    )
 
 
 def on_post_page(output, page, config, **kwargs):
-    """Move the glightbox library out of `<head>`.
+    """Move the glightbox library out of `<head>` and make its init instant-navigation-safe.
 
     The plugin injects its ~57 KB script there synchronously on every page, blocking first
     paint. It is only needed by the `#init-glightbox` script at the end of `<body>`, so it
@@ -156,7 +189,7 @@ def on_post_page(output, page, config, **kwargs):
         return None
     output = output[: match.start()] + output[match.end():]
     init_pos = output.find(_GLIGHTBOX_INIT)
-    return output[:init_pos] + match.group(0) + output[init_pos:]
+    return _instant_safe_hrefs(output[:init_pos] + match.group(0) + output[init_pos:])
 
 
 def _one_line(value) -> str:
