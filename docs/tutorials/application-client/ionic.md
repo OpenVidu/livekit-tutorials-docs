@@ -5,7 +5,7 @@ description: Learn how to build a simple video-call app using Ionic and Angular 
 
 # Ionic Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ionic){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ionic){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Ionic**, using **Angular** and **Capacitor**, that allows:
 
@@ -14,7 +14,7 @@ This tutorial is a simple video-call application built with **Ionic**, using **A
 -   Subscribing to all other participants' video and audio tracks automatically.
 -   Leaving the video call room at any time.
 
-It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 
 ## Running this tutorial
 
@@ -271,7 +271,7 @@ The `joinRoom()` method performs the following actions:
 
     !!! info "Take a look at all events"
 
-        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){target="_blank"}
+        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){:target="_blank"}
 
 3.  It retrieves the room name and participant name from the form.
 4.  It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` method:
@@ -298,7 +298,7 @@ The `joinRoom()` method performs the following actions:
     }
     ```
 
-    This function sends a POST request using [HttpClient](https://angular.dev/api/common/http/HttpClient){:target="\_blank"} to the application server's `/token` endpoint. The request body contains the room name and participant name. The server responds with a token that is used to connect to the room.
+    This function sends a POST request using [HttpClient](https://angular.dev/api/common/http/HttpClient){:target="_blank"} to the application server's `/token` endpoint. The request body contains the room name and participant name. The server responds with a token that is used to connect to the room.
 
 5.  It connects to the room using the LiveKit URL and the token.
 6.  It publishes the camera and microphone tracks to the room using `room.localParticipant.enableCameraAndMicrophone()`, which asks the user for permission to access their camera and microphone at the same time. The local video track is then stored in the `localTrack` variable.

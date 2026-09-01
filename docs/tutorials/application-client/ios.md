@@ -5,7 +5,7 @@ description: Learn how to build a simple video-call app for iOS using Swift with
 
 # iOS Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ios){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ios){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built for **iOS**, using **Swift**, that allows:
 
@@ -14,7 +14,7 @@ This tutorial is a simple video-call application built for **iOS**, using **Swif
 - Subscribing to all other participants' video and audio tracks automatically.
 - Leaving the video call room at any time.
 
-It uses the [LiveKit Swift SDK](https://docs.livekit.io/reference/client-sdk-swift/documentation/livekit/){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+It uses the [LiveKit Swift SDK](https://docs.livekit.io/reference/client-sdk-swift/documentation/livekit/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 
 ## Running this tutorial
 

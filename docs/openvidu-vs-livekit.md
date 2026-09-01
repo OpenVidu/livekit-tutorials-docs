@@ -4,7 +4,7 @@ description: Compare OpenVidu and LiveKit for local development. Discover the ad
 
 # Running OpenVidu vs LiveKit locally
 
-If you want to run the tutorials on this site locally without the need to create an account on [LiveKit Cloud](https://cloud.livekit.io/){target="_blank"}, we recommend **running OpenVidu locally**. OpenVidu is 100% compatible with LiveKit, and it offers many **advantages** for local development:
+If you want to run the tutorials on this site locally without the need to create an account on [LiveKit Cloud](https://cloud.livekit.io/){:target="_blank"}, we recommend **running OpenVidu locally**. OpenVidu is 100% compatible with LiveKit, and it offers many **advantages** for local development:
 
 - Egress and Ingress services already integrated with a Redis instance. [See more](#egress-and-ingress-out-of-the-box).
 - S3 compatible storage for Egress recordings. [See more](#s3-compatible-storage).
@@ -20,15 +20,15 @@ Whenever you are ready to deploy your real-time application, OpenVidu for produc
 
 ## Egress and Ingress out of the box
 
-LiveKit allows you to export media from a Room (for example recording it) or import media into a Room (for example ingesting a video file), using [Egress](https://openvidu.io/latest/docs/reference/egress/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){target="_blank"} and [Ingress](https://openvidu.io/latest/docs/reference/ingress/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){target="_blank"} services respectively. These modules are independent of LiveKit Server and must be correctly configured and connected via a shared Redis.
+LiveKit allows you to export media from a Room (for example recording it) or import media into a Room (for example ingesting a video file), using [Egress](https://openvidu.io/latest/docs/reference/egress/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){:target="_blank"} and [Ingress](https://openvidu.io/latest/docs/reference/ingress/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){:target="_blank"} services respectively. These modules are independent of LiveKit Server and must be correctly configured and connected via a shared Redis.
 
 When running OpenVidu locally you will have all these services properly integrated, so you can focus on developing your app without worrying about anything else.
 
 ## S3 compatible storage
 
-If you are planning to make use of the [Egress](https://openvidu.io/latest/docs/reference/egress/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){target="_blank"} service to export media out of your Rooms, you will need an S3 compatible bucket to store the generated files, and configure your LiveKit deployment to use it.
+If you are planning to make use of the [Egress](https://openvidu.io/latest/docs/reference/egress/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){:target="_blank"} service to export media out of your Rooms, you will need an S3 compatible bucket to store the generated files, and configure your LiveKit deployment to use it.
 
-When running OpenVidu locally you will have an S3 compatible storage available right away ([MinIO](https://www.min.io/){target="_blank"}).
+When running OpenVidu locally you will have an S3 compatible storage available right away ([MinIO](https://www.min.io/){:target="_blank"}).
 
 ## Administration dashboard
 
@@ -60,7 +60,7 @@ This setup is straightforward, but what if you need to test your app from multip
 1. LiveKit Server open source does not natively support HTTPS. You'll need a reverse proxy to serve LiveKit Server over HTTPS.
 2. Even with HTTPS, your SSL certificate might not be valid for local network addresses. You'll need to accept it in the browser for web apps, and install it on mobile devices.
 
-[OpenVidu Local Deployment](https://openvidu.io/latest/docs/self-hosting/local/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){:target="\_blank"} addresses these issues by providing a magic domain name `openvidu-local.dev` that resolves to any IP specified as a subdomain and provides a valid wildcard certificate for HTTPS. This is similar to services like [nip.io](https://nip.io){:target="\_blank"}, [traefik.me](https://traefik.me){:target="\_blank"}, or [localtls](https://github.com/Corollarium/localtls){:target="\_blank"}.
+[OpenVidu Local Deployment](https://openvidu.io/latest/docs/self-hosting/local/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){:target="_blank"} addresses these issues by providing a magic domain name `openvidu-local.dev` that resolves to any IP specified as a subdomain and provides a valid wildcard certificate for HTTPS. This is similar to services like [nip.io](https://nip.io){:target="_blank"}, [traefik.me](https://traefik.me){:target="_blank"}, or [localtls](https://github.com/Corollarium/localtls){:target="_blank"}.
 
 When using OpenVidu Local Deployment, you can access OpenVidu Server (which is 100% LiveKit compatible) and your app from any device on your local network with a valid HTTPS certificate. The following table shows the URLs to access the deployment and your application locally and from other devices on your network:
 
@@ -99,4 +99,4 @@ This setup simplifies the configuration of local OpenVidu deployments with SSL, 
 
 The HTTPS offered by `openvidu-local.dev` is intended for development or testing purposes with the only goal of making your local devices trust your application (which is mandatory in WebRTC applications). For any other use case, it should be treated with the same security considerations as plain HTTP.
 
-For production deployments, you should follow the [official OpenVidu installation guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){target="_blank"}.
+For production deployments, you should follow the [official OpenVidu installation guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=comparison-page){:target="_blank"}.

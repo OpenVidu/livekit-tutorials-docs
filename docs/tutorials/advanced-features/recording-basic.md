@@ -5,9 +5,9 @@ description: Learn how to record a room and manage recordings by extending a sim
 
 # Basic Recording Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-basic-node){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-basic-node){ .md-button target="_blank" }
 
-This tutorial is a simple video-call application, built upon [Node.js server](../application-server/node.md){:target="\_blank"} and [JavaScript client](../application-client/javascript.md){:target="\_blank"} tutorials, and extends them by adding recording capabilities:
+This tutorial is a simple video-call application, built upon [Node.js server](../application-server/node.md){:target="_blank"} and [JavaScript client](../application-client/javascript.md){:target="_blank"} tutorials, and extends them by adding recording capabilities:
 
 - Start and stop recording a room.
 - List all recordings in a room.
@@ -19,7 +19,7 @@ Recordings are always persisted in some kind of S3 compatible storage, which the
 
 - When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
 - When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.
-- When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Basic Azure tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-basic-azure/){target="_blank"} on openvidu.io instead.
+- When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Basic Azure tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-basic-azure/){:target="_blank"} on openvidu.io instead.
 
 ## Running this tutorial
 
@@ -35,7 +35,7 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run the application
 
-To run this application, you need [Node.js](https://nodejs.org/en/download){:target="\_blank"} (≥ 18) installed on your device.
+To run this application, you need [Node.js](https://nodejs.org/en/download){:target="_blank"} (≥ 18) installed on your device.
 
 1. Navigate into the application directory
 
@@ -55,7 +55,7 @@ npm install
 npm start
 ```
 
-Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="\_blank"}. You should see a screen like this:
+Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="_blank"}. You should see a screen like this:
 
 <div class="grid-container">
 
@@ -69,7 +69,7 @@ Once the server is up and running, you can test the application by visiting [`ht
 
     One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application with other devices in your local network very easily without worrying about SSL certificates.
 
-    Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
+    Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){:target="_blank"}.
 
 ## Understanding the code
 
@@ -89,7 +89,7 @@ And the following essential frontend files under the `public` directory:
 
 ### Backend
 
-The server application extends the [Node.js server tutorial](../application-server/node.md){:target="\_blank"} by adding the following REST API endpoints:
+The server application extends the [Node.js server tutorial](../application-server/node.md){:target="_blank"} by adding the following REST API endpoints:
 
 - **`POST /recordings/start`**: Starts the recording of a room.
 - **`POST /recordings/stop`**: Stops the recording of a room.
@@ -133,7 +133,7 @@ There are three new environment variables:
 
 Besides, the `index.js` file configures the server to serve static files from the `public` directory.
 
-It also initializes the `EgressClient`, which will help interacting with [Egress API](https://openvidu.io/latest/docs/reference/egress/){:target="\_blank"} to manage recordings, and the `S3Service`, which will help interacting with the S3 bucket:
+It also initializes the `EgressClient`, which will help interacting with [Egress API](https://openvidu.io/latest/docs/reference/egress/){:target="_blank"} to manage recordings, and the `S3Service`, which will help interacting with the S3 bucket:
 
 ```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L34-L39' target='_blank'>index.js</a>" linenums="34"
 const egressClient = new EgressClient(
@@ -223,7 +223,7 @@ app.post("/recordings/start", async (req, res) => {
 2. If there is already an active recording for the room, the server returns a `409 Conflict` status code.
 3. Use the `EncodedFileOutput` class to export the recording to an external file.
 4. Define the file type as `MP4`.
-5. Define the file path where the recording will be stored. The `{room_name}`, `{time}` and `{room_id}` templates will be replaced by the actual room name, timestamp and room ID, respectively. Check out all available [filename templates](https://openvidu.io/latest/docs/reference/egress/#filenames){:target="\_blank"}.
+5. Define the file path where the recording will be stored. The `{room_name}`, `{time}` and `{room_id}` templates will be replaced by the actual room name, timestamp and room ID, respectively. Check out all available [filename templates](https://openvidu.io/latest/docs/reference/egress/#filenames){:target="_blank"}.
 6. Start a `RoomCompositeEgress` to record all participants in the room by calling the `startRoomCompositeEgress` method of the `EgressClient` with the `roomName` and `fileOutput` as parameters.
 7. Extract the recording name from the `fileResults` array.
 8. Return the recording metadata to the client.
@@ -249,7 +249,7 @@ This endpoint does the following:
     };
     ```
 
-3.  Initializes an `EncodedFileOutput` object to export the recording to an external file. It sets the file type as `MP4` and defines the file path where the recording will be stored. The `{room_name}`, `{time}` and `{room_id}` templates will be replaced by the actual room name, timestamp and room ID, respectively. Check out all available [filename templates](https://openvidu.io/latest/docs/reference/egress/#filenames){:target="\_blank"}.
+3.  Initializes an `EncodedFileOutput` object to export the recording to an external file. It sets the file type as `MP4` and defines the file path where the recording will be stored. The `{room_name}`, `{time}` and `{room_id}` templates will be replaced by the actual room name, timestamp and room ID, respectively. Check out all available [filename templates](https://openvidu.io/latest/docs/reference/egress/#filenames){:target="_blank"}.
 4.  Starts a `RoomCompositeEgress` to record all participants in the room by calling the `startRoomCompositeEgress` method of the `EgressClient` with `roomName` and `fileOutput` as parameters.
 5.  Extracts the recording name from the `fileResults` array.
 6.  Returns the recording metadata to the client.
@@ -449,7 +449,7 @@ This endpoint does the following:
 
 !!! info "Direct access to S3 bucket"
 
-    With this approach, the backend acts as a proxy between the client and S3, which may result in increased server resource usage. To avoid this, it is more efficient to provide the client with a **presigned URL**, allowing direct access to the recording files from the S3 bucket. In the [advanced recording tutorial](./recording-advanced.md){:target="\_blank"}, we show how to implement this method, along with a discussion of its advantages and disadvantages.
+    With this approach, the backend acts as a proxy between the client and S3, which may result in increased server resource usage. To avoid this, it is more efficient to provide the client with a **presigned URL**, allowing direct access to the recording files from the S3 bucket. In the [advanced recording tutorial](./recording-advanced.md){:target="_blank"}, we show how to implement this method, along with a discussion of its advantages and disadvantages.
 
 #### Delete recording
 
@@ -615,7 +615,7 @@ Then, it defines the `S3Service` class as a singleton, which initializes the `S3
 
 ### Frontend
 
-The client application extends the [JavaScript client tutorial](../application-client/javascript.md){:target="\_blank"} by adding recording features, introducing new buttons to facilitate actions such as starting and stopping recording a room, as well as listing, playing and deleting recordings. When these newly introduced buttons are interacted with, the client triggers requests to the REST API endpoints of the server application.
+The client application extends the [JavaScript client tutorial](../application-client/javascript.md){:target="_blank"} by adding recording features, introducing new buttons to facilitate actions such as starting and stopping recording a room, as well as listing, playing and deleting recordings. When these newly introduced buttons are interacted with, the client triggers requests to the REST API endpoints of the server application.
 
 In order to update the user interface of all participants in the room according to the recording status, the client application subscribes to the `RoomEvent.RecordingStatusChanged` event, which is triggered when the room changes from being recorded to not being recorded, and vice versa. When this event is triggered, the `updateRecordingInfo` function is called to update the recording information of the room displayed on the screen. This function is also called when a participant joins the room, using the current value of the `room.recording` property at that moment. This is done in the `joinRoom` function of the `app.js` file:
 
@@ -623,7 +623,7 @@ In order to update the user interface of all participants in the room according 
 
     By using the `RoomEvent.RecordingStatusChanged` event, we can only detect when the recording has started or stopped, but not other states like `starting`, `stopping` or `failed`. Additionally, when the recording stops, the event is not triggered until the recorder participant leaves the room, causing a delay of 20 seconds approximately between the stop and when participants are notified.
 
-    To overcome these limitations, you can follow the steps described in the [advanced recording tutorial](./recording-advanced.md){:target="\_blank"}, where we implement a custom notification system. This system informs participants about the recording status by listening to webhook events and updating room metadata.
+    To overcome these limitations, you can follow the steps described in the [advanced recording tutorial](./recording-advanced.md){:target="_blank"}, where we implement a custom notification system. This system informs participants about the recording status by listening to webhook events and updating room metadata.
 
 ```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L20-L87' target='_blank'>app.js</a>" linenums="20" hl_lines="32-37 62-63"
 async function joinRoom() {
@@ -743,7 +743,7 @@ The `showRecordingList` function creates a new `div` element for each recording 
 
     When a recording is deleted, it is removed from the recording list, but only for the user who initiated the deletion. Other users will continue to see the recording in their list until it is refreshed.
 
-    In the [advanced recording tutorial](./recording-advanced.md){:target="\_blank"}, we show how to implement a custom notification system that alerts all participants of a recording's deletion by sending data messages.
+    In the [advanced recording tutorial](./recording-advanced.md){:target="_blank"}, we show how to implement a custom notification system that alerts all participants of a recording's deletion by sending data messages.
 
 When the user clicks the play button, the `displayRecording` function is called to play the recording. This function opens a dialog window with an embedded video element and sets the source of the video to the [get recording endpoint](#get-recording) of the server application:
 

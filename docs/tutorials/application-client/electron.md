@@ -5,7 +5,7 @@ description: Learn how to build a simple video-call app using Electron with Live
 
 # Electron Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-js){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-js){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Electron** that allows:
 
@@ -14,7 +14,7 @@ This tutorial is a simple video-call application built with **Electron** that al
 -   Subscribing to all other participants' video and audio tracks automatically.
 -   Leaving the video call room at any time.
 
-It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 
 ## Running this tutorial
 
@@ -41,7 +41,7 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 This Electron project has been created using **electron-forge**. As an Electron application, the code is divided into two main parts, the **main process** and the **renderer process**. The most important files are located within the `src/` directory:
 
 -   `index.js`: This file is the entry point (main process) for the Electron application. It creates the main window and loads the `index.html` file.
--   `app.js`: This file constitutes the renderer process code, responsible for the application UI and logic. It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+-   `app.js`: This file constitutes the renderer process code, responsible for the application UI and logic. It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 -   `index.html`: This HTML file is responsible for creating the user interface. It contains the form to connect to a video call and the video call layout.
 -   `styles.css`: This file contains CSS classes that are used to style the `index.html` page.
 
@@ -209,7 +209,7 @@ The `joinRoom()` function performs the following actions:
 
     !!! info "Take a look at all events"
 
-        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){target="_blank"}
+        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){:target="_blank"}
 
 3.  It retrieves the room name and participant name from the form.
 4.  It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` function:

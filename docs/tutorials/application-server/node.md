@@ -5,14 +5,14 @@ description: Learn how to build a minimal Node.js server with Express to generat
 
 # Node.js Server Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/node){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/node){ .md-button target="_blank" }
 
-This is a minimal server application built for Node.js with [Express](https://expressjs.com/){:target="\_blank"} that allows:
+This is a minimal server application built for Node.js with [Express](https://expressjs.com/){:target="_blank"} that allows:
 
 - Generating LiveKit tokens on demand for any [application client](../application-client/index.md).
-- Receiving LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){target=\_blank}.
+- Receiving LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
 
-It internally uses [LiveKit JS SDK](https://docs.livekit.io/reference/server-sdk-js/){:target="\_blank"}.
+It internally uses [LiveKit JS SDK](https://docs.livekit.io/reference/server-sdk-js/){:target="_blank"}.
 
 ## Running this tutorial
 
@@ -106,16 +106,16 @@ app.post("/token", async (req, res) => {
 ```
 
 1. A new `AccessToken` is created providing the `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` and setting the participant's identity.
-2. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="\_blank"}.
+2. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="_blank"}.
 3. We convert the AccessToken to a JWT token.
 4. Finally, the token is sent back to the client.
 
 The endpoint first obtains the `roomName` and `participantName` parameters from the request body. If they are not available, it returns a `400` error.
 
-If required fields are available, a new JWT token is created. For that we use the [LiveKit JS SDK](https://docs.livekit.io/reference/server-sdk-js/){:target="\_blank"}:
+If required fields are available, a new JWT token is created. For that we use the [LiveKit JS SDK](https://docs.livekit.io/reference/server-sdk-js/){:target="_blank"}:
 
 1. A new `AccessToken` is created providing the `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` and setting the participant's identity.
-2. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="\_blank"}.
+2. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="_blank"}.
 3. We convert the AccessToken to a JWT token.
 4. Finally, the token is sent back to the client.
 
@@ -123,7 +123,7 @@ If required fields are available, a new JWT token is created. For that we use th
 
 #### Receive webhook
 
-The endpoint `/livekit/webhook` accepts `POST` requests with a payload of type `application/webhook+json`. This is the endpoint where LiveKit Server will send [webhook events](https://openvidu.io/latest/docs/reference/webhooks/#events){:target="\_blank"}.
+The endpoint `/livekit/webhook` accepts `POST` requests with a payload of type `application/webhook+json`. This is the endpoint where LiveKit Server will send [webhook events](https://openvidu.io/latest/docs/reference/webhooks/#events){:target="_blank"}.
 
 ```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/node/index.js#L33-L49' target='_blank'>index.js</a>" linenums="33"
 const webhookReceiver = new WebhookReceiver( // (1)!
@@ -145,7 +145,7 @@ app.post("/livekit/webhook", async (req, res) => {
 });
 ```
 
-1. Initialize the WebhookReceiver using the `LIVEKIT_API_KEY` and `LIVEKIT_API_SECRET`. It will help validating and decoding incoming [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){target=\_blank}.
+1. Initialize the WebhookReceiver using the `LIVEKIT_API_KEY` and `LIVEKIT_API_SECRET`. It will help validating and decoding incoming [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
 2. The body of the HTTP request.
 3. The `Authorization` header of the HTTP request.
 4. Consume the event as you whish.

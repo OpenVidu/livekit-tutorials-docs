@@ -1,4 +1,4 @@
-To run the client application tutorial, you need [Node.js](https://nodejs.org/en/download){:target="\_blank"} installed on your development computer.
+To run the client application tutorial, you need [Node.js](https://nodejs.org/en/download){:target="_blank"} installed on your development computer.
 
 1.  Navigate into the application client directory:
 
@@ -24,7 +24,7 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
         npm start
         ```
 
-        Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080){:target="\_blank"}. You should see a screen like this:
+        Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080){:target="_blank"}. You should see a screen like this:
 
         !!! info "Mobile appearance"
 
@@ -52,7 +52,7 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
             The WebRTC API demands a secure connection for functionality outside of localhost, necessitating the serving of the application over HTTPS.
 
-        If you run [OpenVidu locally](#run-openvidu-locally) you don't need to worry about this. OpenVidu will handle all of the above requirements for you. For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
+        If you run [OpenVidu locally](#run-openvidu-locally) you don't need to worry about this. OpenVidu will handle all of the above requirements for you. For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){:target="_blank"}.
 
         Now, let's explore how to run the application on a mobile device:
 
@@ -68,7 +68,7 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
         === ":fontawesome-brands-apple:{.icon .lg-icon .tab-icon} iOS device"
 
-            You will need [Ruby](https://www.ruby-lang.org/en/documentation/installation/){target="_blank"} and [Cocoapods](https://guides.cocoapods.org/using/getting-started.html){target="_blank"} installed in your computer.
+            You will need [Ruby](https://www.ruby-lang.org/en/documentation/installation/){:target="_blank"} and [Cocoapods](https://guides.cocoapods.org/using/getting-started.html){:target="_blank"} installed in your computer.
 
             The app must be signed with a development team. To do so, open the project in **Xcode** and select a development team in the **Signing & Capabilities** editor.
 

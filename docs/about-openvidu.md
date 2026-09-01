@@ -2,9 +2,9 @@
 description: OpenVidu is a powerful platform to develop WebRTC real-time applications. Based on LiveKit and mediasoup, performant, fault-tolerant, scalable and observable.
 ---
 
-[OpenVidu](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page){target=\_blank} is a powerful platform to develop WebRTC real-time applications. With it you can add real-time audio and video capabilities to your application: build any kind of videoconference experience, serve ultra-low latency livestreams to thousands of users, manage real-time videos from your drones or camera feeds and record them... The possibilities are truly endless!
+[OpenVidu](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page){:target="_blank"} is a powerful platform to develop WebRTC real-time applications. With it you can add real-time audio and video capabilities to your application: build any kind of videoconference experience, serve ultra-low latency livestreams to thousands of users, manage real-time videos from your drones or camera feeds and record them... The possibilities are truly endless!
 
-It is based on [LiveKit](https://livekit.com/){target=\_blank} and [mediasoup](https://mediasoup.org/){target=\_blank}, bringing the best of both worlds to provide a performant, fault-tolerant, scalable and observable solution.
+It is based on [LiveKit](https://livekit.com/){:target="_blank"} and [mediasoup](https://mediasoup.org/){:target="_blank"}, bringing the best of both worlds to provide a performant, fault-tolerant, scalable and observable solution.
 
 <div class="grid-container features-grid">
 

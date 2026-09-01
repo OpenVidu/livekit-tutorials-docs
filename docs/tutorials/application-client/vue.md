@@ -5,7 +5,7 @@ description: Learn how to build a simple video-call app using Vue with LiveKit J
 
 # Vue Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-vue){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-vue){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Vue** that allows:
 
@@ -14,7 +14,7 @@ This tutorial is a simple video-call application built with **Vue** that allows:
 -   Subscribing to all other participants' video and audio tracks automatically.
 -   Leaving the video call room at any time.
 
-It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 
 ## Running this tutorial
 
@@ -191,7 +191,7 @@ The `joinRoom()` function performs the following actions:
 
     !!! info "Take a look at all events"
 
-        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){target="_blank"}
+        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){:target="_blank"}
 
 3.  It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` function:
 

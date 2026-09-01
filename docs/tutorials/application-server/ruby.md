@@ -5,14 +5,14 @@ description: Learn how to build a minimal Ruby application server with Sinatra t
 
 # Ruby Server Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/ruby){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/ruby){ .md-button target="_blank" }
 
-This is a minimal server application built for Ruby with [Sinatra](https://sinatrarb.com/){:target="\_blank"} that allows:
+This is a minimal server application built for Ruby with [Sinatra](https://sinatrarb.com/){:target="_blank"} that allows:
 
 - Generating LiveKit tokens on demand for any [application client](../application-client/index.md).
-- Receiving LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){target=\_blank}.
+- Receiving LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
 
-It internally uses [LiveKit Ruby SDK](https://github.com/livekit/server-sdk-ruby){:target="\_blank"}.
+It internally uses [LiveKit Ruby SDK](https://github.com/livekit/server-sdk-ruby){:target="_blank"}.
 
 ## Running this tutorial
 
@@ -110,23 +110,23 @@ end
 
 1. A new `AccessToken` is created providing the `LIVEKIT_API_KEY` and `LIVEKIT_API_SECRET`.
 2. We set participant's identity in the AccessToken.
-3. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="\_blank"}.
+3. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="_blank"}.
 4. Finally, we convert the AccessToken to a JWT token and send it back to the client.
 
 The endpoint first obtains the `roomName` and `participantName` parameters from the request body. If they are not available, it returns a `400` error.
 
-If required fields are available, a new JWT token is created. For that we use the [LiveKit Ruby SDK](https://github.com/livekit/server-sdk-ruby){:target="\_blank"}:
+If required fields are available, a new JWT token is created. For that we use the [LiveKit Ruby SDK](https://github.com/livekit/server-sdk-ruby){:target="_blank"}:
 
 1. A new `AccessToken` is created providing the `LIVEKIT_API_KEY` and `LIVEKIT_API_SECRET`.
 2. We set participant's identity in the AccessToken.
-3. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="\_blank"}.
+3. We set the video grants in the AccessToken. `roomJoin` allows the user to join a room and `room` determines the specific room. Check out all [Video Grants](https://openvidu.io/latest/docs/reference/access-tokens/#video-grants){:target="_blank"}.
 4. Finally, we convert the AccessToken to a JWT token and send it back to the client.
 
 ---
 
 #### Receive webhook
 
-The endpoint `/livekit/webhook` accepts `POST` requests with a payload of type `application/webhook+json`. This is the endpoint where LiveKit Server will send [webhook events](https://openvidu.io/latest/docs/reference/webhooks/#events){:target="\_blank"}.
+The endpoint `/livekit/webhook` accepts `POST` requests with a payload of type `application/webhook+json`. This is the endpoint where LiveKit Server will send [webhook events](https://openvidu.io/latest/docs/reference/webhooks/#events){:target="_blank"}.
 
 ```ruby title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/ruby/app.rb#L36-L47' target='_blank'>app.rb</a>" linenums="36"
 post '/livekit/webhook' do
