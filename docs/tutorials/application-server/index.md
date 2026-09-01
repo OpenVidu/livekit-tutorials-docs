@@ -8,14 +8,14 @@ description: Learn how to build an application server that generates LiveKit tok
 Every application server below has two specific purposes: 
 
 - Generate LiveKit tokens on demand for any [application client](../application-client/index.md).
-- Receive LiveKit [webhook events](https://docs.livekit.io/home/server/webhooks/){target=\_blank}.
+- Receive LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
 
 To do so they all define two REST endpoints:
 
 - `/token`: takes a room and participant name and returns a token.
 - `/webhook`: for receiving webhook events from LiveKit Server.
 
-They use the proper [LiveKit Server SDK](https://docs.livekit.io/reference/){target=\_blank} for their language, if available.
+They use the proper [LiveKit Server SDK](https://docs.livekit.io/reference/){:target="_blank"} for their language, if available.
 
 <div class="tutorials-container" markdown>
 
@@ -26,6 +26,10 @@ They use the proper [LiveKit Server SDK](https://docs.livekit.io/reference/){tar
 [:simple-ruby:{.icon .lg-icon .tab-icon} **Ruby**](./ruby.md){ .md-button .md-button--primary .tutorial-link}
 
 [:fontawesome-brands-java:{.icon .lg-icon .tab-icon} **Java**](./java.md){ .md-button .md-button--primary .tutorial-link}
+
+</div>
+
+<div class="tutorials-container" markdown>
 
 [:simple-python:{.icon .lg-icon .tab-icon} **Python**](./python.md){ .md-button .md-button--primary .tutorial-link}
 

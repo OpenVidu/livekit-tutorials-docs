@@ -5,7 +5,7 @@ description: Learn how to build a simple video-call app using plain JavaScript, 
 
 # JavaScript Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-js){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-js){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with plain **JavaScript**, **HTML** and **CSS** that allows:
 
@@ -14,7 +14,7 @@ This tutorial is a simple video-call application built with plain **JavaScript**
 -   Subscribing to all other participants' video and audio tracks automatically.
 -   Leaving the video call room at any time.
 
-It uses the [LiveKit JS SDK](https://docs.livekit.io/client-sdk-js){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 
 ## Running this tutorial
 
@@ -40,11 +40,11 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 This application is designed to be beginner-friendly and consists of only three essential files that are located in the `src` directory:
 
--   `app.js`: This is the main JavaScript file for the sample application. It uses the [LiveKit JS SDK](https://docs.livekit.io/client-sdk-js){:target="\_blank"} to connect to the LiveKit server and interact with the video call room.
+-   `app.js`: This is the main JavaScript file for the sample application. It uses the [LiveKit JS SDK](https://docs.livekit.io/reference/client-sdk-js/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 -   `index.html`: This HTML file is responsible for creating the user interface. It contains the form to connect to a video call and the video call layout.
 -   `styles.css`: This file contains CSS classes that are used to style the `index.html` page.
 
-To use the LiveKit JS SDK in your application, you need to include the library in your HTML file. You can do this by adding the following script tag to the `<head>` section of your HTML file:
+To use the LiveKit JS SDK in your application, you need to include the library in your HTML file. The tutorial does this by adding the following script tag to the `<head>` section of the HTML file:
 
 ```html title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/index.html#L32' target='_blank'>index.html</a>" linenums="32"
 <script src="https://cdn.jsdelivr.net/npm/livekit-client@2.5.9/dist/livekit-client.umd.js"></script>
@@ -109,7 +109,7 @@ After the user specifies their participant name and the name of the room they wa
 async function joinRoom() {
     // Disable 'Join' button
     document.getElementById("join-button").disabled = true;
-	document.getElementById("join-button").innerText = "Joining...";
+    document.getElementById("join-button").innerText = "Joining...";
 
     // Initialize a new Room object
     room = new LivekitClient.Room(); // (1)!
@@ -230,7 +230,7 @@ The `joinRoom()` function performs the following actions:
 
     !!! info "Take a look at all events"
 
-        You can take a look at all the events in the [Livekit Documentation](https://docs.livekit.io/client-sdk-js/enums/RoomEvent.html)
+        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){:target="_blank"}
 
 3.  It retrieves the room name and participant name from the form.
 4.  It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` function:
@@ -297,7 +297,7 @@ async function leaveRoom() {
 
     // Enable 'Join' button
     document.getElementById("join-button").disabled = false;
-	document.getElementById("join-button").innerText = "Join!";
+    document.getElementById("join-button").innerText = "Join!";
 }
 
 // (4)!

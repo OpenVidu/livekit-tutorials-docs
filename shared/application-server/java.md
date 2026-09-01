@@ -1,4 +1,4 @@
-To run this server application, you need [Java](https://www.java.com/en/download/manual.jsp){:target="\_blank"} and [Maven](https://maven.apache.org){:target="\_blank"} installed on your device.
+To run this server application, you need [Java](https://www.java.com/en/download/manual.jsp){:target="_blank"} and [Maven](https://maven.apache.org){:target="_blank"} installed on your device.
 
 1. Navigate into the server directory
 ```bash

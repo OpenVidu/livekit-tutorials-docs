@@ -2,13 +2,13 @@
 title: LiveKit tutorials
 ---
 
-This site contains **simple**, **functional** and **comprehensible** guided tutorials for [**LiveKit**](https://livekit.io/){target=\_blank} applications. They all offer basically the same functionality, but built with different platforms in the client side and the server side, all compatible with each other. Just choose the ones that better fit your needs.
+This site contains **simple**, **functional** and **comprehensible** guided tutorials for [**LiveKit**](https://livekit.com/){:target="_blank"} applications. They all offer basically the same functionality, but built with different platforms in the client side and the server side, all compatible with each other. Just choose the ones that better fit your needs.
 
 You can use them purely for didactic purposes, but also as a solid starting point to build your own application.
 
 ## What is LiveKit?
 
-[LiveKit](https://livekit.io/){target=\_blank} is an open source, cutting edge, end-to-end WebRTC stack with which you can build ultra-low latency real-time audio and video applications. It offers the latest technologies in terms of real-time media, and a fantastic collection of [SDKs](https://docs.livekit.io/reference/){target=\_blank} for both your application's server and client.
+[LiveKit](https://livekit.com/){:target="_blank"} is an open source, cutting edge, end-to-end WebRTC stack with which you can build ultra-low latency real-time audio and video applications. It offers the latest technologies in terms of real-time media, and a fantastic collection of [SDKs](https://docs.livekit.io/reference/){:target="_blank"} for both your application's server and client.
 
 With the power of LiveKit you can add video conferencing capabilities to your platform, build the next big live streaming application or even add AI processing to your media flow (such as AI conversational agents or computer-vision recognition). The possibilities are truly endless!
 
@@ -73,14 +73,14 @@ Every application client below is interchangeable with the others, because:
 Every application server below has two specific purposes:
 
 - Generate LiveKit tokens on demand for any [application client](#application-client-tutorials).
-- Receive LiveKit [webhook events](https://docs.livekit.io/home/server/webhooks/){target=\_blank}.
+- Receive LiveKit [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
 
 To do so they all define two REST endpoints:
 
 - `/token`: takes a room and participant name and returns a token.
 - `/webhook`: for receiving webhook events from LiveKit Server.
 
-They use the proper [LiveKit Server SDK](https://docs.livekit.io/reference/){target=\_blank} for their language, if available.
+They use the proper [LiveKit Server SDK](https://docs.livekit.io/reference/){:target="_blank"} for their language, if available.
 
 <div class="tutorials-container" markdown>
 
@@ -116,7 +116,7 @@ Explore more advanced features of LiveKit! For now, we have implemented a basic 
 
 ## About the authors of this site
 
-This site has been created and is maintained by the [OpenVidu](https://openvidu.io){target=\_blank} team. OpenVidu developers have been working with real-time media for over a decade. We first developed [Kurento](https://kurento.openvidu.io/){target=\_blank} as a powerful media server with low-level capabilities, and then built OpenVidu as a higher-level platform to simplify the development of real-time applications.
+This site has been created and is maintained by the [OpenVidu](https://openvidu.io){:target="_blank"} team. OpenVidu developers have been working with real-time media for over a decade. We first developed [Kurento](https://kurento.openvidu.io/){:target="_blank"} as a powerful media server with low-level capabilities, and then built OpenVidu as a higher-level platform to simplify the development of real-time applications.
 
 <div class="grid" markdown>
 
@@ -128,7 +128,7 @@ This site has been created and is maintained by the [OpenVidu](https://openvidu.
 
 </div>
 
-As the years went by, we continued to improve OpenVidu, making it more efficient, more versatile and more feature-rich. We finally made the decision to embrace [mediasoup](https://mediasoup.org/){target=\_blank} as the internal engine of the platform. mediasoup is an open source SFU designed down to the last detail to deliver the highest possible performance. We love this project: we are very close to it and have collaborated on it on several occasions.
+As the years went by, we continued to improve OpenVidu, making it more efficient, more versatile and more feature-rich. We finally made the decision to embrace [mediasoup](https://mediasoup.org/){:target="_blank"} as the internal engine of the platform. mediasoup is an open source SFU designed down to the last detail to deliver the highest possible performance. We love this project: we are very close to it and have collaborated on it on several occasions.
 
 <figure markdown="span">
   ![Image title](./assets/images/mediasoup.png){ .do-not-include-in-gallery width="500" style="border-radius: 8px; margin: 12px 0;" }
@@ -136,7 +136,7 @@ As the years went by, we continued to improve OpenVidu, making it more efficient
 
 We have helped thousands of developers, companies and organizations to build their real-time applications. Over the years we have seen a myriad of successful use cases built on top of OpenVidu: e-learning, telemedicine, video conferencing, live streaming, proctoring, real-time surveillance, remote assistance... The list goes on and on.
 
-We are now bringing our expertise to [LiveKit](https://livekit.io/){target=\_blank}, and integrating its amazing WebRTC stack directly into OpenVidu.
+We are now bringing our expertise to [LiveKit](https://livekit.com/){:target="_blank"}, and integrating its amazing WebRTC stack directly into OpenVidu.
 
 <figure markdown="span">
   ![Image title](./assets/images/livekit.png){ .do-not-include-in-gallery width="500" style="border-radius: 8px; margin: 12px 0;" }

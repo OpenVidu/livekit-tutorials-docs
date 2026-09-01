@@ -5,14 +5,20 @@ description: Learn how to improve the basic recording tutorial by adding complet
 
 # Advanced Recording Tutorial
 
-[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-advanced-node){ .md-button target=\_blank }
+[Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-advanced-node){ .md-button target="_blank" }
 
-This tutorial improves the [basic recording tutorial](./recording-basic.md){target="\_blank"} by doing the following:
+This tutorial improves the [basic recording tutorial](./recording-basic.md){:target="_blank"} by doing the following:
 
 -   **Complete recording metadata**: Listen to webhook events and save all necessary metadata in a separate file.
 -   **Real time recording status notification**: Implement a custom notification system to inform participants about the recording status by listening to webhook events and updating room metadata.
 -   **Recording deletion notification**: Implement a custom notification system that alerts all participants of a recording's deletion by sending data messages.
 -   **Direct access to recording files**: Add an additional method to allow access to recording files directly from the S3 bucket by creating a presigned URL.
+
+Recordings are always persisted in some kind of storage system. This type of storage depends on your OpenVidu deployment:
+
+-   When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
+-   When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.
+-   When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Advanced Azure tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-azure/){:target="_blank"} on openvidu.io instead.
 
 ## Running this tutorial
 
@@ -28,7 +34,7 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run the application
 
-To run this application, you need [Node.js](https://nodejs.org/en/download){:target="\_blank"} installed on your device.
+To run this application, you need [Node.js](https://nodejs.org/en/download){:target="_blank"} installed on your device.
 
 1. Navigate into the application directory
 
@@ -48,7 +54,7 @@ npm install
 npm start
 ```
 
-Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="\_blank"}. You should see a screen like this:
+Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="_blank"}. You should see a screen like this:
 
 <div class="grid-container">
 
@@ -62,7 +68,7 @@ Once the server is up and running, you can test the application by visiting [`ht
 
     One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application with other devices in your local network very easily without worrying about SSL certificates.
 
-    Access your application client through [`https://xxx-yyy-zzz-www.openvidu-local.dev:6443`](https://xxx-yyy-zzz-www.openvidu-local.dev:6443){target="_blank"}, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){target="_blank"}.
+    Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](../../openvidu-vs-livekit.md#accessing-your-app-from-other-devices-in-your-network){:target="_blank"}.
 
     **Limitation**: Playing recordings with the `S3` strategy from other devices in your local network is not possible due to MinIO not being exposed. To play recordings from other devices, you need to change the environment variable `RECORDING_PLAYBACK_STRATEGY` to `PROXY`.
 
@@ -405,7 +411,7 @@ This method does the following:
 
     !!! info "Getting recording metadata"
 
-        In this tutorial, we can access detailed information about the recording directly from the metadata file stored in the S3 bucket, without needing to make additional requests. This is made possible by saving all the necessary data retrieved from the egress info object. Compared to the [basic recording tutorial](./recording-basic.md){:target="\_blank"}, we are now storing additional details such as the **recording name**, **duration** and **size**.
+        In this tutorial, we can access detailed information about the recording directly from the metadata file stored in the S3 bucket, without needing to make additional requests. This is made possible by saving all the necessary data retrieved from the egress info object. Compared to the [basic recording tutorial](./recording-basic.md){:target="_blank"}, we are now storing additional details such as the **recording name**, **duration** and **size**.
 
 2.  Gets the metadata key from the recordings path and the recordings metadata path, both defined in the `config.js` file, and the recording name replacing the `.mp4` extension with `.json`:
 
@@ -553,7 +559,7 @@ This endpoint does the following:
     }
     ```
 
-    This method creates a presigned URL to access the object in the S3 bucket by calling the `getSignedUrl` function from the [@aws-sdk/s3-request-presigner](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-s3-request-presigner/){target="\_blank"} package, indicating the `S3Client`, `GetObjectCommand` and the expiration time in seconds as parameters. In this case, the expiration time is set to 24 hours.
+    This method creates a presigned URL to access the object in the S3 bucket by calling the `getSignedUrl` function from the [@aws-sdk/s3-request-presigner](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-s3-request-presigner/){:target="_blank"} package, indicating the `S3Client`, `GetObjectCommand` and the expiration time in seconds as parameters. In this case, the expiration time is set to 24 hours.
 
     !!! info "Presigned URLs"
 

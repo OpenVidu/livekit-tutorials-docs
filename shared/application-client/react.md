@@ -1,4 +1,4 @@
-To run the client application tutorial, you need [Node.js](https://nodejs.org/en/download){:target="\_blank"} installed on your development computer.
+To run the client application tutorial, you need [Node.js](https://nodejs.org/en/download){:target="_blank"} installed on your development computer.
 
 1. Navigate into the application client directory:
 
@@ -18,7 +18,7 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
     npm start
     ```
 
-Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080){:target="\_blank"}. You should see a screen like this:
+Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080){:target="_blank"}. You should see a screen like this:
 
 <div class="grid-container">
 
