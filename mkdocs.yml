@@ -90,6 +90,10 @@ theme:
 
 plugins:
   - search
+  # Self-hosts the Google Fonts stylesheet at build time, so no page makes a
+  # third-party request before the visitor has answered the cookie banner.
+  - privacy:
+      enabled: !ENV [CI, true]
   - glightbox:
       width: 100%
       skip_classes:
