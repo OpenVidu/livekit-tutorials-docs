@@ -9,17 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           # Full history: hooks/mkdocs_hook.py dates every sitemap <lastmod> from git,
           # and a shallow clone would fall back to the build date.
           fetch-depth: 0
-
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -28,15 +23,6 @@ jobs:
 
       - name: Install safe-chain
         uses: OpenVidu/actions/install-safe-chain@070fb73fda8fe7a08e28991b1c2d276f12a009ef # v1.0.22
-
-      - name: Restore the privacy plugin's asset cache
-        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
 
       - name: Install dependencies
         run: |
@@ -47,6 +33,11 @@ jobs:
           # Pinned to the same versions openvidu.io publishes with, so the shared
           # tutorials render identically on both sites.
           pip install mkdocs==1.6.1 "mkdocs-material[imaging]==9.7.6" pymdown-extensions==11.0.1 pygments==2.19.2 mkdocs-glightbox==0.5.2 mkdocs-llmstxt==0.5.0
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Publish
         env:
