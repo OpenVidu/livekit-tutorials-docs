@@ -15,7 +15,7 @@ This tutorial is a simple video-call application, built upon [Node.js server](..
 - Delete a recording.
 - List all available recordings.
 
-Recordings are always persisted in some kind of S3 compatible storage, which the tutorial reads from and writes to. If you are running the tutorial against OpenVidu, this storage depends on your deployment:
+Recordings are always persisted in some kind of storage system. This type of storage depends on your OpenVidu deployment:
 
 - When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
 - When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.
@@ -175,7 +175,7 @@ Now let's explore the code for each recording feature:
 
 The `POST /recordings/start` endpoint starts the recording of a room. It receives the name of the room to record as parameter and returns the recording metadata:
 
-```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L62-L96' target='_blank'>index.js</a>" linenums="62"
+```javascript title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L80-L118' target='_blank'>index.js</a>" linenums="80"
 app.post("/recordings/start", async (req, res) => {
   const { roomName } = req.body;
 

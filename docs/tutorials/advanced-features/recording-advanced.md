@@ -14,7 +14,7 @@ This tutorial improves the [basic recording tutorial](./recording-basic.md){:tar
 -   **Recording deletion notification**: Implement a custom notification system that alerts all participants of a recording's deletion by sending data messages.
 -   **Direct access to recording files**: Add an additional method to allow access to recording files directly from the S3 bucket by creating a presigned URL.
 
-Recordings are always persisted in some kind of S3 compatible storage, which the tutorial reads from and writes to. If you are running the tutorial against OpenVidu, this storage depends on your deployment:
+Recordings are always persisted in some kind of storage system. This type of storage depends on your OpenVidu deployment:
 
 -   When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
 -   When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.

@@ -109,7 +109,7 @@ After the user specifies their participant name and the name of the room they wa
 async function joinRoom() {
     // Disable 'Join' button
     document.getElementById("join-button").disabled = true;
-	document.getElementById("join-button").innerText = "Joining...";
+    document.getElementById("join-button").innerText = "Joining...";
 
     // Initialize a new Room object
     room = new LivekitClient.Room(); // (1)!
@@ -297,7 +297,7 @@ async function leaveRoom() {
 
     // Enable 'Join' button
     document.getElementById("join-button").disabled = false;
-	document.getElementById("join-button").innerText = "Join!";
+    document.getElementById("join-button").innerText = "Join!";
 }
 
 // (4)!

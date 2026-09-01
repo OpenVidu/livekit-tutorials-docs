@@ -75,6 +75,8 @@ The `index.js` file imports the required dependencies and loads the necessary en
 - `LIVEKIT_API_KEY`: the API key of LiveKit Server.
 - `LIVEKIT_API_SECRET`: the API secret of LiveKit Server.
 
+It also imports the `WebhookReceiver` class, used further down to validate and decode incoming [webhook events](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
+
 Finally the `express` application is initialized. CORS is allowed, JSON body parsing is enabled for the `/token` endpoint and raw body parsing is enabled for the `/livekit/webhook` endpoint.
 
 ---
