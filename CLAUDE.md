@@ -57,7 +57,8 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
   publish the templates.
 - `shared/` snippets render inside several pages; grep for the snippet's `--8<--` usages before
   editing one.
-- `hooks/mkdocs_hook.py` stamps the copyright year, injects the counterpart box, and feeds the
+- `hooks/mkdocs_hook.py` stamps the copyright year, injects the counterpart box, dates every
+  sitemap `<lastmod>` from git (a page's date follows its snippets too), and feeds the
   `llmstxt` plugin each page's own title and description — a page listed in the llmstxt
   sections without both **fails the build**. Add build-time computation there.
 - Pins live in `Dockerfile` and `.github/workflows/publish-web.yaml` and **must match

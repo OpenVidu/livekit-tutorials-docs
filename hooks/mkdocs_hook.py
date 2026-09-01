@@ -6,8 +6,14 @@ publish-tool/mkdocs_hook.py.
 """
 
 import datetime
+import logging
+import re
+import subprocess
+from pathlib import Path
 
 from mkdocs.exceptions import PluginError
+
+_log = logging.getLogger(f"mkdocs.hooks.{Path(__file__).stem}")
 
 
 def on_config(config, **kwargs):
@@ -18,6 +24,84 @@ def on_config(config, **kwargs):
     if config.copyright and "{year}" in config.copyright:
         config.copyright = config.copyright.replace("{year}", str(datetime.date.today().year))
     return config
+
+
+_SNIPPET_REF = re.compile(r'^\s*--8<--\s+"([^"]+)"', re.M)
+
+
+def _git_dates(root: Path) -> dict[str, str] | None:
+    """{repository-relative path: date of its last commit}, or None when git cannot answer.
+
+    None means "leave MkDocs' build date alone": a shallow clone reports the fetched
+    commit for every path, and no git at all is an ordinary way to build.
+    """
+    try:
+        shallow = subprocess.run(["git", "rev-parse", "--is-shallow-repository"], cwd=root,
+                                 capture_output=True, text=True, check=True).stdout.strip()
+        if shallow == "true":
+            _log.info("Shallow clone: sitemap <lastmod> falls back to the build date.")
+            return None
+        log = subprocess.run(["git", "log", "--format=%x00%cs", "--name-only", "--",
+                              "docs", "shared"],
+                             cwd=root, capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError) as error:
+        _log.info("Could not read dates from git (%s): <lastmod> falls back to the build date.",
+                  error)
+        return None
+    dates: dict[str, str] = {}
+    current = None
+    for line in log.splitlines():
+        if line.startswith("\x00"):
+            current = line[1:]
+        elif line and current:
+            dates.setdefault(line, current)
+    return dates
+
+
+def on_env(env, config, files, **kwargs):
+    """Set each page's `update_date`, which `overrides/sitemap.xml` publishes as `<lastmod>`.
+
+    MkDocs sets it to the build date for every page, which asserts that the whole site
+    changed on every publish. A page's date is the newest commit among its own file and
+    every snippet it includes (transitively), so editing a shared snippet dates every page
+    that renders it. `on_env` because MkDocs renders the theme's static templates —
+    `sitemap.xml` among them — before the pages.
+    """
+    root = Path(config["docs_dir"]).resolve().parent
+    dates = _git_dates(root)
+    if dates is None:
+        return env
+
+    snippets = (config.get("mdx_configs") or {}).get("pymdownx.snippets") or {}
+    bases = [Path(base).resolve().relative_to(root) for base in snippets.get("base_path") or ()]
+
+    def newest(path: str, seen: set[str]) -> str:
+        if path in seen:
+            return ""
+        seen.add(path)
+        date = dates.get(path, "")
+        try:
+            text = (root / path).read_text(encoding="utf8")
+        except OSError:
+            return date
+        for ref in _SNIPPET_REF.findall(text):
+            for base in bases:
+                snippet = f"{base}/{ref}"
+                if (root / snippet).is_file():
+                    date = max(date, newest(snippet, seen))
+                    break
+        return date
+
+    dated = 0
+    for file in files.documentation_pages():
+        if file.page is None or file.generated_by is not None:
+            continue
+        date = newest(f"{Path(config['docs_dir']).name}/{file.src_uri}", set())
+        if date:
+            file.page.update_date = date
+            dated += 1
+    _log.info("sitemap <lastmod>: %d pages dated from git.", dated)
+    return env
 
 
 # openvidu.io publishes the same tutorials OpenVidu-first. Linking each page to

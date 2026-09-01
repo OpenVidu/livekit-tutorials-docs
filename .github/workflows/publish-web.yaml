@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Full history: hooks/mkdocs_hook.py dates every sitemap <lastmod> from git,
+          # and a shallow clone would fall back to the build date.
+          fetch-depth: 0
 
       - name: Configure Git Credentials
         run: |
