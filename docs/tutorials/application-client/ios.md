@@ -49,7 +49,7 @@ This iOS project, created with Xcode and written in Swift, includes various file
 
 ### Integrating LiveKit
 
-To use LiveKit in your iOS app, you need to add the [LiveKit Swift SDK :fontawesome-solid-external-link:{.external-link-icon}](https://github.com/livekit/client-sdk-swift) as a Swift Package. You can do this using either `Package.swift` or Xcode.
+To use LiveKit in your iOS app, you need to add the [LiveKit Swift SDK :fontawesome-solid-external-link:{.external-link-icon}](https://github.com/livekit/client-sdk-swift){:target="_blank"} as a Swift Package. You can do this using either `Package.swift` or Xcode.
 
 #### Adding LiveKit via `Package.swift`
 

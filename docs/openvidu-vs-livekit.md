@@ -45,7 +45,7 @@ You can use OpenVidu Call to help develop your own application, joining particip
 
 Testing WebRTC applications can be challenging because devices require a secure context (HTTPS) to access the camera and microphone. When using LiveKit Open Source, this isn't an issue if you access your app from the same computer where the LiveKit Server is running, as `localhost` is considered a secure context even over plain HTTP. Consider the following architecture:
 
-![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/livekit-architecture.svg){ .round-corners width="450" }
+![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/livekit-architecture.svg){ width="450" loading=lazy }
 
 The simplest way to test your application is:
 

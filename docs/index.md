@@ -13,9 +13,9 @@ You can use them purely for didactic purposes, but also as a solid starting poin
 
 With the power of LiveKit you can add video conferencing capabilities to your platform, build the next big live streaming application or even add AI processing to your media flow (such as AI conversational agents or computer-vision recognition). The possibilities are truly endless!
 
-## Architecture of a Livekit application
+## Architecture of a LiveKit application
 
-![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/livekit-architecture.svg){ .skip-gallery .round-corners width="600" }
+![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/livekit-architecture.svg){ width="600" }
 /// caption
 Architecture of a LiveKit application
 ///
@@ -70,9 +70,6 @@ Every application client below shares the same core functionality:
 - Users may publish their camera, microphone and screen-share.
 - Users automatically subscribe to all media published by other users.
 - Users may leave the room at any time.
-  <!-- - Users may mute and unmute their tracks. -->
-  <!--- Users may select which camera, microphone or screen they want to publish.-->
-  <!--- Users may communicate through a chat.-->
 
 Every application client below is interchangeable with the others, because:
 
@@ -92,10 +89,6 @@ Every application client below is interchangeable with the others, because:
 [:simple-electron:{.icon .lg-icon .tab-icon} **Electron**](./tutorials/application-client/electron.md){ .md-button .md-button--primary .tutorial-link}
 
 [:simple-ionic:{.icon .lg-icon .tab-icon} **Ionic**](./tutorials/application-client/ionic.md){ .md-button .md-button--primary .tutorial-link}
-
-<!-- [:simple-react:{.icon .lg-icon .tab-icon} **React Native**](./tutorials/application-client/react.md){ .md-button .md-button--primary .tutorial-link} -->
-
-<!-- [:simple-flutter:{.icon .lg-icon .tab-icon} **Flutter**](./tutorials/application-client/flutter.md){ .md-button .md-button--primary .tutorial-link} -->
 
 [:simple-android:{.icon .lg-icon .tab-icon} **Android**](./tutorials/application-client/android.md){ .md-button .md-button--primary .tutorial-link}
 
@@ -121,22 +114,22 @@ This site has been created and is maintained by the [OpenVidu :fontawesome-solid
 
 <div class="grid" markdown>
 
-![Kurento logo](./assets/images/logos/kurento-white.png#only-dark){ .skip-gallery style="padding: 2rem" }
-![Kurento logo](./assets/images/logos/kurento-black.png#only-light){ .skip-gallery style="padding: 2rem" }
+![Kurento logo](./assets/images/logos/kurento-white.png#only-dark){ .skip-gallery style="padding: 2rem" loading=lazy }
+![Kurento logo](./assets/images/logos/kurento-black.png#only-light){ .skip-gallery style="padding: 2rem" loading=lazy }
 
-![OpenVidu logo](./assets/images/logos/openvidu_white_bg_transp_cropped.png#only-dark){ .skip-gallery style="padding: 2rem" }
-![OpenVidu logo](./assets/images/logos/openvidu_grey_bg_transp_cropped.png#only-light){ .skip-gallery style="padding: 2rem" }
+![OpenVidu logo](./assets/images/logos/openvidu_white_bg_transp_cropped.png#only-dark){ .skip-gallery style="padding: 2rem" loading=lazy }
+![OpenVidu logo](./assets/images/logos/openvidu_grey_bg_transp_cropped.png#only-light){ .skip-gallery style="padding: 2rem" loading=lazy }
 
 </div>
 
 As the years went by, we continued to improve OpenVidu, making it more efficient, more versatile and more feature-rich. We finally made the decision to embrace [mediasoup :fontawesome-solid-external-link:{.external-link-icon}](https://mediasoup.org/){:target="_blank"} as the internal engine of the platform. mediasoup is an open source SFU designed down to the last detail to deliver the highest possible performance. We love this project: we are very close to it and have collaborated on it on several occasions.
 
-![mediasoup logo](./assets/images/logos/mediasoup.png){ .skip-gallery .round-corners width="500" style="margin: 12px 0" }
+![mediasoup logo](./assets/images/logos/mediasoup.png){ .skip-gallery width="500" style="margin: 12px 0" loading=lazy }
 
 We have helped thousands of developers, companies and organizations to build their real-time applications. Over the years we have seen a myriad of successful use cases built on top of OpenVidu: e-learning, telemedicine, video conferencing, live streaming, proctoring, real-time surveillance, remote assistance... The list goes on and on.
 
 We are now bringing our expertise to [LiveKit :fontawesome-solid-external-link:{.external-link-icon}](https://livekit.com/){:target="_blank"}, and integrating its amazing WebRTC stack directly into OpenVidu.
 
-![LiveKit logo](./assets/images/logos/livekit.png){ .skip-gallery .round-corners width="500" style="margin: 12px 0" }
+![LiveKit logo](./assets/images/logos/livekit.png){ .skip-gallery width="500" style="margin: 12px 0" loading=lazy }
 
 Check out section [What is OpenVidu?](./about-openvidu.md) to learn more about how OpenVidu can help you take your LiveKit applications to the next level.
