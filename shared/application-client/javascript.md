@@ -18,12 +18,16 @@ npm install -g http-server
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080){:target="_blank"}. You should see a screen like this:
 
-<div class="grid-container">
+/// html | div.grid-container
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/application-client/join-js.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/application-client/join-js.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![Join screen of the JavaScript tutorial app](/assets/images/application-client/join-js.png){ .round-corners loading=lazy }
+///
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/application-client/room-js.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/application-client/room-js.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![Video call room of the JavaScript tutorial app](/assets/images/application-client/room-js.png){ .round-corners loading=lazy }
+///
 
-</div>
+///
 
 --8<-- "shared/testing-other-devices.md"

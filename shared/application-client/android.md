@@ -6,11 +6,7 @@ To run the client application tutorial, you need [Android Studio](https://develo
 
 The application will initiate as a native Android program. Once the application is opened, you should see a screen like this:
 
-<div class="grid-container">
-
-<div class="grid-100"><p style="text-align: center;"><a class="glightbox" href="../../../assets/images/application-client/configure-urls-android.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/application-client/configure-urls-android.png" loading="lazy" style="width: 25%;"/></a></p></div>
-
-</div>
+![URL configuration of the Android tutorial app](/assets/images/application-client/configure-urls-android.png){ loading=lazy style="width: 25%" }
 
 This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
@@ -20,10 +16,14 @@ This screen allows you to configure the URLs of the application server and the L
 
 Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.
 
-<div class="grid-container">
+/// html | div.grid-container
 
-<div class="grid-50"><p style="text-align: center;"><a class="glightbox" href="../../../assets/images/application-client/join-android.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/application-client/join-android.png" loading="lazy" style="width: 50%;"/></a></p></div>
+/// html | div.grid-50.text-center
+![Join screen of the Android tutorial app](/assets/images/application-client/join-android.png){ loading=lazy style="width: 50%" }
+///
 
-<div class="grid-50"><p style="text-align: center;"><a class="glightbox" href="../../../assets/images/application-client/room-android.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/application-client/room-android.png" loading="lazy" style="width: 50%;"/></a></p></div>
+/// html | div.grid-50.text-center
+![Video call room of the Android tutorial app](/assets/images/application-client/room-android.png){ loading=lazy style="width: 50%" }
+///
 
-</div>
+///

@@ -45,9 +45,15 @@ not_in_nav: |
   /conditions/
 
 validation:
-  omitted_files: warn
-  absolute_links: warn
-  unrecognized_links: warn
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    absolute_links: relative_to_docs
+    unrecognized_links: warn
+    anchors: info
 
 theme:
   name: material
@@ -128,6 +134,7 @@ markdown_extensions:
   - toc:
       permalink: "#"
       permalink_title: Anchor link to this section for reference
+  - pymdownx.blocks.html
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true

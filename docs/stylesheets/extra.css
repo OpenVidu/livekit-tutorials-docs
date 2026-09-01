@@ -262,3 +262,27 @@ img.mediasoup-icon {
   --md-text-font: "Tomorrow";
   --md-code-font: "Roboto Mono";
 }
+
+/* Marks a link that leaves this site (see CLAUDE.md), as on openvidu.io */
+.external-link-icon {
+  font-size: 0.75em;
+}
+
+/* Screen captures */
+.round-corners {
+  border-radius: 8px;
+}
+
+/* A standalone image is centred whether or not the lightbox wrapped it in an
+   anchor (`skip-gallery` images never get one), and whether its parent is a
+   paragraph or a layout cell. Same rule as openvidu.io. */
+p:has(> a.glightbox),
+p:has(> img),
+div[class*="grid-"]:has(> a.glightbox),
+div[class*="grid-"]:has(> img) {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}

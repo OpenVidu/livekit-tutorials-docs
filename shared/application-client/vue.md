@@ -20,12 +20,16 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080){:target="_blank"}. You should see a screen like this:
 
-<div class="grid-container">
+/// html | div.grid-container
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/application-client/join-vue.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../../assets/images/application-client/join-vue.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![Join screen of the Vue tutorial app](/assets/images/application-client/join-vue.png){ .round-corners loading=lazy }
+///
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/application-client/room-vue.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../../assets/images/application-client/room-vue.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![Video call room of the Vue tutorial app](/assets/images/application-client/room-vue.png){ .round-corners loading=lazy }
+///
 
-</div>
+///
 
 --8<-- "shared/testing-other-devices.md"

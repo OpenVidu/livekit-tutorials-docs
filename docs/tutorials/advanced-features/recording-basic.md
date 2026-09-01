@@ -57,13 +57,17 @@ npm start
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="_blank"}. You should see a screen like this:
 
-<div class="grid-container">
+/// html | div.grid-container
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/advanced-features/recording1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/advanced-features/recording1.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![Video call room of the recording tutorial app with recording controls](../../assets/images/advanced-features/recording1.png){ .round-corners loading=lazy }
+///
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/advanced-features/recording2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/advanced-features/recording2.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![List of recordings of the room in the recording tutorial app](../../assets/images/advanced-features/recording2.png){ loading=lazy }
+///
 
-</div>
+///
 
 !!! info "Accessing your application from other devices in your local network"
 
@@ -773,10 +777,14 @@ function displayRecording(recordingName) {
 
 The `recordings.html` file defines the HTML for the general recording page. This page lists all available recordings from all rooms and allows the user to filter them by room name. It also provides buttons to play and delete each recording.
 
-<div class="grid-container">
+/// html | div.grid-container
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/advanced-features/recording3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/advanced-features/recording3.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![General recording page listing recordings from all rooms](../../assets/images/advanced-features/recording3.png){ .round-corners loading=lazy }
+///
 
-<div class="grid-50"><p><a class="glightbox" href="../../../assets/images/advanced-features/recording4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="../../../assets/images/advanced-features/recording4.png" loading="lazy"/></a></p></div>
+/// html | div.grid-50
+![Recording playback in the general recording page](../../assets/images/advanced-features/recording4.png){ loading=lazy }
+///
 
-</div>
+///
