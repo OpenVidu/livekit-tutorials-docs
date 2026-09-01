@@ -140,5 +140,3 @@ We are now bringing our expertise to [LiveKit :fontawesome-solid-external-link:{
 ![LiveKit logo](./assets/images/logos/livekit.png){ .skip-gallery .round-corners width="500" style="margin: 12px 0" }
 
 Check out section [What is OpenVidu?](./about-openvidu.md) to learn more about how OpenVidu can help you take your LiveKit applications to the next level.
-
-<br>
