@@ -5,10 +5,6 @@ description: "Learn how to build a simple video-call app for Android using Kotli
 
 # Android Tutorial
 
-<!-- livekit-intro -->
-Kotlin with the LiveKit Android SDK: the room is rendered by a `RecyclerView` of `SurfaceViewRenderer`s, and LiveKit's events arrive on a coroutine flow.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-android){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built for **Android**, using **Kotlin**, that allows:

@@ -5,10 +5,6 @@ description: "Learn how to build a simple video-call app using Electron with Liv
 
 # Electron Tutorial
 
-<!-- livekit-intro -->
-The same LiveKit JS SDK as the browser tutorial, running in Electron's renderer process — a desktop app needs no different LiveKit code, only a desktop shell around it.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-js){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Electron** that allows:

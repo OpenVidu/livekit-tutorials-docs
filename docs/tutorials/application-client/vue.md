@@ -5,10 +5,6 @@ description: "Learn how to build a simple video-call app using Vue with LiveKit 
 
 # Vue Tutorial
 
-<!-- livekit-intro -->
-The composition API with plain `ref`s: `App.vue` owns the LiveKit room and renders one component per remote track.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-vue){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Vue** that allows:

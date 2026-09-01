@@ -5,10 +5,6 @@ description: "Learn how to build a simple video-call app using Ionic and Angular
 
 # Ionic Tutorial
 
-<!-- livekit-intro -->
-One Ionic codebase for the browser, Android and iOS: the LiveKit JS SDK runs inside Capacitor's WebView, which is what makes the mobile-specific setup below necessary.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ionic){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Ionic**, using **Angular** and **Capacitor**, that allows:

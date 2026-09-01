@@ -5,10 +5,6 @@ description: "Learn how to build a LiveKit application client to connect to a ro
 
 # Application Client Tutorials
 
-<!-- livekit-intro -->
-Each client below talks to LiveKit through the SDK for its own platform — JS, Android Kotlin or Swift — and they are interchangeable: any of them works against any of the application servers, and against LiveKit Open Source, LiveKit Cloud or OpenVidu.
-<!-- /livekit-intro -->
-
 Every application client below shares the same core functionality:
 
 - Users request a LiveKit token to any [application server](../application-server/index.md) to connect to a room.

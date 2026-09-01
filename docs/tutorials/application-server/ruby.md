@@ -5,10 +5,6 @@ description: "Learn how to build a minimal Ruby application server with Sinatra 
 
 # Ruby Server Tutorial
 
-<!-- livekit-intro -->
-Two Sinatra routes: one mints a LiveKit access token with the Ruby SDK, the other validates the webhook events LiveKit posts back.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/ruby){ .md-button target="_blank" }
 
 This is a minimal server application built for Ruby with [Sinatra :fontawesome-solid-external-link:{.external-link-icon}](https://sinatrarb.com/){:target="_blank"} that allows:

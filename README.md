@@ -47,7 +47,6 @@ differences, all listed at the top of the script:
 | Recording tutorials | S3 only; the Azure case links openvidu.io's Azure tutorials | S3 and Azure variants |
 | Image paths | `/assets/images/…` | `/assets/images/platform/tutorials/…` |
 | The external-link icon | on links to openvidu.io too — from here they leave the site | only on third-party links |
-| The opening paragraph | a LiveKit-first lead of its own, between `<!-- livekit-intro -->` markers | none |
 | The counterpart link | every tutorial links openvidu.io's copy (added by `hooks/mkdocs_hook.py`) | none |
 
 When a real difference is meant to stay, add it to the script's rules with a comment saying why —

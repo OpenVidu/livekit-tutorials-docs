@@ -5,10 +5,6 @@ description: "Learn how to build a simple video-call app using plain JavaScript,
 
 # JavaScript Tutorial
 
-<!-- livekit-intro -->
-No build step and no framework: the LiveKit JS SDK arrives in a `<script>` tag, so this is the shortest path from an empty HTML page to a working LiveKit room.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-js){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with plain **JavaScript**, **HTML** and **CSS** that allows:

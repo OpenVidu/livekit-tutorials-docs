@@ -65,13 +65,10 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
             f'?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link)'
             f'{{:target="_blank"}}.')
     lines = markdown.split("\n")
-    # after this page's own lead paragraph if it has one, else after the H1: the
-    # reader should learn what the tutorial is before being offered another copy
-    anchor = next((i for i, line in enumerate(lines) if line.strip() == "<!-- /livekit-intro -->"),
-                  next((i for i, line in enumerate(lines) if line.startswith("# ")), None))
-    if anchor is None:
+    h1 = next((i for i, line in enumerate(lines) if line.startswith("# ")), None)
+    if h1 is None:
         return markdown
-    lines.insert(anchor + 1, "\n" + note)
+    lines.insert(h1 + 1, "\n" + note)
     return "\n".join(lines)
 
 

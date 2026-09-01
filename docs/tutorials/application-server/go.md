@@ -5,10 +5,6 @@ description: "Learn how to build a minimal Go application server with Gin to gen
 
 # Go Server Tutorial
 
-<!-- livekit-intro -->
-Two endpoints on Gin: one mints a LiveKit access token with the Go SDK, the other validates the webhook events LiveKit posts back.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/go){ .md-button target="_blank" }
 
 This is a minimal server application built for Go with [Gin :fontawesome-solid-external-link:{.external-link-icon}](https://gin-gonic.com/){:target="_blank"} that allows:

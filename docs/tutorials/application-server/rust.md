@@ -5,10 +5,6 @@ description: "Learn how to build a minimal Rust application server with Axum to 
 
 # Rust Server Tutorial
 
-<!-- livekit-intro -->
-Two Axum handlers: one mints a LiveKit access token with the Rust SDK, the other validates the webhook events LiveKit posts back.
-<!-- /livekit-intro -->
-
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/rust){ .md-button target="_blank" }
 
 This is a minimal server application built for Rust with [Axum :fontawesome-solid-external-link:{.external-link-icon}](https://github.com/tokio-rs/axum){:target="_blank"} that allows:
