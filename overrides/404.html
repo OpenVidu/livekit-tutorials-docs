@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+
+{% block htmltitle %}
+  <title>Page not found - LiveKit Tutorials</title>
+{% endblock %}
+
+{% block content %}
+  <h1>404 - Page not found</h1>
+  <p>
+    The page you are looking for does not exist or may have been moved. Try one of these
+    instead, or use the search bar at the top of the page:
+  </p>
+  <div>
+    <a
+      class="md-button md-button--primary"
+      href="/tutorials/application-server/"
+      title="Build the backend of a LiveKit app"
+      >Application Server tutorials</a
+    >
+    <a
+      class="md-button"
+      href="/tutorials/application-client/"
+      title="Build the frontend of a LiveKit app"
+      >Application Client tutorials</a
+    >
+  </div>
+  <ul>
+    <li><a href="/">Home</a>: every tutorial, at a glance</li>
+    <li><a href="/tutorials/advanced-features/">Advanced features</a>: recording tutorials</li>
+    <li><a href="/about-openvidu/">What is OpenVidu?</a>: the self-hosted, LiveKit-compatible platform behind this site</li>
+  </ul>
+{% endblock %}

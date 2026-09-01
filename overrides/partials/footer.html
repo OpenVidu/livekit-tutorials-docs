@@ -1,31 +1,9 @@
-<!-- https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/partials/footer.html -->
+{# https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/partials/footer.html #}
 
-<!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Footer -->
+{# Footer #}
 <footer class="md-footer">
 
-  <!-- Link to previous and/or next page -->
+  {# Link to previous and/or next page #}
   {% if "navigation.footer" in features %}
     {% if page.previous_page or page.next_page %}
       {% if page.meta and page.meta.hide %}
@@ -37,7 +15,7 @@
         {{ hidden }}
       >
 
-        <!-- Link to previous page -->
+        {# Link to previous page #}
         {% if page.previous_page %}
           {% set direction = lang.t("footer.previous") %}
           <a
@@ -60,7 +38,7 @@
           </a>
         {% endif %}
 
-        <!-- Link to next page -->
+        {# Link to next page #}
         {% if page.next_page %}
           {% set direction = lang.t("footer.next") %}
           <a
@@ -86,7 +64,7 @@
     {% endif %}
   {% endif %}
 
-  <!-- Further information -->
+  {# Further information #}
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
 
@@ -94,9 +72,9 @@
 
         <div class="grid-25 tablet-grid-50 mobile-grid-50">
           <div class="md-copyright">
-            <a href="/about-openvidu/">What is OpenVidu?</a> &middot;
-            <a href="/openvidu-vs-livekit/">OpenVidu vs LiveKit</a> &middot;
-            <a href="https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=footer" target="_blank" rel="noopener">openvidu.io</a>
+            <a href="{{ base_url }}/about-openvidu/">What is OpenVidu?</a> &middot;
+            <a href="{{ base_url }}/openvidu-vs-livekit/">OpenVidu vs LiveKit</a> &middot;
+            <a href="https://openvidu.io/?utm_source=livekit-tutorials&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank">openvidu.io</a>
           </div>
         </div>
 
@@ -107,13 +85,13 @@
         <div class="grid-25 tablet-grid-50 mobile-grid-50">
           <div class="grid-container footer-conditions-list">
             <div class="grid-33 tablet-grid-33 mobile-grid-33">
-              <a href="/conditions/privacy-policy/">Privacy policy</a>
+              <a href="{{ base_url }}/conditions/privacy-policy/">Privacy policy</a>
             </div>
             <div class="grid-33 tablet-grid-33 mobile-grid-33">
-              <a href="/conditions/cookie-policy/">Cookie policy</a>
+              <a href="{{ base_url }}/conditions/cookie-policy/">Cookie policy</a>
             </div>
             <div class="grid-33 tablet-grid-33 mobile-grid-33">
-              <a href="/conditions/terms-of-service/">Terms of service</a>
+              <a href="{{ base_url }}/conditions/terms-of-service/">Terms of service</a>
             </div>
           </div>
         </div>

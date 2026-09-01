@@ -1,0 +1,29 @@
+{#-
+  Open Graph + Twitter Card meta tags for social/chat link previews.
+
+  Platforms like Facebook, LinkedIn, Slack, WhatsApp, Discord and X read
+  og:*/twitter:* meta tags to render the preview card when a URL is shared.
+  They do NOT read JSON-LD (which serves search engines/AI crawlers), so both
+  are needed.
+
+  og:title / og:description come from the page frontmatter, falling back to
+  the site defaults (any HTML like <br> in site_description is stripped).
+  Every page shares the OpenVidu 1200x630 card served from openvidu.io — this
+  site has no per-page covers, and OpenVidu is the brand behind it.
+-#}
+{%- set og_title = page.meta.title if page and page.meta and page.meta.title else (page.title if page and page.title else config.site_name) %}
+{%- set og_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+{%- set og_description = og_description | replace("<br>", " ") | striptags %}
+<meta property="og:site_name" content="LiveKit Tutorials" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ og_title | e }}" />
+<meta property="og:description" content="{{ og_description | e }}" />
+{%- if page and page.canonical_url %}
+<meta property="og:url" content="{{ page.canonical_url }}" />
+{%- endif %}
+<meta property="og:image" content="https://openvidu.io/assets/images/og/openvidu-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="OpenVidu — Self-hosted video conferencing. Ready to use or fully custom. Open source. Get started free." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@openvidu" />

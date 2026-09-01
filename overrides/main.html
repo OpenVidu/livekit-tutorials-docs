@@ -1,4 +1,4 @@
-<!-- Elements added to main will be displayed on all pages -->
+{# Elements added to main are displayed on all pages #}
 {% extends "base.html" %}
 
 {% block announce %}
@@ -7,12 +7,27 @@
 </a>
 {% endblock %}
 
+{% block site_meta %}
+{{ super() }}
+
+{# Anti-clickjacking frame buster: GitHub Pages cannot send frame-ancestors /
+   X-Frame-Options headers, so this JS guard is the only available defense. #}
+<style id="antiClickjack">body{display:none !important;}</style>
+<script>
+  if (self === top) {
+    var antiClickjack = document.getElementById("antiClickjack");
+    antiClickjack.parentNode.removeChild(antiClickjack);
+  } else {
+    top.location = self.location;
+  }
+</script>
+<noscript><style>body{display:block !important;}</style></noscript>
+
+{% endblock %}
+
 {% block extrahead %}
 {{ super() }}
-{% include "partials/json-ld.html" %}
-{% if page.meta and page.meta.robots %}
-<meta name="robots" content="{{ page.meta.robots }}" />
-{% endif %}
+
 {# The site's single font stylesheet (theme.font is false), the same one
    openvidu.io loads. Self-hosted at build time by the privacy plugin. #}
 <link
@@ -24,4 +39,30 @@
 <noscript>
   <link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" type="text/css" />
 </noscript>
+
+{% include "partials/og.html" %}
+{% include "partials/json-ld.html" %}
+{% if page.meta and page.meta.robots %}
+<meta name="robots" content="{{ page.meta.robots }}" />
+{% endif %}
+{% endblock %}
+
+{% block styles %}
+
+{#- With no side nav and no table of contents, the content column keeps the site-wide 70rem
+    and stretches to within a few pixels of the window edge on a laptop screen. These pages
+    get the narrower text measure and a gutter that survives every viewport. -#}
+{% if page.meta and page.meta.hide and not page.meta.template
+      and "navigation" in page.meta.hide and "toc" in page.meta.hide %}
+<style>
+  main > div.md-grid {
+    max-width: 61rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+</style>
+{% endif %}
+
+{{ super() }}
+
 {% endblock %}
