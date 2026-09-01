@@ -14,10 +14,10 @@ With the power of LiveKit you can add video conferencing capabilities to your pl
 
 ## Architecture of a Livekit application
 
-<figure markdown="span">
-  ![Image title](./assets/images/livekit-architecture.svg){ .skip-gallery width="600" style="border-radius: 8px" }
-  <figcaption>Architecture of a LiveKit application</figcaption>
-</figure>
+![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/livekit-architecture.svg){ .skip-gallery .round-corners width="600" }
+/// caption
+Architecture of a LiveKit application
+///
 
 Any LiveKit application has 3 different parts:
 
@@ -120,27 +120,23 @@ This site has been created and is maintained by the [OpenVidu :fontawesome-solid
 
 <div class="grid" markdown>
 
-![Image title](./assets/images/logos/kurento-white.png#only-dark){ .skip-gallery style="padding: 2rem" }
-![Image title](./assets/images/logos/kurento-black.png#only-light){ .skip-gallery style="padding: 2rem" }
+![Kurento logo](./assets/images/logos/kurento-white.png#only-dark){ .skip-gallery style="padding: 2rem" }
+![Kurento logo](./assets/images/logos/kurento-black.png#only-light){ .skip-gallery style="padding: 2rem" }
 
-![Image title](./assets/images/logos/openvidu_white_bg_transp_cropped.png#only-dark){ .skip-gallery style="padding: 2rem" }
-![Image title](./assets/images/logos/openvidu_grey_bg_transp_cropped.png#only-light){ .skip-gallery style="padding: 2rem" }
+![OpenVidu logo](./assets/images/logos/openvidu_white_bg_transp_cropped.png#only-dark){ .skip-gallery style="padding: 2rem" }
+![OpenVidu logo](./assets/images/logos/openvidu_grey_bg_transp_cropped.png#only-light){ .skip-gallery style="padding: 2rem" }
 
 </div>
 
 As the years went by, we continued to improve OpenVidu, making it more efficient, more versatile and more feature-rich. We finally made the decision to embrace [mediasoup :fontawesome-solid-external-link:{.external-link-icon}](https://mediasoup.org/){:target="_blank"} as the internal engine of the platform. mediasoup is an open source SFU designed down to the last detail to deliver the highest possible performance. We love this project: we are very close to it and have collaborated on it on several occasions.
 
-<figure markdown="span">
-  ![Image title](./assets/images/logos/mediasoup.png){ .skip-gallery width="500" style="border-radius: 8px; margin: 12px 0;" }
-</figure>
+![mediasoup logo](./assets/images/logos/mediasoup.png){ .skip-gallery .round-corners width="500" style="margin: 12px 0" }
 
 We have helped thousands of developers, companies and organizations to build their real-time applications. Over the years we have seen a myriad of successful use cases built on top of OpenVidu: e-learning, telemedicine, video conferencing, live streaming, proctoring, real-time surveillance, remote assistance... The list goes on and on.
 
 We are now bringing our expertise to [LiveKit :fontawesome-solid-external-link:{.external-link-icon}](https://livekit.com/){:target="_blank"}, and integrating its amazing WebRTC stack directly into OpenVidu.
 
-<figure markdown="span">
-  ![Image title](./assets/images/logos/livekit.png){ .skip-gallery width="500" style="border-radius: 8px; margin: 12px 0;" }
-</figure>
+![LiveKit logo](./assets/images/logos/livekit.png){ .skip-gallery .round-corners width="500" style="margin: 12px 0" }
 
 Check out section [What is OpenVidu?](./about-openvidu.md) to learn more about how OpenVidu can help you take your LiveKit applications to the next level.
 
