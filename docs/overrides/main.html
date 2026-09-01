@@ -13,23 +13,3 @@
 {% include "partials/json-ld.html" %}
 <!-- Add head tags that need to be applied afterwards here -->
 {% endblock %}
-
-{% block styles %}
-{{ super() }}
-{% if page.meta and page.meta.hide %}
-{% if "footer-prev" in page.meta.hide %}
-<style>
-  .md-footer__link--prev {
-    display: none;
-  }
-</style>
-{% endif %}
-{% if "footer-next" in page.meta.hide %}
-<style>
-  .md-footer__link--next {
-    display: none;
-  }
-</style>
-{% endif %}
-{% endif %}
-{% endblock %}
