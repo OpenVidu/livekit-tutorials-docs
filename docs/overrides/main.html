@@ -8,8 +8,8 @@
 {% endblock %}
 
 {% block extrahead %}
-<!-- Add head tags that need to be applied before here -->
 {{ super() }}
 {% include "partials/json-ld.html" %}
-<!-- Add head tags that need to be applied afterwards here -->
+<link href="https://fonts.googleapis.com/css?family=Tomorrow:100,200,300,400,500,600" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 {% endblock %}
