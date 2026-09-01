@@ -5,6 +5,10 @@ description: "Learn how to build a minimal Node.js server with Express to genera
 
 # Node.js Server Tutorial
 
+<!-- livekit-intro -->
+Two endpoints and nothing else: `/token` mints a LiveKit access token with the JS SDK, and `/livekit/webhook` validates the events LiveKit posts back.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/node){ .md-button target="_blank" }
 
 This is a minimal server application built for Node.js with [Express :fontawesome-solid-external-link:{.external-link-icon}](https://expressjs.com/){:target="_blank"} that allows:

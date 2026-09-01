@@ -5,6 +5,10 @@ description: "Learn how to build a minimal Java application server with Spring B
 
 # Java Server Tutorial
 
+<!-- livekit-intro -->
+A single Spring Boot controller: one endpoint mints a LiveKit access token with the Kotlin SDK, the other validates the webhook events LiveKit posts back.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/java){ .md-button target="_blank" }
 
 This is a minimal server application built for Java with [Spring Boot :fontawesome-solid-external-link:{.external-link-icon}](https://spring.io/){:target="_blank"} that allows:

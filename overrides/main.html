@@ -10,6 +10,9 @@
 {% block extrahead %}
 {{ super() }}
 {% include "partials/json-ld.html" %}
+{% if page.meta and page.meta.robots %}
+<meta name="robots" content="{{ page.meta.robots }}" />
+{% endif %}
 {# The site's single font stylesheet (theme.font is false), the same one
    openvidu.io loads. Self-hosted at build time by the privacy plugin. #}
 <link

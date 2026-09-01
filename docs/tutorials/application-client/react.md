@@ -5,6 +5,10 @@ description: "Learn how to build a simple video-call app using React with LiveKi
 
 # React Tutorial
 
+<!-- livekit-intro -->
+One `App.tsx` holds the whole call: React state tracks the room and its tracks, and LiveKit's room events are what drive the re-renders.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-react){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **React** that allows:

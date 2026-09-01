@@ -5,6 +5,10 @@ description: "Tutorials for LiveKit's advanced features: record a room, then man
 
 # Advanced Features Tutorials
 
+<!-- livekit-intro -->
+Beyond joining a room: these tutorials drive LiveKit's Egress service from your own application server to record a room and manage the files it produces.
+<!-- /livekit-intro -->
+
 Explore more advanced features of LiveKit! For now, we have implemented a basic **recording** tutorial and an advanced one, but our tutorials for **streaming** and **ingesting** are coming soon.
 
 <div class="tutorials-container" markdown>

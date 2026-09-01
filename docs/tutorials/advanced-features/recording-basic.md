@@ -5,6 +5,10 @@ description: "Learn how to record a room and manage recordings by extending a si
 
 # Basic Recording Tutorial
 
+<!-- livekit-intro -->
+This is the shortest useful Egress integration: your server starts a Room Composite Egress, LiveKit writes the file to S3-compatible storage, and the client lists and plays it back through your backend.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-basic-node){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application, built upon [Node.js server](../application-server/node.md){:target="_blank"} and [JavaScript client](../application-client/javascript.md){:target="_blank"} tutorials, and extends them by adding recording capabilities:

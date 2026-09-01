@@ -37,6 +37,10 @@ import yaml
 # 7. The external-link icon marks a link that leaves the site, so it appears on
 #    this site's links to openvidu.io and not on openvidu.io's own relative
 #    ones. On third-party links it is compared like any other text.
+# 8. Each tutorial opens with a LiveKit-first lead paragraph of its own, between
+#    <!-- livekit-intro --> markers, so the two copies read as separate-intent
+#    pages to a search engine instead of near-duplicates (issue #38). Only that
+#    region may differ; everything after it is compared.
 
 CLIENTS = ["index", "javascript", "react", "angular", "vue", "electron", "ionic", "android", "ios"]
 SERVERS = ["index", "node", "go", "ruby", "java", "python", "rust", "php", "dotnet"]
@@ -75,6 +79,7 @@ SKIP_STEP1 = {"docs/tutorials/advanced-features/recording-basic.md",
 # Trailing button rows that only exist on openvidu.io (see note 6).
 DROP_LINE = re.compile(r"recording-(basic|advanced)-azure")
 
+INTRO = re.compile(r"<!-- livekit-intro -->.*?<!-- /livekit-intro -->\n*", re.S)
 ICON = re.compile(r" ?:fontawesome-solid-external-link:\{\.external-link-icon\}")
 TARGET = re.compile(r"\{:?target=\"?\\?_blank\"?\}")
 REF = re.compile(r"/(blob|tree)/(?:master|\d+\.\d+\.\d+|[0-9a-f]{40})/")
@@ -129,6 +134,7 @@ def logical(target: str, page_dir: str | None, side: str) -> str:
 def normalize(text: str, side: str, page_dir: str | None, skip_step1: bool) -> list[str]:
     if text.startswith("---\n"):
         text = text.split("\n---\n", 1)[1]
+    text = INTRO.sub("", text)
     text = TARGET.sub("", text)
     text = REF.sub(r"/\1/REF/", text)
     text = CLONE.sub(r"\1", text)

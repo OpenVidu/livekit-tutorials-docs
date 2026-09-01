@@ -5,6 +5,10 @@ description: "Build the backend of a LiveKit app in Node.js, Java, Python, Go, .
 
 # Application Server Tutorials
 
+<!-- livekit-intro -->
+Every server below does the same two things for LiveKit and nothing more — mint access tokens and validate webhook events — so you can pick the language your backend already speaks.
+<!-- /livekit-intro -->
+
 Every application server below has two specific purposes: 
 
 - Generate LiveKit tokens on demand for any [application client](../application-client/index.md).

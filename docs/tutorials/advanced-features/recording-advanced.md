@@ -5,6 +5,10 @@ description: "Learn how to improve the basic recording tutorial by adding comple
 
 # Advanced Recording Tutorial
 
+<!-- livekit-intro -->
+Where the basic tutorial stops, this one keeps going: it takes what LiveKit's Egress webhooks report, stores the recording metadata itself, tells every participant in the room what the recording is doing, and serves the files straight from S3 with a presigned URL.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-advanced-node){ .md-button target="_blank" }
 
 This tutorial improves the [basic recording tutorial](./recording-basic.md){:target="_blank"} by doing the following:

@@ -5,6 +5,10 @@ description: "Learn how to build a minimal PHP server to generate LiveKit tokens
 
 # PHP Server Tutorial
 
+<!-- livekit-intro -->
+Two PHP endpoints: one mints a LiveKit access token with the community PHP SDK, the other validates the webhook events LiveKit posts back.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/php){ .md-button target="_blank" }
 
 This is a minimal server application built for PHP that allows:

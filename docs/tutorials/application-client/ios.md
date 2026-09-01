@@ -5,6 +5,10 @@ description: "Learn how to build a simple video-call app for iOS using Swift wit
 
 # iOS Tutorial
 
+<!-- livekit-intro -->
+Swift and SwiftUI with the LiveKit Swift SDK: an observable room context publishes the tracks, and the views follow it.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ios){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built for **iOS**, using **Swift**, that allows:

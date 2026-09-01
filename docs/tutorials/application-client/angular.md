@@ -5,6 +5,10 @@ description: "Learn how to build a simple video-call app using Angular with Live
 
 # Angular Tutorial
 
+<!-- livekit-intro -->
+Standalone components and signals: the room lives in `app.component.ts`, and a video and an audio component render whatever LiveKit hands them.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-angular){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Angular** that allows:

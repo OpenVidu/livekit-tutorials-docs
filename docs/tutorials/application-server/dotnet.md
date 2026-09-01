@@ -5,6 +5,10 @@ description: "Learn how to build a minimal .NET application server with ASP.NET 
 
 # .NET Server Tutorial
 
+<!-- livekit-intro -->
+Two ASP.NET Core minimal-API endpoints: one mints a LiveKit access token with the .NET SDK, the other validates the webhook events LiveKit posts back.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/dotnet){ .md-button target="_blank" }
 
 This is a minimal server application built for .NET with [ASP.NET Core Minimal APIs :fontawesome-solid-external-link:{.external-link-icon}](https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0&tabs=visual-studio){:target="_blank"} that allows:

@@ -5,6 +5,10 @@ description: "Learn how to build a minimal Python application server with Flask 
 
 # Python Server Tutorial
 
+<!-- livekit-intro -->
+Two Flask routes: one mints a LiveKit access token with the Python SDK, the other validates the webhook events LiveKit posts back.
+<!-- /livekit-intro -->
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/python){ .md-button target="_blank" }
 
 This is a minimal server application built for Python with [Flask :fontawesome-solid-external-link:{.external-link-icon}](https://flask.palletsprojects.com/en/stable/){:target="_blank"} that allows:
