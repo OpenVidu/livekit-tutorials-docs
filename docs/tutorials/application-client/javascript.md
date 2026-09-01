@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Tutorial"
+title: "JavaScript tutorial"
 description: "Learn how to build a simple video-call app using plain JavaScript, HTML and CSS with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Advanced Recording Tutorial"
+title: "Advanced recording tutorial"
 description: "Learn how to improve the basic recording tutorial by adding complete recording metadata, real time recording status notification and more."
 ---
 

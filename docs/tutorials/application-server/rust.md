@@ -1,5 +1,5 @@
 ---
-title: "Rust Server Tutorial"
+title: "Rust server tutorial"
 description: "Learn how to build a minimal Rust application server with Axum to generate LiveKit tokens and receive webhook events using the LiveKit Rust SDK."
 ---
 

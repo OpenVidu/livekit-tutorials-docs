@@ -1,5 +1,5 @@
 ---
-title: "React Tutorial"
+title: "React tutorial"
 description: "Learn how to build a simple video-call app using React with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media."
 ---
 

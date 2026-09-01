@@ -1,5 +1,5 @@
 ---
-title: "Electron Tutorial"
+title: "Electron tutorial"
 description: "Learn how to build a simple video-call app using Electron with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media."
 ---
 

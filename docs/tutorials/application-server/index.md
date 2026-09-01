@@ -1,5 +1,5 @@
 ---
-title: "Application Server Tutorials"
+title: "Application server tutorials"
 description: "Build the backend of a LiveKit app in Node.js, Java, Python, Go, .NET, PHP, Ruby or Rust: issue access tokens and receive webhook events."
 ---
 

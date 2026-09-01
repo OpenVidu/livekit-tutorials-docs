@@ -1,5 +1,5 @@
 ---
-title: "Java Server Tutorial"
+title: "Java server tutorial"
 description: "Learn how to build a minimal Java application server with Spring Boot to generate LiveKit tokens and receive webhook events using the LiveKit Kotlin SDK."
 ---
 

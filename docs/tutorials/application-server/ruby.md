@@ -1,5 +1,5 @@
 ---
-title: "Ruby Server Tutorial"
+title: "Ruby server tutorial"
 description: "Learn how to build a minimal Ruby application server with Sinatra to generate LiveKit tokens and receive webhook events using the LiveKit Ruby SDK."
 ---
 

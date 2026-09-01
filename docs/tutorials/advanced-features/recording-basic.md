@@ -1,5 +1,5 @@
 ---
-title: "Basic Recording Tutorial"
+title: "Basic recording tutorial"
 description: "Learn how to record a room and manage recordings by extending a simple video-call application built upon Node.js server and JavaScript client."
 ---
 

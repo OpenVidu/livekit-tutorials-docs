@@ -1,5 +1,5 @@
 ---
-title: "Advanced Features Tutorials"
+title: "Advanced features tutorials"
 description: "Tutorials for LiveKit's advanced features: record a room, then manage, play and delete the recordings from your own application."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: ".NET Server Tutorial"
+title: ".NET server tutorial"
 description: "Learn how to build a minimal .NET application server with ASP.NET to generate LiveKit tokens and receive webhook events using the LiveKit .NET SDK."
 ---
 

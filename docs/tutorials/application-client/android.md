@@ -1,5 +1,5 @@
 ---
-title: "Android Tutorial"
+title: "Android tutorial"
 description: "Learn how to build a simple video-call app for Android using Kotlin with LiveKit Android Kotlin SDK. Allow users to join a room, publish and subscribe to media."
 ---
 
