@@ -3,6 +3,8 @@ site_url: https://livekit-tutorials.openvidu.io/
 site_description: Discover comprehensive LiveKit tutorials for building real-time audio and video apps. Explore client and server guides for multiple platforms.
 repo_name: openvidu/openvidu-livekit-tutorials
 repo_url: https://github.com/openvidu/openvidu-livekit-tutorials
+# Absolute on purpose: edit links point at this repo, not repo_url (the tutorials' code repo).
+edit_uri: https://github.com/OpenVidu/livekit-tutorials-docs/edit/main/docs/
 
 nav:
   - Home: index.md
@@ -33,9 +35,12 @@ nav:
       - Recording Basic: tutorials/advanced-features/recording-basic.md
       - Recording Advanced: tutorials/advanced-features/recording-advanced.md
 
+# Pages reached by direct link only, never through the nav.
 not_in_nav: |
   /conditions/
 
+# The build year, the openvidu.io counterpart boxes, and every page's own title and
+# description for llmstxt.
 hooks:
   - hooks/mkdocs_hook.py
 
@@ -70,6 +75,7 @@ theme:
     - navigation.instant.prefetch
     - navigation.tracking
     - navigation.footer
+    - navigation.path
     - navigation.top
     - navigation.indexes
     - search.suggest
@@ -98,6 +104,8 @@ theme:
   icon:
     repo: fontawesome/brands/github
   favicon: assets/images/logos/logo.png
+  # The globe mark rather than openvidu.io's wordmark: the header already carries this
+  # site's own name beside it.
   logo: assets/images/logos/openvidu_globe_bg_transp_cropped.png
 
 plugins:

@@ -34,7 +34,7 @@ deliberate; then say why in the same commit.
 | An asset from a page | relative, with `.md`-style path | `![alt](../../assets/images/…)` |
 | An asset from a `shared/` snippet | root-absolute (a snippet is included at more than one depth) | `![alt](/assets/images/…)` |
 | openvidu.io | absolute, **version-less** `/latest/` | `https://openvidu.io/latest/docs/reference/webhooks/` |
-| Tutorial source code | `github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/…` — this site is unversioned, so it tracks `master` (openvidu.io pins the release tag) | |
+| Tutorial source code | `github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/…` (buttons; code-fence `title=` captions use `/blob/master/…`) — this site is unversioned, so it tracks `master` (openvidu.io pins the release tag) | |
 
 Every link that leaves this site gets `{:target="_blank"}` **and** the icon
 `:fontawesome-solid-external-link:{.external-link-icon}` — including links to openvidu.io, which
@@ -67,7 +67,8 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
 
 ## The build rule
 
-`mkdocs build` must pass with **zero WARNINGs**. Anchor `INFO` lines about
+`mkdocs build --strict` must pass with **zero WARNINGs** (the publish workflow deploys with
+`--strict`). Anchor `INFO` lines about
 `#run-openvidu-locally` and `#deploy-openvidu` are `pymdownx.tabbed` tab anchors that MkDocs'
 validator cannot see — expected, do not chase them.
 
@@ -84,7 +85,7 @@ so the two copies stay in step — see [README.md](README.md).
 |---|---|
 | Build the dev image (once) | `docker build --pull --no-cache --rm=true -t squidfunk/mkdocs-material .` |
 | Serve with live reload | `docker run --name=mkdocs --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material` |
-| Build (what CI runs) | `GOOGLE_ANALYTICS_KEY=G-XXXXXXXX mkdocs build` |
+| Build (what CI runs) | `GOOGLE_ANALYTICS_KEY=G-XXXXXXXX mkdocs build --strict` |
 | Sync check | `tools/sync-check.py --openvidu-io ../openvidu.io` |
 | Frontmatter check | `tools/sync-check.py --frontmatter` |
 

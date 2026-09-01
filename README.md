@@ -2,7 +2,7 @@
 
 Visit at [https://livekit-tutorials.openvidu.io/](https://livekit-tutorials.openvidu.io/).
 
-Create custom Docker image with necessary extra plugings:
+Create custom Docker image with necessary extra plugins:
 
 ```bash
 docker build --pull --no-cache --rm=true -t squidfunk/mkdocs-material .
@@ -14,10 +14,10 @@ Serve:
 docker run --name=mkdocs --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
-Build:
+Build (what the publish workflow runs — zero WARNINGs allowed):
 
 ```bash
-docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
+docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build --strict
 ```
 
 ## Sync changes between _openvidu.io_ and _livekit-tutorials.openvidu.io_
