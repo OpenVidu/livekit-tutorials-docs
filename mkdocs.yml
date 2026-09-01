@@ -161,7 +161,6 @@ extra_css:
   - stylesheets/extra.css
   - stylesheets/unsemantic-grid.css
   - stylesheets/livekit-tutorials.css
-  - stylesheets/amplify.css
 
 copyright: >
   2025 &copy; OpenVidu –
