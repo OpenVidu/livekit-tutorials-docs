@@ -1,5 +1,5 @@
 site_name: LiveKit Tutorials
-site_url: https://livekit-tutorials.openvidu.io
+site_url: https://livekit-tutorials.openvidu.io/
 site_description: Discover comprehensive LiveKit tutorials for building real-time audio and video apps. Explore client and server guides for multiple platforms.
 repo_name: openvidu/openvidu-livekit-tutorials
 repo_url: https://github.com/openvidu/openvidu-livekit-tutorials
@@ -32,6 +32,14 @@ nav:
       - tutorials/advanced-features/index.md
       - Recording Basic: tutorials/advanced-features/recording-basic.md
       - Recording Advanced: tutorials/advanced-features/recording-advanced.md
+
+hooks:
+  - hooks/mkdocs_hook.py
+
+watch:
+  - shared
+  - overrides
+  - hooks
 
 not_in_nav: |
   /conditions/
@@ -73,20 +81,26 @@ theme:
   favicon: assets/images/logo.png
   logo: assets/images/openvidu_globe_bg_transp_cropped.png
   palette:
-    # Palette toggle for dark mode
-    - scheme: slate
-      primary: custom
-      accent: custom
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-auto
         name: Switch to light mode
-    # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: custom
       accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  icon:
+    repo: fontawesome/brands/github
 
 plugins:
   - search
@@ -132,6 +146,21 @@ extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
+    # Rendered only after the visitor accepts the analytics cookie.
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            <a href="https://github.com/OpenVidu/livekit-tutorials-docs/issues/new?labels=documentation&amp;title=Docs%20feedback:%20{title}&amp;body=Feedback%20about%20https://livekit-tutorials.openvidu.io{url}%0A%0A(Tell%20us%20what%20you%20were%20looking%20for)" target="_blank" rel="noopener">opening a quick GitHub issue</a>.
   generator: false
   social:
     - icon: simple/github
@@ -149,13 +178,20 @@ extra:
       This website uses cookies to ensure you get the best experience on our website.
       <a href="/conditions/cookie-policy/" target="_blank">See cookie policy</a>
     cookies:
-      analytics: Google Analytics
+      analytics:
+        name: Google Analytics
+        checked: true
+    actions:
+      - accept
+      - reject
+      - manage
 
 extra_css:
   - stylesheets/colors.css
   - stylesheets/extra.css
   - stylesheets/unsemantic-grid.css
 
+# {year} is replaced with the build year by hooks/mkdocs_hook.py
 copyright: >
-  2025 &copy; OpenVidu –
+  {year} &copy; OpenVidu –
   <a href="#__consent">Change cookie settings</a>
