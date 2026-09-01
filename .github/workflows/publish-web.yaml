@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: publish-web
 env:
   GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
 jobs:
@@ -26,7 +28,9 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-glightbox
+      # Pinned to the same versions openvidu.io publishes with, so the shared
+      # tutorials render identically on both sites.
+      - run: pip install mkdocs==1.6.1 mkdocs-material==9.7.6 pymdown-extensions==11.0.1 mkdocs-glightbox==0.5.2
       - run: |
           export GOOGLE_ANALYTICS_KEY="$GOOGLE_ANALYTICS_KEY"
           mkdocs gh-deploy --force
