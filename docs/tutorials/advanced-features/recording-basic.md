@@ -61,17 +61,17 @@ npm start
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="_blank"}. You should see a screen like this:
 
-/// html | div.grid-container
+<div class="grid-container" markdown>
 
-/// html | div.grid-50
+<div class="grid-50" markdown>
 ![Video call room of the recording tutorial app with recording controls](../../assets/images/advanced-features/recording1.png){ .round-corners loading=lazy }
-///
+</div>
 
-/// html | div.grid-50
-![List of recordings of the room in the recording tutorial app](../../assets/images/advanced-features/recording2.png){ loading=lazy }
-///
+<div class="grid-50" markdown>
+![List of recordings of the room in the recording tutorial app](../../assets/images/advanced-features/recording2.png){ .round-corners loading=lazy }
+</div>
 
-///
+</div>
 
 !!! info "Accessing your application from other devices in your local network"
 
@@ -781,14 +781,14 @@ function displayRecording(recordingName) {
 
 The `recordings.html` file defines the HTML for the general recording page. This page lists all available recordings from all rooms and allows the user to filter them by room name. It also provides buttons to play and delete each recording.
 
-/// html | div.grid-container
+<div class="grid-container" markdown>
 
-/// html | div.grid-50
+<div class="grid-50" markdown>
 ![General recording page listing recordings from all rooms](../../assets/images/advanced-features/recording3.png){ .round-corners loading=lazy }
-///
+</div>
 
-/// html | div.grid-50
-![Recording playback in the general recording page](../../assets/images/advanced-features/recording4.png){ loading=lazy }
-///
+<div class="grid-50" markdown>
+![Recording playback in the general recording page](../../assets/images/advanced-features/recording4.png){ .round-corners loading=lazy }
+</div>
 
-///
+</div>

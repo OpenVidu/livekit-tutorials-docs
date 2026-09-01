@@ -60,17 +60,17 @@ npm start
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080){:target="_blank"}. You should see a screen like this:
 
-/// html | div.grid-container
+<div class="grid-container" markdown>
 
-/// html | div.grid-50
+<div class="grid-50" markdown>
 ![Video call room of the recording tutorial app with recording controls](../../assets/images/advanced-features/recording1.png){ .round-corners loading=lazy }
-///
+</div>
 
-/// html | div.grid-50
-![List of recordings of the room in the recording tutorial app](../../assets/images/advanced-features/recording2.png){ loading=lazy }
-///
+<div class="grid-50" markdown>
+![List of recordings of the room in the recording tutorial app](../../assets/images/advanced-features/recording2.png){ .round-corners loading=lazy }
+</div>
 
-///
+</div>
 
 !!! info "Accessing your application from other devices in your local network"
 
