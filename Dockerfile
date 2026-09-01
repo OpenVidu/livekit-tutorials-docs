@@ -2,4 +2,4 @@
 # Dockerfile): the two sites publish the same tutorials, so they must render them
 # with the same theme and extensions.
 FROM squidfunk/mkdocs-material:9.7.6
-RUN pip install mkdocs==1.6.1 pymdown-extensions==11.0.1 mkdocs-glightbox==0.5.2
+RUN pip install mkdocs==1.6.1 pymdown-extensions==11.0.1 mkdocs-glightbox==0.5.2 mkdocs-llmstxt==0.5.0

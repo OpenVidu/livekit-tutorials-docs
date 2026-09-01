@@ -118,6 +118,37 @@ plugins:
       auto_themed: true
       background: none
       shadow: false
+  - llmstxt:
+      markdown_description: >-
+        Hands-on tutorials for building real-time audio and video applications on LiveKit,
+        with application servers in eight languages, clients for eight platforms and recording
+        guides. Every tutorial also runs unchanged on OpenVidu (https://openvidu.io), the
+        self-hosted, LiveKit-compatible platform maintained by this site's authors — use it to
+        deploy and self-host what you build here. The "Optional" section at the end holds
+        legal pages, and can be skipped when a shorter context is needed.
+      # The plugin's own cleaning drops every <img>/<svg> before the preprocess hook runs, so
+      # llmstxt_preprocess.py reimplements it and keeps alt text, table icons and tab labels.
+      autoclean: false
+      preprocess: hooks/llmstxt_preprocess.py
+      # Paths only: mkdocs_hook.py fills in each page's own `title` and `description`, and a
+      # listed page missing either fails the build.
+      sections:
+        Start here:
+        - index.md
+        - about-openvidu.md
+        - openvidu-vs-livekit.md
+
+        Application server tutorials:
+        - tutorials/application-server/*.md
+
+        Application client tutorials:
+        - tutorials/application-client/*.md
+
+        Advanced features tutorials:
+        - tutorials/advanced-features/*.md
+
+        Optional:
+        - conditions/*.md
 
 markdown_extensions:
   - admonition
