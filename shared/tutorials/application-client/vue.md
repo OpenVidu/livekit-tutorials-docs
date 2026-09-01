@@ -23,11 +23,11 @@ Once the server is up and running, you can test the application by visiting [`ht
 /// html | div.grid-container
 
 /// html | div.grid-50
-![Join screen of the Vue tutorial app](/assets/images/application-client/join-vue.png){ .round-corners loading=lazy }
+![Join screen of the Vue tutorial app](/assets/images/tutorials/application-client/join-vue.png){ .round-corners loading=lazy }
 ///
 
 /// html | div.grid-50
-![Video call room of the Vue tutorial app](/assets/images/application-client/room-vue.png){ .round-corners loading=lazy }
+![Video call room of the Vue tutorial app](/assets/images/tutorials/application-client/room-vue.png){ .round-corners loading=lazy }
 ///
 
 ///

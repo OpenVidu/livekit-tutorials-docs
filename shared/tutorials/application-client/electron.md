@@ -23,11 +23,11 @@ The application will seamlessly initiate as a native desktop program, adapting i
 /// html | div.grid-container
 
 /// html | div.grid-50
-![Join screen of the Electron tutorial app](/assets/images/application-client/join-electron.png){ .round-corners loading=lazy }
+![Join screen of the Electron tutorial app](/assets/images/tutorials/application-client/join-electron.png){ .round-corners loading=lazy }
 ///
 
 /// html | div.grid-50
-![Video call room of the Electron tutorial app](/assets/images/application-client/room-electron.png){ .round-corners loading=lazy }
+![Video call room of the Electron tutorial app](/assets/images/tutorials/application-client/room-electron.png){ .round-corners loading=lazy }
 ///
 
 ///

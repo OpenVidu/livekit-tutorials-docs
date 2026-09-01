@@ -45,7 +45,7 @@ differences, all listed at the top of the script:
 | Step 1 | `run-livekit-server*.md`: LiveKit local, LiveKit Cloud or OpenVidu | runs OpenVidu |
 | "Accessing your app from other devices" | this site's own comparison page | openvidu.io self-hosting docs |
 | Recording tutorials | S3 only; the Azure case links openvidu.io's Azure tutorials | S3 and Azure variants |
-| Image paths | `/assets/images/…` | `/assets/images/platform/tutorials/…` |
+| Image paths | `/assets/images/tutorials/…` | `/assets/images/platform/tutorials/…` |
 | The external-link icon | on links to openvidu.io too — from here they leave the site | only on third-party links |
 | The counterpart link | every tutorial links openvidu.io's copy (added by `hooks/mkdocs_hook.py`) | none |
 

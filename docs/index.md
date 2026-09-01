@@ -15,7 +15,7 @@ With the power of LiveKit you can add video conferencing capabilities to your pl
 
 ## Architecture of a LiveKit application
 
-![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/livekit-architecture.svg){ width="600" }
+![Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs](./assets/images/home/livekit-architecture.svg){ width="600" }
 /// caption
 Architecture of a LiveKit application
 ///

@@ -31,11 +31,11 @@ To run the client application tutorial, you need [Node.js :fontawesome-solid-ext
             To show the app with a mobile device appearance, open the dev tools in your browser and find the button to adapt the viewport to a mobile device aspect ratio. You may also choose predefined types of devices to see the behavior of your app in different resolutions.
 
         /// html | div.grid-50
-        ![Join screen of the Ionic tutorial app in a browser](/assets/images/application-client/join-ionic-web.png){ .round-corners loading=lazy }
+        ![Join screen of the Ionic tutorial app in a browser](/assets/images/tutorials/application-client/join-ionic-web.png){ .round-corners loading=lazy }
         ///
 
         /// html | div.grid-50
-        ![Video call room of the Ionic tutorial app in a browser](/assets/images/application-client/room-ionic-web.png){ .round-corners loading=lazy }
+        ![Video call room of the Ionic tutorial app in a browser](/assets/images/tutorials/application-client/room-ionic-web.png){ .round-corners loading=lazy }
         ///
 
         --8<-- "tutorials/testing-other-devices.md"
@@ -84,7 +84,7 @@ To run the client application tutorial, you need [Node.js :fontawesome-solid-ext
 
         Once the mobile device has been selected, the script will launch the application on the device and you will see a screen like this:
 
-        ![URL configuration of the Ionic tutorial app](/assets/images/application-client/configure-urls-ionic.png){ loading=lazy style="width: 25%" }
+        ![URL configuration of the Ionic tutorial app](/assets/images/tutorials/application-client/configure-urls-ionic.png){ loading=lazy style="width: 25%" }
 
         This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
@@ -93,11 +93,11 @@ To run the client application tutorial, you need [Node.js :fontawesome-solid-ext
         /// html | div.grid-container
 
         /// html | div.grid-50.text-center
-        ![Join screen of the Ionic tutorial app on a mobile device](/assets/images/application-client/join-ionic-device.png){ loading=lazy style="width: 50%" }
+        ![Join screen of the Ionic tutorial app on a mobile device](/assets/images/tutorials/application-client/join-ionic-device.png){ loading=lazy style="width: 50%" }
         ///
 
         /// html | div.grid-50.text-center
-        ![Video call room of the Ionic tutorial app on a mobile device](/assets/images/application-client/room-ionic-device.png){ loading=lazy style="width: 50%" }
+        ![Video call room of the Ionic tutorial app on a mobile device](/assets/images/tutorials/application-client/room-ionic-device.png){ loading=lazy style="width: 50%" }
         ///
 
         ///
