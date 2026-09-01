@@ -111,6 +111,14 @@ plugins:
       # it. This site has no mermaid fence configured and no page uses one.
       assets_exclude:
         - unpkg.com/*
+  # Runs only in the publish workflow (CI=true), which installs
+  # mkdocs-material[imaging] and pngquant; local builds skip it.
+  - optimize:
+      enabled: !ENV [CI, false]
+      # The default 60 visibly softens the screenshots.
+      optimize_jpg_quality: 82
+      # pngquant's palette is capped at 256 colours, so search effort is its only quality lever.
+      optimize_png_speed: 1
   - glightbox:
       width: 100%
       skip_classes:
