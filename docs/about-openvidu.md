@@ -24,7 +24,7 @@ It is based on [LiveKit](https://livekit.com/){:target="_blank"} and [mediasoup]
 <path d="M122.073 12.5484V8.0149H117.52V0H112.966V8.0149H108.413V12.5484H112.966V23.0302H117.52V12.5484H122.073Z" fill="white"></path>
 </svg>
 <h4 class="livekit-title">and</h4>
-<img class="skip-gallery mediasoup-icon" src="/assets/images/mediasoup-icon.png"/>
+<img class="skip-gallery mediasoup-icon" src="/assets/images/logos/mediasoup-icon.png"/>
 <h4 class="livekit-title">based</h4>
 </div>
 <p class="feature-description"> OpenVidu is built upon <strong>

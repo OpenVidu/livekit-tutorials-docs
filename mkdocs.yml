@@ -78,8 +78,8 @@ theme:
     # - header.autohide
   # main.html loads the one font stylesheet; --md-text-font/--md-code-font are in extra.css.
   font: false
-  favicon: assets/images/logo.png
-  logo: assets/images/openvidu_globe_bg_transp_cropped.png
+  favicon: assets/images/logos/logo.png
+  logo: assets/images/logos/openvidu_globe_bg_transp_cropped.png
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
