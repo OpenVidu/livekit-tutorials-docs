@@ -116,46 +116,10 @@ span:has(> a > .openvidu-tag) {
 .gfadeOut {
   animation: gfadeOut 0.2s ease !important;
 }
-.feature-info {
-  text-align: center;
-  margin-top: 30px;
-}
-.feature-title {
-  display: flex;
-  min-height: 50px;
-  align-items: center;
-  justify-content: center;
-}
-.feature-title-livekit {
-  align-items: flex-end;
-  padding-bottom: 12.5px;
-}
-.feature-title .feature-name {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-/* Card icons are emoji shortcodes (attr_list lands on the .twemoji span);
-   the theme's 1.125em icon slot is overridden to the card size, and
-   fill: currentcolor colors them in both palettes. */
-.feature-title .twemoji {
-  height: auto;
-  margin-right: 8px;
-}
-.feature-title .twemoji svg {
-  width: 3em;
-  height: auto;
-  max-height: none;
-}
-.feature-title .livekit-icon {
-  margin-right: 12px;
-  flex-shrink: 0.05;
-}
-.feature-title .livekit-icon svg {
-  width: 100px;
-}
-.livekit-title {
-  line-height: 1;
+/* The LiveKit wordmark in the about-page card header: a wide glyph, sized to
+   read at the height of the header text beside it. */
+.md-typeset .livekit-icon {
+  --md-icon-size: 4.6em;
 }
 
 /* Tablet */
@@ -188,8 +152,8 @@ span:has(> a > .openvidu-tag) {
 }
 
 img.mediasoup-icon {
-  max-width: 6rem !important;
-  margin: 0 0.5rem -5px 0.5rem;
+  max-width: 4.6rem !important;
+  margin: 0 0.2rem -4px 0.2rem;
 }
 /* Content tabs (pymdownx.tabbed) */
 
