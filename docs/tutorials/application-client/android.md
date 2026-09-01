@@ -14,7 +14,7 @@ This tutorial is a simple video-call application built for **Android**, using **
 -   Subscribing to all other participants' video and audio tracks automatically.
 -   Leaving the video call room at any time.
 
-It uses the [LiveKit Android Kotlin SDK](https://docs.livekit.io/reference/client-sdk-android/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
+It uses the [LiveKit Android Kotlin SDK :fontawesome-solid-external-link:{.external-link-icon}](https://docs.livekit.io/reference/client-sdk-android/){:target="_blank"} to connect to the LiveKit server and interact with the video call room.
 
 ## Running this tutorial
 
@@ -48,7 +48,7 @@ This Android project has been generated with Android Studio. You may come across
 
 The activity layout files are located in the `app/src/main/res/layout` directory.
 
-To use LiveKit in an Android application, you need to add the [LiveKit Android Kotlin SDK](https://docs.livekit.io/reference/client-sdk-android/){:target="_blank"} as a dependency in the `build.gradle.kts` file. This dependecy provides the necessary classes and methods to interact with the LiveKit server:
+To use LiveKit in an Android application, you need to add the [LiveKit Android Kotlin SDK :fontawesome-solid-external-link:{.external-link-icon}](https://docs.livekit.io/reference/client-sdk-android/){:target="_blank"} as a dependency in the `build.gradle.kts` file. This dependecy provides the necessary classes and methods to interact with the LiveKit server:
 
 ```gradle title="<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43' target='_blank'>build.gradle.kts</a>"
 dependencies {
@@ -354,7 +354,7 @@ The `connectToRoom()` method performs the following actions:
 
     !!! info "Take a look at all events"
 
-        You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){:target="_blank"}
+        You can take a look at all the events in the [Room events reference :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io/latest/docs/reference/client-sdk/#room-events){:target="_blank"}
 
 4.  It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` method:
 
@@ -381,7 +381,7 @@ The `connectToRoom()` method performs the following actions:
     }
     ```
 
-    This method sends a POST request using [Ktor Client](https://ktor.io/docs/client-create-and-configure.html){:target="_blank"} to the application server's `/token` endpoint. The request body contains the room name and participant name. The server responds with a token that is used to connect to the room.
+    This method sends a POST request using [Ktor Client :fontawesome-solid-external-link:{.external-link-icon}](https://ktor.io/docs/client-create-and-configure.html){:target="_blank"} to the application server's `/token` endpoint. The request body contains the room name and participant name. The server responds with a token that is used to connect to the room.
 
 5.  It connects to the room using the LiveKit URL and the token.
 6.  It publishes the camera and microphone tracks to the room using `setMicrophoneEnabled()` and `setCameraEnabled()` methods from `room.localParticipant`.

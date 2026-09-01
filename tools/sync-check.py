@@ -32,9 +32,9 @@ import sys
 #    own comparison page, openvidu.io links its self-hosting docs.
 # 6. Recording pages: no Azure variants here, so the Azure case links
 #    openvidu.io's Azure tutorials instead.
-# 7. External-link icons and Material's `/// html` image blocks are openvidu.io
-#    conventions that need its CSS and extensions; this site keeps plain links
-#    and the glightbox markup its own stylesheets support.
+# 7. The external-link icon marks a link that leaves the site, so it appears on
+#    this site's links to openvidu.io and not on openvidu.io's own relative
+#    ones. On third-party links it is compared like any other text.
 
 CLIENTS = ["index", "javascript", "react", "angular", "vue", "electron", "ionic", "android", "ios"]
 SERVERS = ["index", "node", "go", "ruby", "java", "python", "rust", "php", "dotnet"]
@@ -88,6 +88,7 @@ STEP1 = re.compile(r"^### 1\. Run (?:OpenVidu|LiveKit) Server(?: and Egress)?$")
 STEP2 = re.compile(r"^### 2\. ")
 OVURL = re.compile(r"https://openvidu\.io/latest/docs/([^)\s\"'`]*?)/?(?:\?[^)#\s]*)?(#[^)\s\"'`]*)?(?=[)\s\"'`]|$)")
 MDLINK = re.compile(r"\]\((?!https?:|wss:|mailto:|#)([^)\s]+?)\)")
+OVDOC_LINK = re.compile(r"\[([^\]]*)\]\((OVDOC:[^)]*)\)")
 ACCESS = re.compile(
     r"\[Accessing your (?:app from other devices in your network|local deployment from other "
     r"devices on your network)\]\([^)]*\)")
@@ -126,7 +127,6 @@ def logical(target: str, page_dir: str | None, side: str) -> str:
 def normalize(text: str, side: str, page_dir: str | None, skip_step1: bool) -> list[str]:
     if text.startswith("---\n"):
         text = text.split("\n---\n", 1)[1]
-    text = ICON.sub("", text)
     text = TARGET.sub("", text)
     text = REF.sub(r"/\1/REF/", text)
     text = CLONE.sub(r"\1", text)
@@ -137,6 +137,10 @@ def normalize(text: str, side: str, page_dir: str | None, skip_step1: bool) -> l
     text = SNIP.sub(lambda m: f'--8<-- "SNIP/{canon_snip(m.group(1))}"', text)
     text = MDLINK.sub(lambda m: "](" + logical(m.group(1), page_dir, side) + ")", text)
     text = OVURL.sub(lambda m: "OVDOC:" + m.group(1).rstrip("/") + (m.group(2) or ""), text)
+    # This site links openvidu.io from the outside, so those links carry the
+    # external-link icon and openvidu.io's own relative ones do not. Everywhere
+    # else the icon is compared.
+    text = OVDOC_LINK.sub(lambda m: "[" + ICON.sub("", m.group(1)) + "](" + m.group(2) + ")", text)
     text = ACCESS.sub("[ACCESS-FROM-OTHER-DEVICES]", text)
     text = SERVER_STEP_LINK.sub("[SERVER-STEP]", text)
 

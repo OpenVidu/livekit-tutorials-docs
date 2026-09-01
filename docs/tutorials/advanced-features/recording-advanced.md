@@ -18,7 +18,7 @@ Recordings are always persisted in some kind of storage system. This type of sto
 
 -   When running OpenVidu **locally** or **On-Premises**, recordings are stored in a **local S3 MinIO bucket**.
 -   When running OpenVidu in **AWS**, recordings are stored in an **AWS S3 bucket**.
--   When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Advanced Azure tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-azure/){:target="_blank"} on openvidu.io instead.
+-   When running OpenVidu in **Azure**, recordings are stored in an **Azure Blob Storage container**. If this is your case, follow the [Recording Advanced Azure tutorial :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-azure/){:target="_blank"} on openvidu.io instead.
 
 ## Running this tutorial
 
@@ -34,7 +34,7 @@ git clone https://github.com/OpenVidu/openvidu-livekit-tutorials.git
 
 ### 3. Run the application
 
-To run this application, you need [Node.js](https://nodejs.org/en/download){:target="_blank"} installed on your device.
+To run this application, you need [Node.js :fontawesome-solid-external-link:{.external-link-icon}](https://nodejs.org/en/download){:target="_blank"} installed on your device.
 
 1. Navigate into the application directory
 
@@ -563,7 +563,7 @@ This endpoint does the following:
     }
     ```
 
-    This method creates a presigned URL to access the object in the S3 bucket by calling the `getSignedUrl` function from the [@aws-sdk/s3-request-presigner](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-s3-request-presigner/){:target="_blank"} package, indicating the `S3Client`, `GetObjectCommand` and the expiration time in seconds as parameters. In this case, the expiration time is set to 24 hours.
+    This method creates a presigned URL to access the object in the S3 bucket by calling the `getSignedUrl` function from the [@aws-sdk/s3-request-presigner :fontawesome-solid-external-link:{.external-link-icon}](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-s3-request-presigner/){:target="_blank"} package, indicating the `S3Client`, `GetObjectCommand` and the expiration time in seconds as parameters. In this case, the expiration time is set to 24 hours.
 
     !!! info "Presigned URLs"
 

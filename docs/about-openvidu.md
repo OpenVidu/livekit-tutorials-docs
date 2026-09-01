@@ -2,9 +2,9 @@
 description: OpenVidu is a powerful platform to develop WebRTC real-time applications. Based on LiveKit and mediasoup, performant, fault-tolerant, scalable and observable.
 ---
 
-[OpenVidu](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page){:target="_blank"} is a powerful platform to develop WebRTC real-time applications. With it you can add real-time audio and video capabilities to your application: build any kind of videoconference experience, serve ultra-low latency livestreams to thousands of users, manage real-time videos from your drones or camera feeds and record them... The possibilities are truly endless!
+[OpenVidu :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page){:target="_blank"} is a powerful platform to develop WebRTC real-time applications. With it you can add real-time audio and video capabilities to your application: build any kind of videoconference experience, serve ultra-low latency livestreams to thousands of users, manage real-time videos from your drones or camera feeds and record them... The possibilities are truly endless!
 
-It is based on [LiveKit](https://livekit.com/){:target="_blank"} and [mediasoup](https://mediasoup.org/){:target="_blank"}, bringing the best of both worlds to provide a performant, fault-tolerant, scalable and observable solution.
+It is based on [LiveKit :fontawesome-solid-external-link:{.external-link-icon}](https://livekit.com/){:target="_blank"} and [mediasoup :fontawesome-solid-external-link:{.external-link-icon}](https://mediasoup.org/){:target="_blank"}, bringing the best of both worlds to provide a performant, fault-tolerant, scalable and observable solution.
 
 <div class="grid-container features-grid">
 
@@ -128,6 +128,6 @@ OpenVidu is available in two editions:
 - **OpenVidu** <span class="openvidu-tag openvidu-community-tag">COMMUNITY</span>: free to use. It is a single-server deployment and provides a custom LiveKit distribution with Egress, Ingress, S3 storage and monitoring. Ideal for development and testing, but also for small-scale production deployments. You can host hundreds of simultaneous participants in your rooms by running OpenVidu Community in a sufficiently powerful server!
 - **OpenVidu** <span class="openvidu-tag openvidu-pro-tag">PRO</span>: OpenVidu commercial edition. It is a multi-server deployment with all the features of OpenVidu Community plus 2x performance, scalability, fault tolerance and improved monitoring and observability. Ideal for large-scale production deployments with heavy traffic that require the highest standards. You can start with OpenVidu Community and upgrade to OpenVidu Pro when needed.
 
-Visit [openvidu.io](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page) to learn more about what OpenVidu has to offer.
+Visit [openvidu.io :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=about-openvidu-page) to learn more about what OpenVidu has to offer.
 
 <br>
