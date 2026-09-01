@@ -66,9 +66,9 @@ When using OpenVidu Local Deployment, you can access OpenVidu Server (which is 1
 |                                   | Local access                                                   | Access from devices in your local network                                                                                      |
 | --------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Usage                             | Access only from the development machine                       | Access from any device connected to your local network. In the URLs below, replace **`xxx-yyy-zzz-www`{.no-break}** with the local IP address of the development machine, replacing the dots (`.`) with dashes (`-`). You can find the configured local IP in the **`.env`** file in the **`LAN_PRIVATE_IP`** variable |
-| Application Client (frontend)     | [http://localhost:5080 :fontawesome-solid-external-link:{.external-link-icon}](http://localhost:5080)                 | `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`                            |
-| Application Server (backend)      | [http://localhost:6080 :fontawesome-solid-external-link:{.external-link-icon}](http://localhost:6080)                 | `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`                            |
-| OpenVidu (LiveKit Compatible) URL | [http://localhost:7880 :fontawesome-solid-external-link:{.external-link-icon}](http://localhost:7880)                 | `https://xxx-yyy-zzz-www.openvidu-local.dev:7443`                            |
+| Application Client (frontend)     | [http://localhost:5080](http://localhost:5080)                 | `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`                            |
+| Application Server (backend)      | [http://localhost:6080](http://localhost:6080)                 | `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`                            |
+| OpenVidu (LiveKit Compatible) URL | [http://localhost:7880](http://localhost:7880)                 | `https://xxx-yyy-zzz-www.openvidu-local.dev:7443`                            |
 
 !!! info
     

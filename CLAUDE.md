@@ -37,7 +37,8 @@ deliberate; then say why in the same commit.
 
 Every link that leaves this site gets `{:target="_blank"}` **and** the icon
 `:fontawesome-solid-external-link:{.external-link-icon}` — including links to openvidu.io, which
-from here are external. Button links (`{ .md-button … }`) do not get the icon.
+from here are external. Button links (`{ .md-button … }`) and local links (`http://localhost:…`,
+the reader's own machine) do not get the icon.
 
 Conversion links to openvidu.io (the announce band, the two funnel pages, the deploy step, the
 footer) carry `utm_source=livekit-tutorials&utm_medium=referral` plus a `utm_campaign` naming the
