@@ -5,7 +5,7 @@ repo_name: openvidu/openvidu-livekit-tutorials
 repo_url: https://github.com/openvidu/openvidu-livekit-tutorials
 
 nav:
-  - index.md
+  - Home: index.md
   - What is OpenVidu?: about-openvidu.md
   - OpenVidu vs LiveKit: openvidu-vs-livekit.md
   - Application Client:
@@ -33,6 +33,9 @@ nav:
       - Recording Basic: tutorials/advanced-features/recording-basic.md
       - Recording Advanced: tutorials/advanced-features/recording-advanced.md
 
+not_in_nav: |
+  /conditions/
+
 hooks:
   - hooks/mkdocs_hook.py
 
@@ -40,9 +43,6 @@ watch:
   - shared
   - overrides
   - hooks
-
-not_in_nav: |
-  /conditions/
 
 validation:
   nav:
@@ -65,27 +65,17 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.tooltips
-    # - navigation.tabs
-    # - navigation.tabs.sticky
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.prefetch
     - navigation.tracking
     - navigation.footer
-    # - navigation.expand
-    # - navigation.path
-    # - navigation.sections
     - navigation.top
     - navigation.indexes
-    # - toc.follow
-    # - toc.integrate
     - search.suggest
     - search.highlight
-    # - header.autohide
   # main.html loads the one font stylesheet; --md-text-font/--md-code-font are in extra.css.
   font: false
-  favicon: assets/images/logos/logo.png
-  logo: assets/images/logos/openvidu_globe_bg_transp_cropped.png
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -107,8 +97,11 @@ theme:
         name: Switch to system preference
   icon:
     repo: fontawesome/brands/github
+  favicon: assets/images/logos/logo.png
+  logo: assets/images/logos/openvidu_globe_bg_transp_cropped.png
 
 plugins:
+  - meta
   - search
   # Self-hosts the Google Fonts stylesheet at build time, so no page makes a
   # third-party request before the visitor has answered the cookie banner.
@@ -134,8 +127,6 @@ markdown_extensions:
   - toc:
       permalink: "#"
       permalink_title: Anchor link to this section for reference
-  - pymdownx.blocks.caption
-  - pymdownx.blocks.html
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
@@ -148,11 +139,12 @@ markdown_extensions:
         kwds:
           case: lower
   - pymdownx.snippets:
-      url_download: true
       check_paths: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.caption
+  - pymdownx.blocks.html
 
 extra:
   analytics:
@@ -183,7 +175,6 @@ extra:
       link: https://openvidu.medium.com/
     - icon: simple/youtube
       link: https://www.youtube.com/@openvidu
-  scope: /
   consent:
     title: Cookie consent
     description: >
@@ -205,5 +196,5 @@ extra_css:
 
 # {year} is replaced with the build year by hooks/mkdocs_hook.py
 copyright: >
-  {year} &copy; OpenVidu –
+  {year} &copy; OpenVidu<br>
   <a href="#__consent">Change cookie settings</a>
