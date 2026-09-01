@@ -108,6 +108,10 @@ plugins:
   # third-party request before the visitor has answered the cookie banner.
   - privacy:
       enabled: !ENV [CI, true]
+      # Material's bundle names the mermaid CDN, so the plugin vendors 3.5 MB of
+      # it. This site has no mermaid fence configured and no page uses one.
+      assets_exclude:
+        - unpkg.com/*
   - glightbox:
       width: 100%
       skip_classes:
