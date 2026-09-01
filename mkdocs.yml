@@ -8,16 +8,6 @@ nav:
   - Home: index.md
   - What is OpenVidu?: about-openvidu.md
   - OpenVidu vs LiveKit: openvidu-vs-livekit.md
-  - Application Client:
-      - tutorials/application-client/index.md
-      - JavaScript: tutorials/application-client/javascript.md
-      - React: tutorials/application-client/react.md
-      - Angular: tutorials/application-client/angular.md
-      - Vue: tutorials/application-client/vue.md
-      - Electron: tutorials/application-client/electron.md
-      - Ionic: tutorials/application-client/ionic.md
-      - Android: tutorials/application-client/android.md
-      - iOS: tutorials/application-client/ios.md
   - Application Server:
       - tutorials/application-server/index.md
       - Node.js: tutorials/application-server/node.md
@@ -28,6 +18,16 @@ nav:
       - Rust: tutorials/application-server/rust.md
       - PHP: tutorials/application-server/php.md
       - .NET: tutorials/application-server/dotnet.md
+  - Application Client:
+      - tutorials/application-client/index.md
+      - JavaScript: tutorials/application-client/javascript.md
+      - React: tutorials/application-client/react.md
+      - Angular: tutorials/application-client/angular.md
+      - Vue: tutorials/application-client/vue.md
+      - Electron: tutorials/application-client/electron.md
+      - Ionic: tutorials/application-client/ionic.md
+      - Android: tutorials/application-client/android.md
+      - iOS: tutorials/application-client/ios.md
   - Advanced Features:
       - tutorials/advanced-features/index.md
       - Recording Basic: tutorials/advanced-features/recording-basic.md

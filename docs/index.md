@@ -28,6 +28,40 @@ Any LiveKit application has 3 different parts:
 
 ## Tutorials
 
+### Application server tutorials
+
+Every application server below has two specific purposes:
+
+- Generate LiveKit tokens on demand for any [application client](#application-client-tutorials).
+- Receive LiveKit [webhook events :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
+
+To do so they all define two REST endpoints:
+
+- `/token`: takes a room and participant name and returns a token.
+- `/webhook`: for receiving webhook events from LiveKit Server.
+
+They use the proper [LiveKit Server SDK :fontawesome-solid-external-link:{.external-link-icon}](https://docs.livekit.io/reference/){:target="_blank"} for their language, if available.
+
+<div class="tutorials-container" markdown>
+
+[:simple-nodedotjs:{.icon .lg-icon .tab-icon} **Node.js**](./tutorials/application-server/node.md){ .md-button .md-button--primary .tutorial-link }
+
+[:simple-goland:{.icon .lg-icon .tab-icon} **Go**](./tutorials/application-server/go.md){ .md-button .md-button--primary .tutorial-link}
+
+[:simple-ruby:{.icon .lg-icon .tab-icon} **Ruby**](./tutorials/application-server/ruby.md){ .md-button .md-button--primary .tutorial-link}
+
+[:fontawesome-brands-java:{.icon .lg-icon .tab-icon} **Java**](./tutorials/application-server/java.md){ .md-button .md-button--primary .tutorial-link}
+
+[:simple-python:{.icon .lg-icon .tab-icon} **Python**](./tutorials/application-server/python.md){ .md-button .md-button--primary .tutorial-link}
+
+[:simple-rust:{.icon .lg-icon .tab-icon} **Rust**](./tutorials/application-server/rust.md){ .md-button .md-button--primary .tutorial-link}
+
+[:simple-php:{.icon .lg-icon .tab-icon} **PHP**](./tutorials/application-server/php.md){ .md-button .md-button--primary .tutorial-link}
+
+[:simple-dotnet:{.icon .lg-icon .tab-icon} **.NET**](./tutorials/application-server/dotnet.md){ .md-button .md-button--primary .tutorial-link}
+
+</div>
+
 ### Application client tutorials
 
 Every application client below shares the same core functionality:
@@ -66,40 +100,6 @@ Every application client below is interchangeable with the others, because:
 [:simple-android:{.icon .lg-icon .tab-icon} **Android**](./tutorials/application-client/android.md){ .md-button .md-button--primary .tutorial-link}
 
 [:simple-apple:{.icon .lg-icon .tab-icon} **iOS**](./tutorials/application-client/ios.md){ .md-button .md-button--primary .tutorial-link}
-
-</div>
-
-### Application server tutorials
-
-Every application server below has two specific purposes:
-
-- Generate LiveKit tokens on demand for any [application client](#application-client-tutorials).
-- Receive LiveKit [webhook events :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io/latest/docs/reference/webhooks/){:target="_blank"}.
-
-To do so they all define two REST endpoints:
-
-- `/token`: takes a room and participant name and returns a token.
-- `/webhook`: for receiving webhook events from LiveKit Server.
-
-They use the proper [LiveKit Server SDK :fontawesome-solid-external-link:{.external-link-icon}](https://docs.livekit.io/reference/){:target="_blank"} for their language, if available.
-
-<div class="tutorials-container" markdown>
-
-[:simple-nodedotjs:{.icon .lg-icon .tab-icon} **Node.js**](./tutorials/application-server/node.md){ .md-button .md-button--primary .tutorial-link }
-
-[:simple-goland:{.icon .lg-icon .tab-icon} **Go**](./tutorials/application-server/go.md){ .md-button .md-button--primary .tutorial-link}
-
-[:simple-ruby:{.icon .lg-icon .tab-icon} **Ruby**](./tutorials/application-server/ruby.md){ .md-button .md-button--primary .tutorial-link}
-
-[:fontawesome-brands-java:{.icon .lg-icon .tab-icon} **Java**](./tutorials/application-server/java.md){ .md-button .md-button--primary .tutorial-link}
-
-[:simple-python:{.icon .lg-icon .tab-icon} **Python**](./tutorials/application-server/python.md){ .md-button .md-button--primary .tutorial-link}
-
-[:simple-rust:{.icon .lg-icon .tab-icon} **Rust**](./tutorials/application-server/rust.md){ .md-button .md-button--primary .tutorial-link}
-
-[:simple-php:{.icon .lg-icon .tab-icon} **PHP**](./tutorials/application-server/php.md){ .md-button .md-button--primary .tutorial-link}
-
-[:simple-dotnet:{.icon .lg-icon .tab-icon} **.NET**](./tutorials/application-server/dotnet.md){ .md-button .md-button--primary .tutorial-link}
 
 </div>
 
