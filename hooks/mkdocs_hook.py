@@ -139,6 +139,26 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     return "\n".join(lines)
 
 
+_GLIGHTBOX_JS = re.compile(r'<script src="([^"]*glightbox\.min\.js)"></script>')
+_GLIGHTBOX_INIT = '<script id="init-glightbox">'
+
+
+def on_post_page(output, page, config, **kwargs):
+    """Move the glightbox library out of `<head>`.
+
+    The plugin injects its ~57 KB script there synchronously on every page, blocking first
+    paint. It is only needed by the `#init-glightbox` script at the end of `<body>`, so it
+    loads there instead. Ported from openvidu.io's hook, without the instance handover:
+    this site has no custom gallery script, so the plugin's own init stays in charge.
+    """
+    match = _GLIGHTBOX_JS.search(output)
+    if match is None or _GLIGHTBOX_INIT not in output:
+        return None
+    output = output[: match.start()] + output[match.end():]
+    init_pos = output.find(_GLIGHTBOX_INIT)
+    return output[:init_pos] + match.group(0) + output[init_pos:]
+
+
 def _one_line(value) -> str:
     """A frontmatter value as a single line, so it cannot break llms.txt's one-entry-per-line."""
     return " ".join(str(value).split())
