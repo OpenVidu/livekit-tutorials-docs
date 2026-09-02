@@ -39,8 +39,8 @@ nav:
 not_in_nav: |
   /conditions/
 
-# Sitemap <lastmod> from git, the build year, the openvidu.io counterpart boxes, and
-# every page's own title and description for llmstxt.
+# Sitemap <lastmod> from git, the build year, the glightbox fixes, and every
+# page's own title and description for llmstxt.
 hooks:
   - hooks/mkdocs_hook.py
 

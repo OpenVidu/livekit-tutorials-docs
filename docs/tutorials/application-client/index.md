@@ -5,6 +5,10 @@ description: "Learn how to build a LiveKit application client to connect to a ro
 
 # Application Client Tutorials
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-client/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 Every application client below shares the same core functionality:
 
 - Users request a LiveKit token to any [application server](../application-server/index.md) to connect to a room.

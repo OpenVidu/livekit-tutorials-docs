@@ -5,6 +5,10 @@ description: "Learn how to build a minimal PHP server to generate LiveKit tokens
 
 # PHP Server Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-server/php/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/php){ .md-button target="_blank" }
 
 This is a minimal server application built for PHP that allows:

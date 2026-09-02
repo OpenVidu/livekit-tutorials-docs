@@ -18,6 +18,7 @@ The same tutorials are published twice: LiveKit-first here, OpenVidu-first on op
 | `docs/tutorials/advanced-features/recording-advanced.md` | `…/advanced-features/recording-advanced-s3.md` |
 | `shared/tutorials/**` | the **same path** in both repos |
 | `shared/tutorials/run-livekit-server*.md` | no counterpart — this site's own step 1 (theirs is `run-openvidu-server.md`) |
+| `shared/tutorials/counterpart-box.md` | no counterpart — the "Running OpenVidu?" box every page here includes, its link passed as the page's `[counterpart]` reference |
 
 ## What to change when carrying a hunk
 

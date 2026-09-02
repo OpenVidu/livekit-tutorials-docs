@@ -5,6 +5,10 @@ description: "Learn how to build a minimal Python application server with Flask 
 
 # Python Server Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-server/python/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/python){ .md-button target="_blank" }
 
 This is a minimal server application built for Python with [Flask :fontawesome-solid-external-link:{.external-link-icon}](https://flask.palletsprojects.com/en/stable/){:target="_blank"} that allows:

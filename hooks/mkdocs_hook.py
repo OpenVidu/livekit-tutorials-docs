@@ -104,41 +104,6 @@ def on_env(env, config, files, **kwargs):
     return env
 
 
-# openvidu.io publishes the same tutorials OpenVidu-first. Linking each page to
-# its counterpart interlinks the two copies (issue #38) and gives a reader who
-# is already on OpenVidu the version written for them.
-_CROSS_LINK_ROOT = "https://openvidu.io/latest/docs/tutorials/"
-_COUNTERPART = {
-    "tutorials/advanced-features/recording-basic.md": "advanced-features/recording-basic-s3/",
-    "tutorials/advanced-features/recording-advanced.md": "advanced-features/recording-advanced-s3/",
-}
-
-
-def on_page_markdown(markdown, page, config, files, **kwargs):
-    """Add the openvidu.io counterpart link under each tutorial's H1."""
-    src = page.file.src_uri
-    if not src.startswith("tutorials/"):
-        return markdown
-    target = _COUNTERPART.get(src)
-    if target is None:
-        target = src[len("tutorials/"):].removesuffix(".md").removesuffix("/index") + "/"
-        if src.endswith("/index.md"):
-            target = src[len("tutorials/"):-len("index.md")]
-    note = (f'!!! info "Running OpenVidu?"\n\n'
-            f'    OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are '
-            f'running, read the '
-            f'[OpenVidu version of this tutorial :fontawesome-solid-external-link:'
-            f'{{.external-link-icon}}]({_CROSS_LINK_ROOT}{target}'
-            f'?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link)'
-            f'{{:target="_blank"}}.')
-    lines = markdown.split("\n")
-    h1 = next((i for i, line in enumerate(lines) if line.startswith("# ")), None)
-    if h1 is None:
-        return markdown
-    lines.insert(h1 + 1, "\n" + note)
-    return "\n".join(lines)
-
-
 _GLIGHTBOX_JS = re.compile(r'<script src="([^"]*glightbox\.min\.js)"></script>')
 _GLIGHTBOX_INIT = '<script id="init-glightbox">'
 _GLIGHTBOX_HREF_MARKER = "element.setAttribute('href', img.src)"

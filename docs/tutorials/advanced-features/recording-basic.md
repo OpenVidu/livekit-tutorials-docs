@@ -5,6 +5,10 @@ description: "Learn how to record a room and manage recordings by extending a si
 
 # Basic Recording Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/advanced-features/recording-basic-s3/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-basic-node){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application, built upon [Node.js server](../application-server/node.md){:target="_blank"} and [JavaScript client](../application-client/javascript.md){:target="_blank"} tutorials, and extends them by adding recording capabilities:

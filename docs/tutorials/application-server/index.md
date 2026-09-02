@@ -5,6 +5,10 @@ description: "Build the backend of a LiveKit app in Node.js, Java, Python, Go, .
 
 # Application Server Tutorials
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-server/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 Every application server below has two specific purposes: 
 
 - Generate LiveKit tokens on demand for any [application client](../application-client/index.md).

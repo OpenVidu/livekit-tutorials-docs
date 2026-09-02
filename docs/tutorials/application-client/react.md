@@ -5,6 +5,10 @@ description: "Learn how to build a simple video-call app using React with LiveKi
 
 # React Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-client/react/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-react){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **React** that allows:

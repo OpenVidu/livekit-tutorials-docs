@@ -5,6 +5,10 @@ description: "Learn how to build a minimal Java application server with Spring B
 
 # Java Server Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-server/java/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/java){ .md-button target="_blank" }
 
 This is a minimal server application built for Java with [Spring Boot :fontawesome-solid-external-link:{.external-link-icon}](https://spring.io/){:target="_blank"} that allows:

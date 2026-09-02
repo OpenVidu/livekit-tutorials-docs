@@ -5,6 +5,10 @@ description: "Tutorials for LiveKit's advanced features: record a room, then man
 
 # Advanced Features Tutorials
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/advanced-features/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 Explore more advanced features of LiveKit! For now, we have implemented a basic **recording** tutorial and an advanced one, but our tutorials for **streaming** and **ingesting** are coming soon.
 
 <div class="tutorials-container" markdown>

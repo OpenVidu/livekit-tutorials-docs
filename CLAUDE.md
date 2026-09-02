@@ -57,10 +57,13 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
   publish the templates.
 - `shared/` snippets render inside several pages; grep for the snippet's `--8<--` usages before
   editing one.
-- `hooks/mkdocs_hook.py` stamps the copyright year, injects the counterpart box, dates every
-  sitemap `<lastmod>` from git (a page's date follows its snippets too), and feeds the
-  `llmstxt` plugin each page's own title and description — a page listed in the llmstxt
-  sections without both **fails the build**. Add build-time computation there.
+- Every tutorial page carries the "Running OpenVidu?" box: the
+  `tutorials/counterpart-box.md` include under its H1 plus a `[counterpart]` link
+  definition — `sync-check.py` requires both, with the exact URL its pair dictates.
+- `hooks/mkdocs_hook.py` stamps the copyright year, dates every sitemap `<lastmod>` from
+  git (a page's date follows its snippets too), keeps the glightbox init working, and
+  feeds the `llmstxt` plugin each page's own title and description — a page listed in the
+  llmstxt sections without both **fails the build**. Add build-time computation there.
 - Pins live in `Dockerfile` and `.github/workflows/publish-web.yaml` and **must match
   openvidu.io's** (mkdocs 1.6.1, material 9.7.6, pymdown-extensions 11.0.1, pygments 2.19.2,
   glightbox 0.5.2, llmstxt 0.5.0): the two sites render the same Markdown, so a version drift

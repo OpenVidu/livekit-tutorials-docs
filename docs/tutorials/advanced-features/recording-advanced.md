@@ -5,6 +5,10 @@ description: "Learn how to improve the basic recording tutorial by adding comple
 
 # Advanced Recording Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-s3/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-advanced-node){ .md-button target="_blank" }
 
 This tutorial improves the [basic recording tutorial](./recording-basic.md){:target="_blank"} by doing the following:

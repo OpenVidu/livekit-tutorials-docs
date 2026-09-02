@@ -5,6 +5,10 @@ description: "Learn how to build a simple video-call app for Android using Kotli
 
 # Android Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-client/android/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-android){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built for **Android**, using **Kotlin**, that allows:

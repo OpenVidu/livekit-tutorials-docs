@@ -5,6 +5,10 @@ description: "Learn how to build a simple video-call app using Angular with Live
 
 # Angular Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-client/angular/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-angular){ .md-button target="_blank" }
 
 This tutorial is a simple video-call application built with **Angular** that allows:

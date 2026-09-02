@@ -5,6 +5,10 @@ description: "Learn how to build a minimal Node.js server with Express to genera
 
 # Node.js Server Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-server/node/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/node){ .md-button target="_blank" }
 
 This is a minimal server application built for Node.js with [Express :fontawesome-solid-external-link:{.external-link-icon}](https://expressjs.com/){:target="_blank"} that allows:

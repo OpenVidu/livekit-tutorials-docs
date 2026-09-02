@@ -37,6 +37,10 @@ import yaml
 # 7. The external-link icon marks a link that leaves the site, so it appears on
 #    this site's links to openvidu.io and not on openvidu.io's own relative
 #    ones. On third-party links it is compared like any other text.
+# 8. The "Running OpenVidu?" box: every tutorial page here includes
+#    tutorials/counterpart-box.md under its H1 and defines the box's
+#    [counterpart] link; openvidu.io has neither. Both lines are required —
+#    with the exact URL derived from the pair — rather than merely tolerated.
 
 CLIENTS = ["index", "javascript", "react", "angular", "vue", "electron", "ionic", "android", "ios"]
 SERVERS = ["index", "node", "go", "ruby", "java", "python", "rust", "php", "dotnet"]
@@ -91,6 +95,8 @@ ACCESS = re.compile(
     r"devices on your network)\]\([^)]*\)")
 SERVER_STEP_LINK = re.compile(r"\[(?:LiveKit|OpenVidu) Server\]\(#1-run-(?:livekit|openvidu)-server\)")
 AZURE_TAIL = re.compile(r" on openvidu\.io instead\.$")
+BOX_INCLUDE = '--8<-- "tutorials/counterpart-box.md"'
+BOX_UTM = "?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link"
 
 
 def canon_snip(path: str) -> str:
@@ -145,6 +151,11 @@ def normalize(text: str, side: str, page_dir: str | None, skip_step1: bool) -> l
     in_step1 = False
     for line in text.split("\n"):
         stripped = HEADING.sub(r"### \2", line.strip())
+        # The counterpart box exists only on this side (note 8); its presence is
+        # enforced separately in main().
+        if stripped == '--8<-- "SNIP/tutorials/counterpart-box.md"' \
+                or stripped.startswith("[counterpart]: "):
+            continue
         if skip_step1:
             if STEP1.match(stripped):
                 in_step1 = True
@@ -265,6 +276,19 @@ def main() -> int:
             if not f.is_file():
                 print(f"missing: {f}", file=sys.stderr)
                 return 2
+        # Every page must carry the counterpart box (note 8), pointing at the URL
+        # this pair's openvidu.io path dictates — the -s3 recording variants and
+        # the section indexes included.
+        if lk_rel.startswith("docs/"):
+            target = ov_rel[len("docs/docs/tutorials/"):-len(".md")]
+            target = target[:-len("index")] if target.endswith("index") else target + "/"
+            expected = f"[counterpart]: https://openvidu.io/latest/docs/tutorials/{target}{BOX_UTM}"
+            text = lk_file.read_text()
+            for needed in (BOX_INCLUDE, expected):
+                if needed not in text:
+                    print(f"livekit-tutorials {lk_rel}: counterpart box — missing `{needed}`\n")
+                    divergent += 1
+
         skip = lk_rel in SKIP_STEP1
         lk_dir = None if lk_rel.startswith("shared/") else posixpath.dirname(lk_rel)[len("docs/"):]
         ov_dir = None if ov_rel.startswith("shared/") else posixpath.dirname(ov_rel)[len("docs/"):]

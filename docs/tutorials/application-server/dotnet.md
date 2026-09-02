@@ -5,6 +5,10 @@ description: "Learn how to build a minimal .NET application server with ASP.NET 
 
 # .NET Server Tutorial
 
+--8<-- "tutorials/counterpart-box.md"
+
+[counterpart]: https://openvidu.io/latest/docs/tutorials/application-server/dotnet/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link
+
 [Source code :simple-github:](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/dotnet){ .md-button target="_blank" }
 
 This is a minimal server application built for .NET with [ASP.NET Core Minimal APIs :fontawesome-solid-external-link:{.external-link-icon}](https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0&tabs=visual-studio){:target="_blank"} that allows:
