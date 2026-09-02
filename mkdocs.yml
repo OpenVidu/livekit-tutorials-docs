@@ -39,8 +39,8 @@ nav:
 not_in_nav: |
   /conditions/
 
-# Sitemap <lastmod> from git, the build year, the glightbox fixes, and every
-# page's own title and description for llmstxt.
+# Sitemap <lastmod> from git, the glightbox fixes, and every page's own title
+# and description for llmstxt.
 hooks:
   - hooks/mkdocs_hook.py
 
@@ -244,8 +244,3 @@ extra_css:
   - stylesheets/colors.css
   - stylesheets/extra.css
   - stylesheets/unsemantic-grid.css
-
-# {year} is replaced with the build year by hooks/mkdocs_hook.py
-copyright: >
-  {year} &copy; OpenVidu<br>
-  <a href="#__consent">Change cookie settings</a>

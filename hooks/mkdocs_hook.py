@@ -5,7 +5,6 @@ needs to compute lives here. openvidu.io does the same in
 publish-tool/mkdocs_hook.py.
 """
 
-import datetime
 import logging
 import re
 import subprocess
@@ -14,16 +13,6 @@ from pathlib import Path
 from mkdocs.exceptions import PluginError
 
 _log = logging.getLogger(f"mkdocs.hooks.{Path(__file__).stem}")
-
-
-def on_config(config, **kwargs):
-    """Replace {year} in the footer copyright with the build year.
-
-    It was hard-coded, and had been reading "2025" since January.
-    """
-    if config.copyright and "{year}" in config.copyright:
-        config.copyright = config.copyright.replace("{year}", str(datetime.date.today().year))
-    return config
 
 
 _SNIPPET_REF = re.compile(r'^\s*--8<--\s+"([^"]+)"', re.M)
