@@ -10,19 +10,11 @@
   --md-accent-bg-color--light: #ffffff;
   --md-hue: 190deg;
   color-scheme: dark;
-  --plyr-video-background: transparent;
-  --top-home-section-color: linear-gradient(
-    0deg,
-    rgb(30, 39, 41) 0%,
-    rgb(30, 39, 41) 39%,
-    #4d4d4d 100%
-  );
 
   --slate-md-typeset-color: hsla(var(--md-hue), 15%, 90%, 0.82);
   --slate-md-default-bg-color: hsla(var(--md-hue), 15%, 14%, 1);
   --slate-md-default-fg-color--light: hsla(var(--md-hue), 15%, 90%, 0.56);
 }
-
 /* Custom colors for dark mode */
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color: var(--md-primary-fg-color--light);
@@ -30,48 +22,22 @@
 
 /* Custom colors for light mode */
 [data-md-color-scheme="default"] {
-  --top-home-section-color: linear-gradient(
-    180deg,
-    rgb(77, 77, 77) 81%,
-    #ffffff 100%
-  );
   --md-typeset-a-color: var(--md-primary-fg-color--dark);
+  hr {
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgb(202, 202, 202) 25%,
+      rgba(202, 202, 202) 75%,
+      transparent 100%
+    );
+  }
   .md-button--primary {
     background-color: var(--md-accent-fg-color--transparent);
     border-color: var(--md-accent-fg-color--transparent);
-  }
-  svg.home-icon {
-    filter: brightness(33%);
-  }
-  #sign-in-button {
-    color: var(--slate-md-typeset-color);
-  }
-  #sign-in-button:hover {
-    color: #ffffff;
-    background-color: var(--slate-md-typeset-color);
-    border-color: var(--slate-md-typeset-color);
-  }
-  figure img.dark-img {
-    background-color: var(--slate-md-default-bg-color);
-  }
-  .slogan {
-    color: var(--slate-md-default-fg-color--light);
-  }
-  .home-description {
-    color: var(--slate-md-typeset-color);
-  }
-  a#account-btn {
-    color: var(--slate-md-typeset-color);
-  }
-  img.mediasoup-icon {
+}
+img.mediasoup-icon {
     filter: brightness(0.5) saturate(2.5);
-  }
 }
 
-.red-color {
-  color: #ff5252;
-}
-
-.green-color {
-  color: #2b9b46;
 }

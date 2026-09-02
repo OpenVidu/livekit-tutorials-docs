@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://livekit-tutorials.openvidu.io/sitemap.xml

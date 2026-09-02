@@ -1,0 +1,48 @@
+# LiveKit Tutorials
+
+> Discover comprehensive LiveKit tutorials for building real-time audio and video apps. Explore client and server guides for multiple platforms.
+
+Hands-on tutorials for building real-time audio and video applications on LiveKit, with application servers in eight languages, clients for eight platforms and recording guides. Every tutorial also runs unchanged on OpenVidu (https://openvidu.io), the self-hosted, LiveKit-compatible platform maintained by this site's authors — use it to deploy and self-host what you build here. The "Optional" section at the end holds legal pages, and can be skipped when a shorter context is needed.
+
+## Start here
+
+- [LiveKit tutorials](https://livekit-tutorials.openvidu.io/index.md): Hands-on LiveKit tutorials for real-time audio and video apps: client and server guides for eight platforms, plus recording, all interoperable.
+- [What is OpenVidu?](https://livekit-tutorials.openvidu.io/about-openvidu/index.md): OpenVidu is a powerful platform to develop WebRTC real-time applications. Based on LiveKit and mediasoup, performant, fault-tolerant, scalable and observable.
+- [OpenVidu vs LiveKit for local development](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/index.md): Compare OpenVidu and LiveKit for local development: HTTPS on your LAN, bundled Egress and S3 storage, and testing a WebRTC app from real devices.
+
+## Application server tutorials
+
+- [Application server tutorials](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md): Build the backend of a LiveKit app in Node.js, Java, Python, Go, .NET, PHP, Ruby or Rust: issue access tokens and receive webhook events.
+- [.NET server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/dotnet/index.md): Learn how to build a minimal .NET application server with ASP.NET to generate LiveKit tokens and receive webhook events using the LiveKit .NET SDK.
+- [Go server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/go/index.md): Learn how to build a minimal Go application server with Gin to generate LiveKit tokens and receive webhook events using the LiveKit Go SDK.
+- [Java server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/java/index.md): Learn how to build a minimal Java application server with Spring Boot to generate LiveKit tokens and receive webhook events using the LiveKit Kotlin SDK.
+- [Node.js server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/node/index.md): Learn how to build a minimal Node.js server with Express to generate LiveKit tokens and receive webhook events using the LiveKit JS SDK.
+- [PHP server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/php/index.md): Learn how to build a minimal PHP server to generate LiveKit tokens and receive webhook events using the LiveKit PHP SDK.
+- [Python server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/python/index.md): Learn how to build a minimal Python application server with Flask to generate LiveKit tokens and receive webhook events using the LiveKit Python SDK.
+- [Ruby server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/ruby/index.md): Learn how to build a minimal Ruby application server with Sinatra to generate LiveKit tokens and receive webhook events using the LiveKit Ruby SDK.
+- [Rust server tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/rust/index.md): Learn how to build a minimal Rust application server with Axum to generate LiveKit tokens and receive webhook events using the LiveKit Rust SDK.
+
+## Application client tutorials
+
+- [Application client tutorials](https://livekit-tutorials.openvidu.io/tutorials/application-client/index.md): Learn how to build a LiveKit application client to connect to a room, publish media and subscribe to media from other participants.
+- [Android tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/android/index.md): Learn how to build a simple video-call app for Android using Kotlin with LiveKit Android Kotlin SDK. Allow users to join a room, publish and subscribe to media.
+- [Angular tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/angular/index.md): Learn how to build a simple video-call app using Angular with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+- [Electron tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/electron/index.md): Learn how to build a simple video-call app using Electron with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+- [Ionic tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/ionic/index.md): Learn how to build a simple video-call app using Ionic and Angular with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+- [iOS tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/ios/index.md): Learn how to build a simple video-call app for iOS using Swift with LiveKit Swift SDK. Allow users to join a room, publish and subscribe to media.
+- [JavaScript tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/javascript/index.md): Learn how to build a simple video-call app using plain JavaScript, HTML and CSS with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+- [React tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/react/index.md): Learn how to build a simple video-call app using React with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+- [Vue tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/vue/index.md): Learn how to build a simple video-call app using Vue with LiveKit JS SDK. Allow users to join a room, publish and subscribe to media.
+
+## Advanced features tutorials
+
+- [Advanced features tutorials](https://livekit-tutorials.openvidu.io/tutorials/advanced-features/index.md): Tutorials for LiveKit's advanced features: record a room, then manage, play and delete the recordings from your own application.
+- [Advanced recording tutorial](https://livekit-tutorials.openvidu.io/tutorials/advanced-features/recording-advanced/index.md): Learn how to improve the basic recording tutorial by adding complete recording metadata, real time recording status notification and more.
+- [Basic recording tutorial](https://livekit-tutorials.openvidu.io/tutorials/advanced-features/recording-basic/index.md): Learn how to record a room and manage recordings by extending a simple video-call application built upon Node.js server and JavaScript client.
+
+## Optional
+
+- [Cookie Policy](https://livekit-tutorials.openvidu.io/conditions/cookie-policy/index.md): How livekit-tutorials.openvidu.io uses cookies, which ones it sets, what they are for, and how to change or withdraw your consent at any time.
+- [Privacy Policy](https://livekit-tutorials.openvidu.io/conditions/privacy-policy/index.md): How OpenVidu handles personal data collected through livekit-tutorials.openvidu.io, and the rights you have over the data we process.
+- [Terms of Service](https://livekit-tutorials.openvidu.io/conditions/terms-of-service/index.md): The terms governing the use of OpenVidu's services and of this site, including licensing, payment, liability and applicable law.
+
