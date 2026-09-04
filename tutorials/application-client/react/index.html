@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/logos/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
 
 
@@ -44,7 +44,7 @@
     
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1857,13 +1857,13 @@
 <li><code>App.tsx</code>: This file defines the main application component. It is responsible for handling tasks such as joining a video call and managing the video calls themselves.</li>
 <li><code>App.css</code>: This file contains the styles for the main application component.</li>
 <li><code>VideoComponent.tsx</code>: This file defines the <code>VideoComponent</code>. This component is responsible for displaying video tracks along with participant's data. Its associated styles are in <code>VideoComponent.css</code>.</li>
-<li><code>AudioComponent.vue</code>: This file defines the <code>AudioComponent</code>. This component is responsible for displaying audio tracks.</li>
+<li><code>AudioComponent.tsx</code>: This file defines the <code>AudioComponent</code>. This component is responsible for displaying audio tracks.</li>
 </ul>
-<p>To use the LiveKit JS SDK in a Vue application, you need to install the <code>livekit-client</code> package. This package provides the necessary classes and methods to interact with the LiveKit server. You can install it using the following command:</p>
+<p>To use the LiveKit JS SDK in a React application, you need to install the <code>livekit-client</code> package. This package provides the necessary classes and methods to interact with the LiveKit server. You can install it using the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>npm<span class="w"> </span>install<span class="w"> </span>livekit-client
 </code></pre></div>
 <p>Now let's see the code of the <code>App.tsx</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L14-L51" target="_blank" rel="noopener">App.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L14-L51' target='_blank'&gt;App.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-14">14</a></span>
 <span class="normal"><a href="#__codelineno-34-15">15</a></span>
 <span class="normal"><a href="#__codelineno-34-16">16</a></span>
 <span class="normal"><a href="#__codelineno-34-17">17</a></span>
@@ -1966,7 +1966,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a Room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>After the user specifies their participant name and the name of the room they want to join, when they click the <code>Join</code> button, the <code>joinRoom()</code> function is called:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L53-L89" target="_blank" rel="noopener">App.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-53">53</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L53-L89' target='_blank'&gt;App.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-53">53</a></span>
 <span class="normal"><a href="#__codelineno-35-54">54</a></span>
 <span class="normal"><a href="#__codelineno-35-55">55</a></span>
 <span class="normal"><a href="#__codelineno-35-56">56</a></span>
@@ -2079,7 +2079,7 @@
 </li>
 <li>
 <p>It requests a token from the application server using the room name and participant name. This is done by calling the <code>getToken()</code> function:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L101-L133" target="_blank" rel="noopener">App.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-101">101</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L101-L133' target='_blank'&gt;App.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-101">101</a></span>
 <span class="normal"><a href="#__codelineno-36-102">102</a></span>
 <span class="normal"><a href="#__codelineno-36-103">103</a></span>
 <span class="normal"><a href="#__codelineno-36-104">104</a></span>
@@ -2155,7 +2155,7 @@
 <hr>
 <h3 id="displaying-video-and-audio-tracks">Displaying Video and Audio Tracks<a class="headerlink" href="#displaying-video-and-audio-tracks" title="Anchor link to this section for reference">#</a></h3>
 <p>In order to display participants' video and audio tracks, the main component integrates the <code>VideoComponent</code> and <code>AudioComponent</code>.</p>
-<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L187-L205" target="_blank" rel="noopener">App.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-187">187</a></span>
+<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L187-L205' target='_blank'&gt;App.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-187">187</a></span>
 <span class="normal"><a href="#__codelineno-37-188">188</a></span>
 <span class="normal"><a href="#__codelineno-37-189">189</a></span>
 <span class="normal"><a href="#__codelineno-37-190">190</a></span>
@@ -2207,7 +2207,7 @@
 </li>
 </ul>
 <p>Let's see now the code of the <code>VideoComponent.txs</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/components/VideoComponent.tsx#L5-L32" target="_blank" rel="noopener">VideoComponent.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/components/VideoComponent.tsx#L5-L32' target='_blank'&gt;VideoComponent.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-38-6"> 6</a></span>
 <span class="normal"><a href="#__codelineno-38-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-38-8"> 8</a></span>
@@ -2288,7 +2288,7 @@
 <li>It detaches the video track when the component is unmounted.</li>
 </ul>
 <p>Finally, let's see the code of the <code>AudioComponent.tsx</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/components/AudioComponent.tsx#L4-L22" target="_blank" rel="noopener">AudioComponent.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-5"> 5</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/components/AudioComponent.tsx#L4-L22' target='_blank'&gt;AudioComponent.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-39-6"> 6</a></span>
 <span class="normal"><a href="#__codelineno-39-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-39-8"> 8</a></span>
@@ -2336,7 +2336,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the Room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>When the user wants to leave the room, they can click the <code>Leave Room</code> button. This action calls the <code>leaveRoom()</code> function:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L91-L99" target="_blank" rel="noopener">App.tsx</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-91">91</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L91-L99' target='_blank'&gt;App.tsx&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-91">91</a></span>
 <span class="normal"><a href="#__codelineno-40-92">92</a></span>
 <span class="normal"><a href="#__codelineno-40-93">93</a></span>
 <span class="normal"><a href="#__codelineno-40-94">94</a></span>
@@ -2722,7 +2722,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.tracking", "navigation.footer", "navigation.path", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

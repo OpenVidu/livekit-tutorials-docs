@@ -337,7 +337,7 @@ The activity layout files are located in the `app/src/main/res/layout` directory
 
 To use LiveKit in an Android application, you need to add the [LiveKit Android Kotlin SDK](https://docs.livekit.io/reference/client-sdk-android/) as a dependency in the `build.gradle.kts` file. This dependecy provides the necessary classes and methods to interact with the LiveKit server:
 
-[build.gradle.kts](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43)
+<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43' target='_blank'>build.gradle.kts</a>
 
 ```text
 dependencies {
@@ -347,7 +347,7 @@ dependencies {
 
 You will also need JitPack as a repository in the `settings.gradle.kts` file:
 
-[settings.gradle.kts](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/settings.gradle.kts#L19)
+<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/settings.gradle.kts#L19' target='_blank'>settings.gradle.kts</a>
 
 ```text
 dependencyResolutionManagement {

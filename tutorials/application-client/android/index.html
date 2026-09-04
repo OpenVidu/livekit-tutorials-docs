@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/logos/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
 
 
@@ -44,7 +44,7 @@
     
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1899,12 +1899,12 @@
 </ul>
 <p>The activity layout files are located in the <code>app/src/main/res/layout</code> directory.</p>
 <p>To use LiveKit in an Android application, you need to add the <a href="https://docs.livekit.io/reference/client-sdk-android/" target="_blank" rel="noopener">LiveKit Android Kotlin SDK <span class="twemoji external-link-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.3 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32zM80 96c-44.2 0-80 35.8-80 80v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32z"></path></svg></span></a> as a dependency in the <code>build.gradle.kts</code> file. This dependecy provides the necessary classes and methods to interact with the LiveKit server:</p>
-<div class="language-text highlight"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43" target="_blank" rel="noopener">build.gradle.kts</a></span><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>dependencies {
+<div class="language-text highlight"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43' target='_blank'&gt;build.gradle.kts&lt;/a&gt;</span><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>dependencies {
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    implementation 'io.livekit:livekit-android:2.5.0'
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>}
 </code></pre></div>
 <p>You will also need JitPack as a repository in the <code>settings.gradle.kts</code> file:</p>
-<div class="language-text highlight"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/settings.gradle.kts#L19" target="_blank" rel="noopener">settings.gradle.kts</a></span><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>dependencyResolutionManagement {
+<div class="language-text highlight"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/settings.gradle.kts#L19' target='_blank'&gt;settings.gradle.kts&lt;/a&gt;</span><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>dependencyResolutionManagement {
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    //...
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    repositories {
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>        google()
@@ -1917,7 +1917,7 @@
 <h3 id="android-specific-requirements">Android specific requirements<a class="headerlink" href="#android-specific-requirements" title="Anchor link to this section for reference">#</a></h3>
 <p>In order to be able to test the application on an Android device, the application must ask for the necessary permissions to access the device's camera and microphone.</p>
 <p>First, you need to add the following permissions to the <code>AndroidManifest.xml</code> file located in the <code>app/src/main</code> directory:</p>
-<div class="language-xml highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/AndroidManifest.xml#L9-L12" target="_blank" rel="noopener">AndroidManifest.xml</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<div class="language-xml highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/AndroidManifest.xml#L9-L12' target='_blank'&gt;AndroidManifest.xml&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-32-10">10</a></span>
 <span class="normal"><a href="#__codelineno-32-11">11</a></span>
 <span class="normal"><a href="#__codelineno-32-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span><span class="w"> </span><span class="nt">/&gt;</span>
@@ -1926,7 +1926,7 @@
 <a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.MODIFY_AUDIO_SETTINGS"</span><span class="w"> </span><span class="nt">/&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Then, the app need to request these permissions when the user joins the video call room. This is done in the <code>RoomLayoutActivity.kt</code> file by calling the <code>requestNeededPermissions</code> method in the <code>onCreate</code> method:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L175-L208" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-175">175</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L175-L208' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-175">175</a></span>
 <span class="normal"><a href="#__codelineno-33-176">176</a></span>
 <span class="normal"><a href="#__codelineno-33-177">177</a></span>
 <span class="normal"><a href="#__codelineno-33-178">178</a></span>
@@ -2005,7 +2005,7 @@
 <p>If these URLs are left empty, the user will be prompted to enter the URLs when the application starts. This configuration is managed in the <code>ConfigureUrlsActivity.kt</code> file:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Android tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-android.png" style="width: 25%"></a></p>
 <p>When the user clicks the <code>Save</code> button, the <code>onSaveUrls()</code> method is called, which saves the URLs in the <code>Urls</code> object and finishes the activity, returning to the MainActivity:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ConfigureUrlsActivity.kt#L24-L35" target="_blank" rel="noopener">ConfigureUrlsActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-24">24</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ConfigureUrlsActivity.kt#L24-L35' target='_blank'&gt;ConfigureUrlsActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-24">24</a></span>
 <span class="normal"><a href="#__codelineno-34-25">25</a></span>
 <span class="normal"><a href="#__codelineno-34-26">26</a></span>
 <span class="normal"><a href="#__codelineno-34-27">27</a></span>
@@ -2032,7 +2032,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>Before joining a room, the user must provide a room name and a user name. After the user specifies them, when they click the <code>Join</code> button, the <code>navigateToRoomLayoutActivity()</code> method of the <code>MainActivity.kt</code> file is called, which simply set the values of the participant name and room name in the intent and starts the <code>RoomLayoutActivity</code>:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/MainActivity.kt#L33-L49" target="_blank" rel="noopener">MainActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-33">33</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/MainActivity.kt#L33-L49' target='_blank'&gt;MainActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-33">33</a></span>
 <span class="normal"><a href="#__codelineno-35-34">34</a></span>
 <span class="normal"><a href="#__codelineno-35-35">35</a></span>
 <span class="normal"><a href="#__codelineno-35-36">36</a></span>
@@ -2067,7 +2067,7 @@
 <a id="__codelineno-35-49" name="__codelineno-35-49"></a><span class="p">}</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Now let's see the code of the <code>RoomLayoutActivity.kt</code> file:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L32-L50" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-32">32</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L32-L50' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-32">32</a></span>
 <span class="normal"><a href="#__codelineno-36-33">33</a></span>
 <span class="normal"><a href="#__codelineno-36-34">34</a></span>
 <span class="normal"><a href="#__codelineno-36-35">35</a></span>
@@ -2119,7 +2119,7 @@
 <li><code>participantTracks</code>: A list of <code>TrackInfo</code> objects, which represent the video tracks of the participants in the room.</li>
 </ul>
 <p>When the activity is created, the <code>onCreate</code> method is called. This method initializes the activity layout, create a <code>Room</code> object, initializes the <code>RecyclerView</code> and request needed permissions:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L52-L69" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-52">52</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L52-L69' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-52">52</a></span>
 <span class="normal"><a href="#__codelineno-37-53">53</a></span>
 <span class="normal"><a href="#__codelineno-37-54">54</a></span>
 <span class="normal"><a href="#__codelineno-37-55">55</a></span>
@@ -2156,7 +2156,7 @@
 <a id="__codelineno-37-69" name="__codelineno-37-69"></a><span class="p">}</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>After the application check if the user has granted permissions, the <code>connectToRoom()</code> method is called:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L77-L134" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-77"> 77</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L77-L134' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-77"> 77</a></span>
 <span class="normal"><a href="#__codelineno-38-78"> 78</a></span>
 <span class="normal"><a href="#__codelineno-38-79"> 79</a></span>
 <span class="normal"><a href="#__codelineno-38-80"> 80</a></span>
@@ -2291,7 +2291,7 @@
 <ul>
 <li><strong><code>RoomEvent.TrackSubscribed</code></strong>: This event is triggered when a new track is received in the room. It manages the storage of the new track in the <code>participantTracks</code> list if it is a video track and notify the Adapter that a new item has been inserted.</li>
 </ul>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L136-L144" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-136">136</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L136-L144' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-136">136</a></span>
 <span class="normal"><a href="#__codelineno-39-137">137</a></span>
 <span class="normal"><a href="#__codelineno-39-138">138</a></span>
 <span class="normal"><a href="#__codelineno-39-139">139</a></span>
@@ -2312,7 +2312,7 @@
 <ul>
 <li><strong><code>RoomEvent.TrackUnsubscribed</code></strong>: This event occurs when a track is destroyed, and it takes care of removing the video track from the <code>participantTracks</code> list and notify the Adapter that an item has been removed.</li>
 </ul>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L146-L158" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-146">146</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L146-L158' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-146">146</a></span>
 <span class="normal"><a href="#__codelineno-40-147">147</a></span>
 <span class="normal"><a href="#__codelineno-40-148">148</a></span>
 <span class="normal"><a href="#__codelineno-40-149">149</a></span>
@@ -2346,7 +2346,7 @@
 </li>
 <li>
 <p>It requests a token from the application server using the room name and participant name. This is done by calling the <code>getToken()</code> method:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L210-L229" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-210">210</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L210-L229' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-210">210</a></span>
 <span class="normal"><a href="#__codelineno-41-211">211</a></span>
 <span class="normal"><a href="#__codelineno-41-212">212</a></span>
 <span class="normal"><a href="#__codelineno-41-213">213</a></span>
@@ -2398,7 +2398,7 @@
 <h3 id="displaying-video-tracks">Displaying Video Tracks<a class="headerlink" href="#displaying-video-tracks" title="Anchor link to this section for reference">#</a></h3>
 <p>In order to display the video tracks of the participants in the room, the <code>RoomLayoutActivity</code> uses a <code>RecyclerView</code> with a custom <code>Adapter</code> and <code>ViewHolder</code>. This allows the application to load and display the video tracks dynamically as they are received.</p>
 <p>Whenever a new video track is added to the <code>participantTracks</code> list, the <code>ParticipantAdapter</code> is notified that a new item has been inserted. The <code>ParticipantAdapter</code> then updates the <code>RecyclerView</code> to display the new video track by calling the <code>render</code> method of the <code>ParticipantViewHolder</code>:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ParticipantViewHolder.kt#L12-L28" target="_blank" rel="noopener">ParticipantViewHolder.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-12">12</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ParticipantViewHolder.kt#L12-L28' target='_blank'&gt;ParticipantViewHolder.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-12">12</a></span>
 <span class="normal"><a href="#__codelineno-42-13">13</a></span>
 <span class="normal"><a href="#__codelineno-42-14">14</a></span>
 <span class="normal"><a href="#__codelineno-42-15">15</a></span>
@@ -2446,7 +2446,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>When the user wants to leave the room, they can click the <code>Leave Room</code> button. This action calls the <code>leaveRoom()</code> method:</p>
-<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L160-L173" target="_blank" rel="noopener">RoomLayoutActivity.kt</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-160">160</a></span>
+<div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L160-L173' target='_blank'&gt;RoomLayoutActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-160">160</a></span>
 <span class="normal"><a href="#__codelineno-43-161">161</a></span>
 <span class="normal"><a href="#__codelineno-43-162">162</a></span>
 <span class="normal"><a href="#__codelineno-43-163">163</a></span>
@@ -2846,7 +2846,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.tracking", "navigation.footer", "navigation.path", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

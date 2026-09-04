@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/logos/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
 
 
@@ -44,7 +44,7 @@
     
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1834,11 +1834,11 @@
 <li><code>styles.css</code>: This file contains CSS classes that are used to style the <code>index.html</code> page.</li>
 </ul>
 <p>To use the LiveKit JS SDK in your application, you need to include the library in your HTML file. The tutorial does this by adding the following script tag to the <code>&lt;head&gt;</code> section of the HTML file:</p>
-<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/index.html#L32" target="_blank" rel="noopener">index.html</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-32" name="__codelineno-33-32"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/livekit-client@2.5.9/dist/livekit-client.umd.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/index.html#L32' target='_blank'&gt;index.html&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-32" name="__codelineno-33-32"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/livekit-client@2.5.9/dist/livekit-client.umd.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Then, you can use the <code>LivekitClient</code> object in your JavaScript code by referencing it from the <code>window</code> object under <code>LivekitClient</code>. When accessing symbols from the class, you will need to prefix them with <code>LivekitClient.</code>. For example, <code>Room</code> becomes <code>LivekitClient.Room</code>.</p>
 <p>Now let's see the code of the <code>app.js</code> file:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L1-L28" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L1-L28' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
@@ -1914,7 +1914,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a Room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>After the user specifies their participant name and the name of the room they want to join, when they click the <code>Join</code> button, the <code>joinRoom()</code> function is called:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L30-L78" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-30">30</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L30-L78' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-30">30</a></span>
 <span class="normal"><a href="#__codelineno-35-31">31</a></span>
 <span class="normal"><a href="#__codelineno-35-32">32</a></span>
 <span class="normal"><a href="#__codelineno-35-33">33</a></span>
@@ -2032,7 +2032,7 @@
 <ul>
 <li><strong><code>LivekitClient.RoomEvent.TrackSubscribed</code></strong>: This event is triggered when a new track is received in the room. It handles the attachment of the track to the HTML page, assigning an ID, and appending it to the <code>layout-container</code> element. If the track is of kind <code>video</code>, a <code>video-container</code> is created and participant data is appended as well.</li>
 </ul>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L80-L93" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-80">80</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L80-L93' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-80">80</a></span>
 <span class="normal"><a href="#__codelineno-36-81">81</a></span>
 <span class="normal"><a href="#__codelineno-36-82">82</a></span>
 <span class="normal"><a href="#__codelineno-36-83">83</a></span>
@@ -2063,7 +2063,7 @@
 <ol>
 <li>Attach the track to an HTML element.</li>
 </ol>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L122-L142" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-122">122</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L122-L142' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-122">122</a></span>
 <span class="normal"><a href="#__codelineno-37-123">123</a></span>
 <span class="normal"><a href="#__codelineno-37-124">124</a></span>
 <span class="normal"><a href="#__codelineno-37-125">125</a></span>
@@ -2108,7 +2108,7 @@
 <ul>
 <li><strong><code>LivekitClient.RoomEvent.TrackUnsubscribed</code></strong>: This event occurs when a track is destroyed, and it takes care of detaching the track from the HTML page and removing it from the DOM. If the track is a <code>video</code> track, <code>video-container</code> with the participant's identity is removed as well.</li>
 </ul>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L144-L147" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-144">144</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L144-L147' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-144">144</a></span>
 <span class="normal"><a href="#__codelineno-38-145">145</a></span>
 <span class="normal"><a href="#__codelineno-38-146">146</a></span>
 <span class="normal"><a href="#__codelineno-38-147">147</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-144" name="__codelineno-38-144"></a><span class="kd">function</span><span class="w"> </span><span class="nx">removeVideoContainer</span><span class="p">(</span><span class="nx">participantIdentity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2127,7 +2127,7 @@
 </li>
 <li>
 <p>It requests a token from the application server using the room name and participant name. This is done by calling the <code>getToken()</code> function:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L156-L188" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-156">156</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L156-L188' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-156">156</a></span>
 <span class="normal"><a href="#__codelineno-39-157">157</a></span>
 <span class="normal"><a href="#__codelineno-39-158">158</a></span>
 <span class="normal"><a href="#__codelineno-39-159">159</a></span>
@@ -2204,7 +2204,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the Room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>When the user wants to leave the room, they can click the <code>Leave Room</code> button. This action calls the <code>leaveRoom()</code> function:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L95-L113" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-95"> 95</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-js/src/app.js#L95-L113' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-95"> 95</a></span>
 <span class="normal"><a href="#__codelineno-40-96"> 96</a></span>
 <span class="normal"><a href="#__codelineno-40-97"> 97</a></span>
 <span class="normal"><a href="#__codelineno-40-98"> 98</a></span>
@@ -2616,7 +2616,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.tracking", "navigation.footer", "navigation.path", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

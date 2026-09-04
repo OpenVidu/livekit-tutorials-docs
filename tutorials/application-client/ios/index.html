@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/logos/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
 
 
@@ -44,7 +44,7 @@
     
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2055,7 +2055,7 @@
 <p>If these URLs are left empty, the user will be prompted to enter them when the application starts. This configuration is managed in the <code>ConfigureUrlsView.swift</code> file:</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ios.png" style="width: 25%"></a></p>
 <p>When the user clicks the <code>Save</code> button, the <code>LKButton</code> action triggers the validation and saves the URLs into the <code>AppContext</code> and <code>RoomContext</code>. The <code>ConfigureUrlsView</code> handles this logic:</p>
-<div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConfigureUrlsView.swift#L50-L64" target="_blank" rel="noopener">ConfigureUrlsView.swift</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-28">28</a></span>
+<div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConfigureUrlsView.swift#L50-L64' target='_blank'&gt;ConfigureUrlsView.swift&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-28">28</a></span>
 <span class="normal"><a href="#__codelineno-33-29">29</a></span>
 <span class="normal"><a href="#__codelineno-33-30">30</a></span>
 <span class="normal"><a href="#__codelineno-33-31">31</a></span>
@@ -2091,7 +2091,7 @@
 <p>Before joining a room, the <code>ConnectView.swift</code> defines the view for the connection screen. It includes a logo, text fields for participant name and room name, and buttons for joining the room and resetting URLs.</p>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ios.png" style="width: 25%"></a></p>
 <p>After define the participant and room name, the user can click the <code>Join</code> button to connect to the room. This action triggers the <code>connectToRoom</code> method asynchronously:</p>
-<div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConnectView.swift#L93-L122" target="_blank" rel="noopener">ConnectView.swift</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-93"> 93</a></span>
+<div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConnectView.swift#L93-L122' target='_blank'&gt;ConnectView.swift&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-93"> 93</a></span>
 <span class="normal"><a href="#__codelineno-34-94"> 94</a></span>
 <span class="normal"><a href="#__codelineno-34-95"> 95</a></span>
 <span class="normal"><a href="#__codelineno-34-96"> 96</a></span>
@@ -2179,7 +2179,7 @@
 <li>The <code>setMicrophone</code> method is called to enable the microphone for the local participant.</li>
 </ol>
 <p>The <code>OpenViduApp.swift</code> handle the navigation page. When room status is <code>connected</code>, the user is redirected to the <code>RoomView</code>:</p>
-<div class="language-swift highlight"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/OpenViduApp.swift" target="_blank" rel="noopener">OpenViduApp.swift</a></span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">RoomSwitchView</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
+<div class="language-swift highlight"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/OpenViduApp.swift' target='_blank'&gt;OpenViduApp.swift&lt;/a&gt;</span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">RoomSwitchView</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">appCtx</span><span class="p">:</span><span class="w"> </span><span class="n">AppContext</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">roomCtx</span><span class="p">:</span><span class="w"> </span><span class="n">RoomContext</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">room</span><span class="p">:</span><span class="w"> </span><span class="n">Room</span>
@@ -2221,7 +2221,7 @@
 <hr>
 <h3 id="displaying-video-tracks">Displaying Video Tracks<a class="headerlink" href="#displaying-video-tracks" title="Anchor link to this section for reference">#</a></h3>
 <p>To display the video tracks of participants in the room, the <code>RoomView.swift</code> uses various SwiftUI views and custom components. This approach allows the application to dynamically load and display the video tracks as they are received.</p>
-<div class="language-swift highlight"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift" target="_blank" rel="noopener">RoomView.swift</a></span><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">RoomView</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
+<div class="language-swift highlight"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift' target='_blank'&gt;RoomView.swift&lt;/a&gt;</span><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">RoomView</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">appCtx</span><span class="p">:</span><span class="w"> </span><span class="n">AppContext</span>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">roomCtx</span><span class="p">:</span><span class="w"> </span><span class="n">RoomContext</span>
 <a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">room</span><span class="p">:</span><span class="w"> </span><span class="n">Room</span>
@@ -2260,7 +2260,7 @@
 </ol>
 <p>The <code>ParticipantView</code> component is responsible for rendering the video track of a participant. It uses the <code>SwiftUIVideoView</code> component to display the video track and the <code>VideoView.LayoutMode</code> enum to define the layout mode.</p>
 <p>The <strong>LiveKit Swift SDK</strong> includes a VideoView class, based on UIKit, specifically designed for rendering video tracks. Additionally, subscribed audio tracks are automatically played by default.</p>
-<div class="language-swift highlight"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ParticipantView.swift" target="_blank" rel="noopener">ParticipantView.swift</a></span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">ParticipantView</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
+<div class="language-swift highlight"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ParticipantView.swift' target='_blank'&gt;ParticipantView.swift&lt;/a&gt;</span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">ParticipantView</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="p">@</span><span class="n">ObservedObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">participant</span><span class="p">:</span><span class="w"> </span><span class="n">Participant</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">    </span><span class="p">@</span><span class="n">EnvironmentObject</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">appCtx</span><span class="p">:</span><span class="w"> </span><span class="n">AppContext</span>
 <a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
@@ -2298,7 +2298,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>To leave the room, the user can click the <code>Leave</code> button in the <code>RoomView</code>. This action triggers the <code>leaveRoom</code> method asynchronously:</p>
-<div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift#L49-L108" target="_blank" rel="noopener">RoomView.swift</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-49">49</a></span>
+<div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift#L49-L108' target='_blank'&gt;RoomView.swift&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-49">49</a></span>
 <span class="normal"><a href="#__codelineno-38-50">50</a></span>
 <span class="normal"><a href="#__codelineno-38-51">51</a></span>
 <span class="normal"><a href="#__codelineno-38-52">52</a></span>
@@ -2702,7 +2702,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.tracking", "navigation.footer", "navigation.path", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

@@ -509,7 +509,7 @@ func enableCameraAndMicrophone() async {
 
 The `OpenViduApp.swift` handle the navigation page. When room status is `connected`, the user is redirected to the `RoomView`:
 
-[OpenViduApp.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/OpenViduApp.swift)
+<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/OpenViduApp.swift' target='_blank'>OpenViduApp.swift</a>
 
 ```swift
 struct RoomSwitchView: View {
@@ -557,7 +557,7 @@ ______________________________________________________________________
 
 To display the video tracks of participants in the room, the `RoomView.swift` uses various SwiftUI views and custom components. This approach allows the application to dynamically load and display the video tracks as they are received.
 
-[RoomView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift)
+<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift' target='_blank'>RoomView.swift</a>
 
 ```swift
 struct RoomView: View {
@@ -601,7 +601,7 @@ The `ParticipantView` component is responsible for rendering the video track of 
 
 The **LiveKit Swift SDK** includes a VideoView class, based on UIKit, specifically designed for rendering video tracks. Additionally, subscribed audio tracks are automatically played by default.
 
-[ParticipantView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ParticipantView.swift)
+<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ParticipantView.swift' target='_blank'>ParticipantView.swift</a>
 
 ```swift
 struct ParticipantView: View {

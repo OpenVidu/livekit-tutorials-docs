@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/logos/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
 
 
@@ -44,7 +44,7 @@
     
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1862,7 +1862,7 @@
 <li><strong><code>DELETE /recordings/:recordingName</code></strong>: This endpoint deletes a recording from the S3 bucket.</li>
 </ul>
 <p>Before we dive into the code of each endpoint, let's first see the changes introduced in the <code>index.js</code> file:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L15-L27" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L15-L27' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-15">15</a></span>
 <span class="normal"><a href="#__codelineno-9-16">16</a></span>
 <span class="normal"><a href="#__codelineno-9-17">17</a></span>
 <span class="normal"><a href="#__codelineno-9-18">18</a></span>
@@ -1912,7 +1912,7 @@
 </ul>
 <p>Besides, the <code>index.js</code> file configures the server to serve static files from the <code>public</code> directory.</p>
 <p>It also initializes the <code>EgressClient</code>, which will help interacting with <a href="https://openvidu.io/latest/docs/reference/egress/" target="_blank" rel="noopener">Egress API <span class="twemoji external-link-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.3 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32zM80 96c-44.2 0-80 35.8-80 80v256c0 44.2 35.8 80 80 80h256c44.2 0 80-35.8 80-80v-80c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32z"></path></svg></span></a> to manage recordings, and the <code>S3Service</code>, which will help interacting with the S3 bucket:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L34-L39" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-34">34</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L34-L39' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-34">34</a></span>
 <span class="normal"><a href="#__codelineno-10-35">35</a></span>
 <span class="normal"><a href="#__codelineno-10-36">36</a></span>
 <span class="normal"><a href="#__codelineno-10-37">37</a></span>
@@ -1925,7 +1925,7 @@
 <a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="kd">const</span><span class="w"> </span><span class="nx">s3Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">S3Service</span><span class="p">();</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>The <code>POST /token</code> endpoint has been modified to add the <code>roomRecord</code> permission to the access token, so that participants can start recording a room:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L46-L63" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-46">46</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L46-L63' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-46">46</a></span>
 <span class="normal"><a href="#__codelineno-11-47">47</a></span>
 <span class="normal"><a href="#__codelineno-11-48">48</a></span>
 <span class="normal"><a href="#__codelineno-11-49">49</a></span>
@@ -1967,7 +1967,7 @@
 <p>Now let's explore the code for each recording feature:</p>
 <h4 id="start-recording">Start recording<a class="headerlink" href="#start-recording" title="Anchor link to this section for reference">#</a></h4>
 <p>The <code>POST /recordings/start</code> endpoint starts the recording of a room. It receives the name of the room to record as parameter and returns the recording metadata:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L80-L118" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-80"> 80</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L80-L118' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-80"> 80</a></span>
 <span class="normal"><a href="#__codelineno-12-81"> 81</a></span>
 <span class="normal"><a href="#__codelineno-12-82"> 82</a></span>
 <span class="normal"><a href="#__codelineno-12-83"> 83</a></span>
@@ -2064,7 +2064,7 @@
 <li>Obtains the <code>roomName</code> parameter from the request body. If it is not available, it returns a <code>400</code> error.</li>
 <li>
 <p>Check if there is already an active recording for the room. If there is, it returns a <code>409</code> error to prevent starting a new recording. To accomplish this, we use the <code>getActiveRecordingByRoom</code> function, which lists all active egresses for a specified room by calling the <code>listEgress</code> method of the <code>EgressClient</code> with the <code>roomName</code> and <code>active</code> parameters, and then returns the egress ID of the first active egress found:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L236-L245" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-236">236</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L236-L245' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-236">236</a></span>
 <span class="normal"><a href="#__codelineno-13-237">237</a></span>
 <span class="normal"><a href="#__codelineno-13-238">238</a></span>
 <span class="normal"><a href="#__codelineno-13-239">239</a></span>
@@ -2100,7 +2100,7 @@
 </ol>
 <h4 id="stop-recording">Stop recording<a class="headerlink" href="#stop-recording" title="Anchor link to this section for reference">#</a></h4>
 <p>The <code>POST /recordings/stop</code> endpoint stops the recording of a room. It receives the room name of the room to stop recording as a parameter and returns the updated recording metadata:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L121-L149" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-121">121</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L121-L149' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-121">121</a></span>
 <span class="normal"><a href="#__codelineno-14-122">122</a></span>
 <span class="normal"><a href="#__codelineno-14-123">123</a></span>
 <span class="normal"><a href="#__codelineno-14-124">124</a></span>
@@ -2174,7 +2174,7 @@
 </ol>
 <h4 id="list-recordings">List recordings<a class="headerlink" href="#list-recordings" title="Anchor link to this section for reference">#</a></h4>
 <p>The <code>GET /recordings</code> endpoint lists all recordings stored in the S3 bucket. This endpoint also allows filtering recordings by room name or room ID:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L152-L173" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-152">152</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L152-L173' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-152">152</a></span>
 <span class="normal"><a href="#__codelineno-15-153">153</a></span>
 <span class="normal"><a href="#__codelineno-15-154">154</a></span>
 <span class="normal"><a href="#__codelineno-15-155">155</a></span>
@@ -2241,7 +2241,7 @@
 </ol>
 <h4 id="get-recording">Get recording<a class="headerlink" href="#get-recording" title="Anchor link to this section for reference">#</a></h4>
 <p>The <code>GET /recordings/:recordingName</code> endpoint retrieves a specific portion of a recording from the S3 bucket and returns it as a stream. The server sends the recording file in portions of <code>5 MB</code> each time the client requests a range of the recording file. This is done to prevent loading the entire recording file into memory and to allow the client to play the recording while it is being downloaded and seek to a specific time:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L176-L207" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-176">176</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L176-L207' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-176">176</a></span>
 <span class="normal"><a href="#__codelineno-16-177">177</a></span>
 <span class="normal"><a href="#__codelineno-16-178">178</a></span>
 <span class="normal"><a href="#__codelineno-16-179">179</a></span>
@@ -2324,7 +2324,7 @@
 <li>Checks if the recording exists in the S3 bucket by calling the <code>exists</code> method of the <code>S3Service</code> with the <code>key</code> as a parameter. If the recording does not exist, it returns a <code>404</code> error.</li>
 <li>
 <p>Gets the requested range of the recording file by calling the <code>getRecordingStream</code> function:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L247-L261" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-247">247</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L247-L261' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-247">247</a></span>
 <span class="normal"><a href="#__codelineno-17-248">248</a></span>
 <span class="normal"><a href="#__codelineno-17-249">249</a></span>
 <span class="normal"><a href="#__codelineno-17-250">250</a></span>
@@ -2390,7 +2390,7 @@
 </div>
 <h4 id="delete-recording">Delete recording<a class="headerlink" href="#delete-recording" title="Anchor link to this section for reference">#</a></h4>
 <p>The <code>DELETE /recordings/:recordingName</code> endpoint deletes a recording from the S3 bucket:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L210-L227" target="_blank" rel="noopener">index.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-210">210</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/index.js#L210-L227' target='_blank'&gt;index.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-210">210</a></span>
 <span class="normal"><a href="#__codelineno-18-211">211</a></span>
 <span class="normal"><a href="#__codelineno-18-212">212</a></span>
 <span class="normal"><a href="#__codelineno-18-213">213</a></span>
@@ -2439,7 +2439,7 @@
 <hr>
 <h4 id="s3-service">S3 service<a class="headerlink" href="#s3-service" title="Anchor link to this section for reference">#</a></h4>
 <p>Finally, let's take a look at the <code>s3.service.js</code> file, which encapsulates the operations to interact with the S3 bucket:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/s3.service.js" target="_blank" rel="noopener">s3.service.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/src/s3.service.js' target='_blank'&gt;s3.service.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-19-10">10</a></span>
 <span class="normal"><a href="#__codelineno-19-11">11</a></span>
 <span class="normal"><a href="#__codelineno-19-12">12</a></span>
@@ -2651,7 +2651,7 @@
 <p>By using the <code>RoomEvent.RecordingStatusChanged</code> event, we can only detect when the recording has started or stopped, but not other states like <code>starting</code>, <code>stopping</code> or <code>failed</code>. Additionally, when the recording stops, the event is not triggered until the recorder participant leaves the room, causing a delay of 20 seconds approximately between the stop and when participants are notified.</p>
 <p>To overcome these limitations, you can follow the steps described in the <a href="../recording-advanced/" target="_blank">advanced recording tutorial</a>, where we implement a custom notification system. This system informs participants about the recording status by listening to webhook events and updating room metadata.</p>
 </div>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L20-L87" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-20">20</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L20-L87' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-20">20</a></span>
 <span class="normal"><a href="#__codelineno-20-21">21</a></span>
 <span class="normal"><a href="#__codelineno-20-22">22</a></span>
 <span class="normal"><a href="#__codelineno-20-23">23</a></span>
@@ -2789,7 +2789,7 @@
 </code></pre></div></td></tr></tbody></table></div>
 <p>The <code>updateRecordingInfo</code> function updates the recording information of the room by changing the recording button's text and color according to the recording status. It also shows or hides the alert message that informs the user that the room is being recorded. Finally, it updates the recording list by calling the <code>listRecordings</code> function.</p>
 <p>This function retrieves all recordings available for the room from the backend and displays their relevant information by invoking the <code>showRecordingList</code> function:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L337-L370" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-337">337</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L337-L370' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-337">337</a></span>
 <span class="normal"><a href="#__codelineno-21-338">338</a></span>
 <span class="normal"><a href="#__codelineno-21-339">339</a></span>
 <span class="normal"><a href="#__codelineno-21-340">340</a></span>
@@ -2864,7 +2864,7 @@
 <p>In the <a href="../recording-advanced/" target="_blank">advanced recording tutorial</a>, we show how to implement a custom notification system that alerts all participants of a recording's deletion by sending data messages.</p>
 </div>
 <p>When the user clicks the play button, the <code>displayRecording</code> function is called to play the recording. This function opens a dialog window with an embedded video element and sets the source of the video to the <a href="#get-recording">get recording endpoint</a> of the server application:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L372-L379" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-372">372</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/app.js#L372-L379' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-372">372</a></span>
 <span class="normal"><a href="#__codelineno-22-373">373</a></span>
 <span class="normal"><a href="#__codelineno-22-374">374</a></span>
 <span class="normal"><a href="#__codelineno-22-375">375</a></span>
@@ -2880,7 +2880,7 @@
 <a id="__codelineno-22-378" name="__codelineno-22-378"></a><span class="w">  </span><span class="nx">recordingVideo</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`/recordings/</span><span class="si">${</span><span class="nx">recordingName</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 <a id="__codelineno-22-379" name="__codelineno-22-379"></a><span class="p">}</span>
 </code></pre></div></td></tr></tbody></table></div>
-<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/index.html#L94-L99" target="_blank" rel="noopener">index.html</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-94">94</a></span>
+<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-basic-node/public/index.html#L94-L99' target='_blank'&gt;index.html&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-94">94</a></span>
 <span class="normal"><a href="#__codelineno-23-95">95</a></span>
 <span class="normal"><a href="#__codelineno-23-96">96</a></span>
 <span class="normal"><a href="#__codelineno-23-97">97</a></span>
@@ -3262,7 +3262,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.tracking", "navigation.footer", "navigation.path", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   
