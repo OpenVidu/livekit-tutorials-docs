@@ -32,7 +32,7 @@ jobs:
           sudo apt-get install -y --fix-missing pngquant
           # Pinned to the same versions openvidu.io publishes with, so the shared
           # tutorials render identically on both sites.
-          pip install mkdocs==1.6.1 "mkdocs-material[imaging]==9.7.6" pymdown-extensions==11.0.1 pygments==2.19.2 mkdocs-glightbox==0.5.2 mkdocs-llmstxt==0.5.0
+          pip install mkdocs==1.6.1 "mkdocs-material[imaging]==9.7.7" pymdown-extensions==11.0.1 pygments==2.20.0 mkdocs-glightbox==0.5.2 mkdocs-llmstxt==0.5.0
 
       - name: Configure Git Credentials
         run: |
