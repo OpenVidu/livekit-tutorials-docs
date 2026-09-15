@@ -30,17 +30,26 @@
 {% block extrahead %}
 {{ super() }}
 
-{# The site's single font stylesheet (theme.font is false), the same one
-   openvidu.io loads. Self-hosted at build time by the privacy plugin. #}
+{# Fonts, the same block openvidu.io's main.html carries (minus Tomorrow 800, which only its
+   pricing tables use). `theme.font` is false, so this is the site's only font stylesheet; the
+   privacy plugin vendors every URL below at build time, preload hrefs included.
+   No-flicker contract: break any one and text paints twice (fallback, then Tomorrow).
+     1. A render-blocking `rel="stylesheet"`, never the preload-as-style + onload trick.
+     2. `display=block`, not `swap` (swap paints the fallback first by design).
+     3. Preload every face the first viewport needs, or `block` shows invisible text instead:
+        Tomorrow 300 (Material h1), 400, 500 and 700, Roboto Mono (one latin file serves
+        400/500/700), Arciform (header title, same href as extra.css). Latin subset only;
+        `crossorigin` must match the CSS's CORS fetch or the hint becomes a second download. #}
+{# Tomorrow 300 #}<link rel="preload" href="https://fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR15WXXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+{# Tomorrow 400 #}<link rel="preload" href="https://fonts.gstatic.com/s/tomorrow/v19/WBLmrETNbFtZCeGqgRXSe2A.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+{# Tomorrow 500 #}<link rel="preload" href="https://fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR0hWHXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+{# Tomorrow 700 #}<link rel="preload" href="https://fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR1pXnXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+{# Roboto Mono #}<link rel="preload" href="https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/Arciform.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 <link
-  rel="preload"
-  href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
-  as="style"
-  onload="this.onload=null;this.rel='stylesheet'"
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400&display=block"
 />
-<noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" type="text/css" />
-</noscript>
 
 {% include "partials/og.html" %}
 {% include "partials/json-ld.html" %}

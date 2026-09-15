@@ -1,11 +1,22 @@
+/* Site palette, laid out like openvidu.io's colors.css: the brand tokens (--ov-*), Material's
+   colour variables for the site-wide look, then the per-scheme overrides. Every repeated colour
+   lives here as a token; only white, black and single-use UI colours stay literal elsewhere. */
+
 :root {
-  --md-primary-fg-color: #4d4d4d;
-  --md-primary-fg-color--light: #00c8f7;
-  --md-primary-fg-color--dark: #0088aa;
+  --ov-meet-accent-rgb: 6, 211, 98;
+  --ov-platform-primary: #0088aa;
+  --ov-platform-primary-rgb: 0, 136, 170;
+  --ov-platform-accent: #00c8f7;
+  --ov-nav-grey: #4d4d4d;
+  --ov-grey-muted: #818181;
+
+  --md-primary-fg-color: var(--ov-nav-grey);
+  --md-primary-fg-color--light: var(--ov-platform-accent);
+  --md-primary-fg-color--dark: var(--ov-platform-primary);
   --md-primary-bg-color: #fff;
-  --md-primary-bg-color--dark: #0088aa;
-  --md-accent-fg-color: #0088aa;
-  --md-accent-fg-color--transparent: #818181;
+  --md-primary-bg-color--dark: var(--ov-platform-primary);
+  --md-accent-fg-color: var(--ov-platform-primary);
+  --md-accent-fg-color--transparent: var(--ov-grey-muted);
   --md-accent-bg-color: #ffffff;
   --md-accent-bg-color--light: #ffffff;
   --md-hue: 190deg;
@@ -15,14 +26,16 @@
   --slate-md-default-bg-color: hsla(var(--md-hue), 15%, 14%, 1);
   --slate-md-default-fg-color--light: hsla(var(--md-hue), 15%, 90%, 0.56);
 }
-/* Custom colors for dark mode */
+
+/* Dark scheme */
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color: var(--md-primary-fg-color--light);
 }
 
-/* Custom colors for light mode */
+/* Light scheme */
 [data-md-color-scheme="default"] {
   --md-typeset-a-color: var(--md-primary-fg-color--dark);
+
   hr {
     background-image: linear-gradient(
       to right,
@@ -32,12 +45,13 @@
       transparent 100%
     );
   }
+
   .md-button--primary {
     background-color: var(--md-accent-fg-color--transparent);
     border-color: var(--md-accent-fg-color--transparent);
-}
-img.mediasoup-icon {
-    filter: brightness(0.5) saturate(2.5);
-}
+  }
 
+  img.mediasoup-icon {
+    filter: brightness(0.5) saturate(2.5);
+  }
 }
