@@ -79,7 +79,7 @@ The `index.php` file imports the required dependencies, sets the HTTP headers fo
 
 ---
 
-#### Create token
+### Create token
 
 The endpoint `/token` accepts `POST` requests with a payload of type `application/json`, containing the following fields:
 
@@ -131,7 +131,7 @@ If required fields are available, a new JWT token is created. For that we use th
 
 ---
 
-#### Receive webhook
+### Receive webhook
 
 The endpoint `/livekit/webhook` accepts `POST` requests with a payload of type `application/webhook+json`. This is the endpoint where LiveKit Server will send [webhook events :fontawesome-solid-external-link:{.external-link-icon}](https://openvidu.io/latest/docs/reference/webhooks/#events){:target="_blank"}.
 
