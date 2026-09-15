@@ -281,6 +281,14 @@ div[class*="grid-"]:has(> img) {
   text-align: center;
 }
 
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
 .nowrap {
   white-space: nowrap;
 }
