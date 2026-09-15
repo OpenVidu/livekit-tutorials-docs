@@ -52,6 +52,12 @@ differences, all listed at the top of the script:
 When a real difference is meant to stay, add it to the script's rules with a comment saying why —
 never leave it reported.
 
+**CSS is not compared.** The tutorials' markup relies on classes both sites define:
+`docs/stylesheets/unsemantic-grid.css` is the same complete file on both, and `extra.css` here
+carries the utilities the synced pages use (`.text-center`, `.w-25`, `.w-50`) plus the selectors
+shared with openvidu.io's sheet (footer, product tags, tabbed content, lightbox, newsletter form).
+A class openvidu.io adds to a synced page needs its rule here too.
+
 ## Publishing
 
 Merging to `main` does not change the live site.
