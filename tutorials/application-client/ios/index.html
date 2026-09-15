@@ -87,10 +87,13 @@
 
 
 
-<link rel="preload" href="../../../assets/external/fonts.googleapis.com/css2.73f59626.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="../../../assets/external/fonts.googleapis.com/css2.73f59626.css" rel="stylesheet" type="text/css">
-</noscript>
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR15WXXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLmrETNbFtZCeGqgRXSe2A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR0hWHXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR1pXnXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/fonts/Arciform.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css2.84d667f7.css">
 
 
 <meta property="og:site_name" content="LiveKit Tutorials">
@@ -1956,7 +1959,7 @@
 </div>
 <p>If you encounter code signing issues, make sure you change the <strong>Team</strong> and <strong>bundle id</strong> from the previous step.</p>
 <p>The application will initiate as a native iOS application. Once the app is opened, you should see a screen like this:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ios.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the iOS tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ios.png"></a></p>
 <p>This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.</p>
 <div class="admonition info">
 <p class="admonition-title">Connecting real iOS device to application server running in you local network</p>
@@ -1965,10 +1968,10 @@
 <p>Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.</p>
 <div class="grid-container">
 <div class="grid-50 text-center">
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ios.png" style="width: 50%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the iOS tutorial app" class="w-50" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ios.png"></a></p>
 </div>
 <div class="grid-50 text-center">
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Video call room of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/room-ios.png" style="width: 50%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Video call room of the iOS tutorial app" class="w-50" loading="lazy" src="../../../assets/images/tutorials/application-client/room-ios.png"></a></p>
 </div>
 </div>
 <h2 id="understanding-the-code">Understanding the Code<a class="headerlink" href="#understanding-the-code" title="Anchor link to this section for reference">#</a></h2>
@@ -2053,7 +2056,7 @@
 </ul>
 <p>You should configure these URLs according to your deployment settings. If you are <a href="#run-openvidu-locally">running OpenVidu locally</a>, you can set <code>applicationServerUrl</code> to <code>https://xxx-yyy-zzz-www.openvidu-local.dev:6443</code> and <code>livekitUrl</code> to <code>wss://xxx-yyy-zzz-www.openvidu-local.dev:7443</code>, where <code>xxx-yyy-zzz-www</code> represents the LAN private IP address of the machine running OpenVidu, with dashes (-) instead of dots (.).</p>
 <p>If these URLs are left empty, the user will be prompted to enter them when the application starts. This configuration is managed in the <code>ConfigureUrlsView.swift</code> file:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ios.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the iOS tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ios.png"></a></p>
 <p>When the user clicks the <code>Save</code> button, the <code>LKButton</code> action triggers the validation and saves the URLs into the <code>AppContext</code> and <code>RoomContext</code>. The <code>ConfigureUrlsView</code> handles this logic:</p>
 <div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConfigureUrlsView.swift#L50-L64' target='_blank'&gt;ConfigureUrlsView.swift&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-28">28</a></span>
 <span class="normal"><a href="#__codelineno-33-29">29</a></span>
@@ -2089,7 +2092,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>Before joining a room, the <code>ConnectView.swift</code> defines the view for the connection screen. It includes a logo, text fields for participant name and room name, and buttons for joining the room and resetting URLs.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the iOS tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ios.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the iOS tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ios.png"></a></p>
 <p>After define the participant and room name, the user can click the <code>Join</code> button to connect to the room. This action triggers the <code>connectToRoom</code> method asynchronously:</p>
 <div class="language-swift highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConnectView.swift#L93-L122' target='_blank'&gt;ConnectView.swift&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-93"> 93</a></span>
 <span class="normal"><a href="#__codelineno-34-94"> 94</a></span>

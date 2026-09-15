@@ -87,10 +87,13 @@
 
 
 
-<link rel="preload" href="../../../assets/external/fonts.googleapis.com/css2.73f59626.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="../../../assets/external/fonts.googleapis.com/css2.73f59626.css" rel="stylesheet" type="text/css">
-</noscript>
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR15WXXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLmrETNbFtZCeGqgRXSe2A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR0hWHXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR1pXnXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/fonts/Arciform.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css2.84d667f7.css">
 
 
 <meta property="og:site_name" content="LiveKit Tutorials">
@@ -1873,7 +1876,7 @@
 </li>
 </ol>
 <p>The application will initiate as a native Android program. Once the application is opened, you should see a screen like this:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Android tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-android.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Android tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-android.png"></a></p>
 <p>This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.</p>
 <div class="admonition info">
 <p class="admonition-title">Connecting real Android device to application server running in you local network</p>
@@ -1882,10 +1885,10 @@
 <p>Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.</p>
 <div class="grid-container">
 <div class="grid-50 text-center">
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the Android tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/join-android.png" style="width: 50%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the Android tutorial app" class="w-50" loading="lazy" src="../../../assets/images/tutorials/application-client/join-android.png"></a></p>
 </div>
 <div class="grid-50 text-center">
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Video call room of the Android tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/room-android.png" style="width: 50%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Video call room of the Android tutorial app" class="w-50" loading="lazy" src="../../../assets/images/tutorials/application-client/room-android.png"></a></p>
 </div>
 </div>
 <h2 id="understanding-the-code">Understanding the code<a class="headerlink" href="#understanding-the-code" title="Anchor link to this section for reference">#</a></h2>
@@ -2003,7 +2006,7 @@
 </ul>
 <p>You should configure these URLs according to your deployment settings. In case you are <a href="#run-openvidu-locally">running OpenVidu locally</a>, you can set the <code>applicationServerUrl</code> to <code>https://xxx-yyy-zzz-www.openvidu-local.dev:6443</code> and the <code>livekitUrl</code> to <code>wss://xxx-yyy-zzz-www.openvidu-local.dev:7443</code>, where <code>xxx-yyy-zzz-www</code> part of the domain is the LAN private IP address of the machine running OpenVidu, with dashes (-) instead of dots (.).</p>
 <p>If these URLs are left empty, the user will be prompted to enter the URLs when the application starts. This configuration is managed in the <code>ConfigureUrlsActivity.kt</code> file:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Android tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-android.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Android tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-android.png"></a></p>
 <p>When the user clicks the <code>Save</code> button, the <code>onSaveUrls()</code> method is called, which saves the URLs in the <code>Urls</code> object and finishes the activity, returning to the MainActivity:</p>
 <div class="language-kotlin highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ConfigureUrlsActivity.kt#L24-L35' target='_blank'&gt;ConfigureUrlsActivity.kt&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-24">24</a></span>
 <span class="normal"><a href="#__codelineno-34-25">25</a></span>

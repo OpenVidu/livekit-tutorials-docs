@@ -87,10 +87,13 @@
 
 
 
-<link rel="preload" href="../../../assets/external/fonts.googleapis.com/css2.73f59626.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="../../../assets/external/fonts.googleapis.com/css2.73f59626.css" rel="stylesheet" type="text/css">
-</noscript>
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR15WXXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLmrETNbFtZCeGqgRXSe2A.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR0hWHXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/tomorrow/v19/WBLhrETNbFtZCeGqgR1pXnXPDMU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../assets/external/fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/fonts/Arciform.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css2.84d667f7.css">
 
 
 <meta property="og:site_name" content="LiveKit Tutorials">
@@ -1939,15 +1942,15 @@
 </div>
 <p>The script will ask you for the device you want to run the application on. You should select the real device you have connected to your computer.</p>
 <p>Once the mobile device has been selected, the script will launch the application on the device and you will see a screen like this:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Ionic tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ionic.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Ionic tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ionic.png"></a></p>
 <p>This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.</p>
 <p>Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.</p>
 <div class="grid-container">
 <div class="grid-50 text-center">
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the Ionic tutorial app on a mobile device" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ionic-device.png" style="width: 50%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Join screen of the Ionic tutorial app on a mobile device" class="w-50" loading="lazy" src="../../../assets/images/tutorials/application-client/join-ionic-device.png"></a></p>
 </div>
 <div class="grid-50 text-center">
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Video call room of the Ionic tutorial app on a mobile device" loading="lazy" src="../../../assets/images/tutorials/application-client/room-ionic-device.png" style="width: 50%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Video call room of the Ionic tutorial app on a mobile device" class="w-50" loading="lazy" src="../../../assets/images/tutorials/application-client/room-ionic-device.png"></a></p>
 </div>
 </div>
 </div>
@@ -2178,7 +2181,7 @@
 <p>When <a href="#run-openvidu-locally">running OpenVidu locally</a> and launching the app in a web browser, leave <code>APPLICATION_SERVER_URL</code> and <code>LIVEKIT_URL</code> variables empty. The function <code>configureUrls()</code> will automatically configure them with default values. However, for other deployment type or when launching the app in a mobile device, you should configure these variables with the correct URLs depending on your deployment.</p>
 <p>In case you are <a href="#run-openvidu-locally">running OpenVidu locally</a> and launching the app in a mobile device, you can set the <code>applicationServerUrl</code> to <code>https://xxx-yyy-zzz-www.openvidu-local.dev:6443</code> and the <code>livekitUrl</code> to <code>wss://xxx-yyy-zzz-www.openvidu-local.dev:7443</code>, where <code>xxx-yyy-zzz-www</code> part of the domain is the LAN private IP address of the machine running OpenVidu, with dashes (-) instead of dots (.).</p>
 <p>If you leave them empty and app is launched in a mobile device, the user will be prompted to enter the URLs when the application starts:</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Ionic tutorial app" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ionic.png" style="width: 25%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="URL configuration of the Ionic tutorial app" class="w-25" loading="lazy" src="../../../assets/images/tutorials/application-client/configure-urls-ionic.png"></a></p>
 <hr>
 <h3 id="joining-a-room">Joining a Room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>After the user specifies their participant name and the name of the room they want to join, when they click the <code>Join</code> button, the <code>joinRoom()</code> method is called:</p>
