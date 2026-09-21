@@ -5,7 +5,8 @@ Both sites document the same tutorial code for different audiences: this one is
 LiveKit-first, openvidu.io is OpenVidu-first. Everything else should match. This
 script normalizes away the differences that are intentional (listed in
 DELIBERATE below) and prints whatever is left, so a drift between the two repos
-shows up as a diff instead of going unnoticed.
+shows up as a diff instead of going unnoticed. The build hooks this site copies
+from openvidu.io (HOOK_COPIES) are compared byte for byte instead.
 
     tools/sync-check.py [--openvidu-io PATH] [--context N]
 
@@ -67,6 +68,12 @@ for _f in ["dotnet", "go", "java", "node", "php", "python", "ruby", "rust", "tab
     PAIRS.append((f"shared/tutorials/application-server/{_f}.md",) * 2)
 for _f in ["configure-urls", "testing-other-devices", "webhook-local-server", "run-openvidu-locally"]:
     PAIRS.append((f"shared/tutorials/{_f}.md",) * 2)
+
+# Build hooks copied verbatim from openvidu.io's publish-tool/: edited there, then copied here.
+HOOK_COPIES = [
+    ("hooks/pygments_fence_title_hook.py", "publish-tool/pygments_fence_title_hook.py"),
+    ("hooks/llmstxt_preprocess.py", "publish-tool/llmstxt_preprocess.py"),
+]
 
 # Pages whose step 1 differs by design (see note 4): skip that region.
 SKIP_STEP1 = {"docs/tutorials/advanced-features/recording-basic.md",
@@ -270,6 +277,17 @@ def main() -> int:
         return 2
 
     divergent = 0
+    for lk_rel, ov_rel in HOOK_COPIES:
+        lk_file, ov_file = here / lk_rel, args.openvidu_io / ov_rel
+        for f in (lk_file, ov_file):
+            if not f.is_file():
+                print(f"missing: {f}", file=sys.stderr)
+                return 2
+        if lk_file.read_bytes() != ov_file.read_bytes():
+            print(f"livekit-tutorials {lk_rel}: not a byte-for-byte copy of openvidu.io {ov_rel}"
+                  " — copy it over\n")
+            divergent += 1
+
     for lk_rel, ov_rel in PAIRS:
         lk_file, ov_file = here / lk_rel, args.openvidu_io / ov_rel
         for f in (lk_file, ov_file):
@@ -301,10 +319,12 @@ def main() -> int:
             print("\n".join(diff) + "\n")
 
     if divergent:
-        print(f"{divergent} unexplained line(s) across {len(PAIRS)} tutorial file pairs.")
+        print(f"{divergent} unexplained difference(s) across {len(PAIRS)} tutorial file pairs "
+              f"and {len(HOOK_COPIES)} hook copies.")
         print("Either sync the two repos, or record the difference in DELIBERATE.")
         return 1
-    print(f"In sync: {len(PAIRS)} tutorial file pairs, no unexplained differences.")
+    print(f"In sync: {len(PAIRS)} tutorial file pairs and {len(HOOK_COPIES)} hook copies, "
+          "no unexplained differences.")
     return 0
 
 

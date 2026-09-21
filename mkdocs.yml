@@ -40,9 +40,11 @@ not_in_nav: |
   /conditions/
 
 # Sitemap <lastmod> from git, the glightbox fixes, and every page's own title
-# and description for llmstxt.
+# and description for llmstxt; then the linked code-block filenames Pygments
+# escapes (a verbatim copy of openvidu.io's hook, like llmstxt_preprocess.py).
 hooks:
   - hooks/mkdocs_hook.py
+  - hooks/pygments_fence_title_hook.py
 
 watch:
   - shared
@@ -142,8 +144,9 @@ plugins:
         self-hosted, LiveKit-compatible platform maintained by this site's authors — use it to
         deploy and self-host what you build here. The "Optional" section at the end holds
         legal pages, and can be skipped when a shorter context is needed.
-      # The plugin's own cleaning drops every <img>/<svg> before the preprocess hook runs, so
-      # llmstxt_preprocess.py reimplements it and keeps alt text, table icons and tab labels.
+      # The plugin's own cleaning runs before the preprocess hook and drops the tab labels and
+      # comparison icons, so llmstxt_preprocess.py reimplements it: it keeps those, exports
+      # admonitions as blockquotes and restores the code blocks' linked filenames.
       autoclean: false
       preprocess: hooks/llmstxt_preprocess.py
       # Paths only: mkdocs_hook.py fills in each page's own `title` and `description`, and a

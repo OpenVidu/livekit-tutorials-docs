@@ -65,6 +65,9 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
   each page's own title and description — a page listed in the llmstxt sections without
   both **fails the build**. Add build-time computation there only when nothing
   MkDocs-native (a snippet, a template, config) can carry it.
+- `hooks/pygments_fence_title_hook.py` and `hooks/llmstxt_preprocess.py` are **verbatim
+  copies** of openvidu.io's `publish-tool/` files, compared byte for byte by `sync-check.py`:
+  edit them there, then copy them here.
 - Pins live in `Dockerfile` and `.github/workflows/publish-web.yaml` and **must match
   openvidu.io's** (mkdocs 1.6.1, material 9.7.7, pymdown-extensions 11.0.1, pygments 2.20.0,
   glightbox 0.5.2, llmstxt 0.5.0): the two sites render the same Markdown, so a version drift
