@@ -71,6 +71,7 @@ for _f in ["configure-urls", "testing-other-devices", "webhook-local-server", "r
 
 # Build hooks copied verbatim from openvidu.io's publish-tool/: edited there, then copied here.
 HOOK_COPIES = [
+    ("hooks/llmstxt_entries_hook.py", "publish-tool/llmstxt_entries_hook.py"),
     ("hooks/pygments_fence_title_hook.py", "publish-tool/pygments_fence_title_hook.py"),
     ("hooks/llmstxt_preprocess.py", "publish-tool/llmstxt_preprocess.py"),
 ]

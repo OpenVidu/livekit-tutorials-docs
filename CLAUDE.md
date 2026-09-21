@@ -61,13 +61,13 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
   `tutorials/counterpart-box.md` include under its H1 plus a `[counterpart]` link
   definition — `sync-check.py` requires both, with the exact URL its pair dictates.
 - `hooks/mkdocs_hook.py` dates every sitemap `<lastmod>` from git (a page's date follows
-  its snippets too), keeps the glightbox init working, and feeds the `llmstxt` plugin
-  each page's own title and description — a page listed in the llmstxt sections without
-  both **fails the build**. Add build-time computation there only when nothing
-  MkDocs-native (a snippet, a template, config) can carry it.
-- `hooks/pygments_fence_title_hook.py` and `hooks/llmstxt_preprocess.py` are **verbatim
-  copies** of openvidu.io's `publish-tool/` files, compared byte for byte by `sync-check.py`:
-  edit them there, then copy them here.
+  its snippets too) and keeps the glightbox init working. Add build-time computation there
+  only when nothing MkDocs-native (a snippet, a template, config) can carry it.
+- `hooks/llmstxt_entries_hook.py`, `hooks/pygments_fence_title_hook.py` and
+  `hooks/llmstxt_preprocess.py` are **verbatim copies** of openvidu.io's `publish-tool/`
+  files, compared byte for byte by `sync-check.py`: edit them there, then copy them here.
+  The first feeds the `llmstxt` plugin each page's own title and description — a page
+  listed in the llmstxt sections without both **fails the build**.
 - Pins live in `Dockerfile` and `.github/workflows/publish-web.yaml` and **must match
   openvidu.io's** (mkdocs 1.6.1, material 9.7.7, pymdown-extensions 11.0.1, pygments 2.20.0,
   glightbox 0.5.2, llmstxt 0.5.0): the two sites render the same Markdown, so a version drift

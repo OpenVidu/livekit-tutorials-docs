@@ -39,11 +39,13 @@ nav:
 not_in_nav: |
   /conditions/
 
-# Sitemap <lastmod> from git, the glightbox fixes, and every page's own title
-# and description for llmstxt; then the linked code-block filenames Pygments
-# escapes (a verbatim copy of openvidu.io's hook, like llmstxt_preprocess.py).
+# Sitemap <lastmod> from git and the glightbox fixes; then every page's own
+# title and description for llmstxt, and the linked code-block filenames
+# Pygments escapes (verbatim copies of openvidu.io's hooks, like
+# llmstxt_preprocess.py).
 hooks:
   - hooks/mkdocs_hook.py
+  - hooks/llmstxt_entries_hook.py
   - hooks/pygments_fence_title_hook.py
 
 watch:
@@ -149,7 +151,7 @@ plugins:
       # admonitions as blockquotes and restores the code blocks' linked filenames.
       autoclean: false
       preprocess: hooks/llmstxt_preprocess.py
-      # Paths only: mkdocs_hook.py fills in each page's own `title` and `description`, and a
+      # Paths only: llmstxt_entries_hook.py fills in each page's own `title` and `description`, and a
       # listed page missing either fails the build.
       sections:
         Start here:
