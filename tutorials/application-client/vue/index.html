@@ -155,6 +155,8 @@
 }
 </script>
 
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 
   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
@@ -1869,7 +1871,7 @@
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>npm<span class="w"> </span>install<span class="w"> </span>livekit-client
 </code></pre></div>
 <p>Now let's see the code of the <code>App.vue</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L14-L50' target='_blank'&gt;App.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L14-L50" target="_blank" rel="noopener">App.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-14">14</a></span>
 <span class="normal"><a href="#__codelineno-34-15">15</a></span>
 <span class="normal"><a href="#__codelineno-34-16">16</a></span>
 <span class="normal"><a href="#__codelineno-34-17">17</a></span>
@@ -1972,7 +1974,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a Room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>After the user specifies their participant name and the name of the room they want to join, when they click the <code>Join</code> button, the <code>joinRoom()</code> function is called:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L52-L90' target='_blank'&gt;App.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-52">52</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L52-L90" target="_blank" rel="noopener">App.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-52">52</a></span>
 <span class="normal"><a href="#__codelineno-35-53">53</a></span>
 <span class="normal"><a href="#__codelineno-35-54">54</a></span>
 <span class="normal"><a href="#__codelineno-35-55">55</a></span>
@@ -2090,7 +2092,7 @@
 </li>
 <li>
 <p>It requests a token from the application server using the room name and participant name. This is done by calling the <code>getToken()</code> function:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L109-L141' target='_blank'&gt;App.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-109">109</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L109-L141" target="_blank" rel="noopener">App.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-109">109</a></span>
 <span class="normal"><a href="#__codelineno-36-110">110</a></span>
 <span class="normal"><a href="#__codelineno-36-111">111</a></span>
 <span class="normal"><a href="#__codelineno-36-112">112</a></span>
@@ -2167,7 +2169,7 @@
 <hr>
 <h3 id="displaying-video-and-audio-tracks">Displaying Video and Audio Tracks<a class="headerlink" href="#displaying-video-and-audio-tracks" title="Anchor link to this section for reference">#</a></h3>
 <p>In order to display participants' video and audio tracks, the main component integrates the <code>VideoComponent</code> and <code>AudioComponent</code>.</p>
-<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L168-L183' target='_blank'&gt;App.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-168">168</a></span>
+<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L168-L183" target="_blank" rel="noopener">App.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-168">168</a></span>
 <span class="normal"><a href="#__codelineno-37-169">169</a></span>
 <span class="normal"><a href="#__codelineno-37-170">170</a></span>
 <span class="normal"><a href="#__codelineno-37-171">171</a></span>
@@ -2203,7 +2205,7 @@
 </li>
 </ul>
 <p>Let's see now the code of the <code>VideoComponent.vue</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/components/VideoComponent.vue#L5-L26' target='_blank'&gt;VideoComponent.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/components/VideoComponent.vue#L5-L26" target="_blank" rel="noopener">VideoComponent.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-38-6"> 6</a></span>
 <span class="normal"><a href="#__codelineno-38-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-38-8"> 8</a></span>
@@ -2272,7 +2274,7 @@
 <li>It detaches the video track when the component is unmounted.</li>
 </ul>
 <p>Finally, let's see the code of the <code>AudioComponent.vue</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/components/AudioComponent.vue#L5-L18' target='_blank'&gt;AudioComponent.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-5"> 5</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/components/AudioComponent.vue#L5-L18" target="_blank" rel="noopener">AudioComponent.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-39-6"> 6</a></span>
 <span class="normal"><a href="#__codelineno-39-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-39-8"> 8</a></span>
@@ -2310,7 +2312,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the Room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>When the user wants to leave the room, they can click the <code>Leave Room</code> button. This action calls the <code>leaveRoom()</code> function:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L92-L107' target='_blank'&gt;App.vue&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-92"> 92</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-vue/src/App.vue#L92-L107" target="_blank" rel="noopener">App.vue</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-92"> 92</a></span>
 <span class="normal"><a href="#__codelineno-40-93"> 93</a></span>
 <span class="normal"><a href="#__codelineno-40-94"> 94</a></span>
 <span class="normal"><a href="#__codelineno-40-95"> 95</a></span>
@@ -2560,10 +2562,9 @@
             
             <div style="width:100%; padding-top: .4rem;">
                 <div id="mc_embed_signup">
-                    <form action="//openvidu.us16.list-manage.com/subscribe/post?u=5cccadc0d9ef9bab689a3c70f&amp;id=43f63ba2f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-                      <div class="form-validation alert"></div>
+                    <form action="//openvidu.us16.list-manage.com/subscribe/post?u=5cccadc0d9ef9bab689a3c70f&amp;id=43f63ba2f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                       <div id="mc_embed_signup_scroll" class="form-group subscribe-form-input" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                          <input type="email" value="" name="EMAIL" class="email footer-subscribe-input" id="mce-EMAIL" placeholder="Email Address" required="" style="flex: 1 1 120px; min-width: 0;">
+                          <input type="email" value="" name="EMAIL" class="footer-subscribe-input" id="mce-EMAIL" placeholder="Email Address" aria-label="Email address" required="" style="flex: 1 1 120px; min-width: 0;">
                           
                           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5cccadc0d9ef9bab689a3c70f_43f63ba2f8" tabindex="-1" value=""></div>
                           <div class="md-typeset" style="flex-shrink: 0;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="md-button"></div>

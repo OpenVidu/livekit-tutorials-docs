@@ -1,8 +1,8 @@
 # Ruby Server Tutorial
 
-Running OpenVidu?
-
-OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-server/ruby/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
+> **Running OpenVidu?**
+>
+> OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-server/ruby/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
 
 [Source code](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-server/ruby)
 
@@ -62,31 +62,31 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
 To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
 
 **Run LiveKit locally**
 
 Follow the official instructions to run [LiveKit locally](https://docs.livekit.io/transport/self-hosting/local/) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
 **Use LiveKit Cloud**
 
 Use your account in [LiveKit Cloud](https://cloud.livekit.io/) .
 
-Configure Webhooks
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
-
-Expose your local application server
-
-In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
-
-These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
+> **Expose your local application server**
+>
+> In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
+>
+> These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
 
 ### 2. Download the tutorial code
 
@@ -140,15 +140,11 @@ npm install -g http-server
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080). You should see a screen like this:
 
-Join screen of the JavaScript tutorial app
-
-Video call room of the JavaScript tutorial app
-
-Accessing your application client from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
-
-Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Accessing your application client from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
+>
+> Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 For more information, check the [JavaScript tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/javascript/index.md).
 
@@ -176,15 +172,11 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080). You should see a screen like this:
 
-Join screen of the React tutorial app
-
-Video call room of the React tutorial app
-
-Accessing your application client from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
-
-Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Accessing your application client from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
+>
+> Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 For more information, check the [React tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/react/index.md).
 
@@ -212,15 +204,11 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080). You should see a screen like this:
 
-Join screen of the Angular tutorial app
-
-Video call room of the Angular tutorial app
-
-Accessing your application client from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
-
-Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Accessing your application client from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
+>
+> Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 For more information, check the [Angular tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/angular/index.md).
 
@@ -248,15 +236,11 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080). You should see a screen like this:
 
-Join screen of the Vue tutorial app
-
-Video call room of the Vue tutorial app
-
-Accessing your application client from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
-
-Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Accessing your application client from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
+>
+> Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 For more information, check the [Vue tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/vue/index.md).
 
@@ -284,13 +268,9 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
 The application will seamlessly initiate as a native desktop program, adapting itself to the specific operating system you are using. Once the application is open, you should see a screen like this:
 
-Join screen of the Electron tutorial app
-
-Video call room of the Electron tutorial app
-
-Running your application client from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Running your application client from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 For more information, check the [Electron tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/electron/index.md).
 
@@ -324,19 +304,15 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
    Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080). You should see a screen like this:
 
-   Mobile appearance
+   > **Mobile appearance**
+   >
+   > To show the app with a mobile device appearance, open the dev tools in your browser and find the button to adapt the viewport to a mobile device aspect ratio. You may also choose predefined types of devices to see the behavior of your app in different resolutions.
 
-   To show the app with a mobile device appearance, open the dev tools in your browser and find the button to adapt the viewport to a mobile device aspect ratio. You may also choose predefined types of devices to see the behavior of your app in different resolutions.
-
-   Join screen of the Ionic tutorial app in a browser
-
-   Video call room of the Ionic tutorial app in a browser
-
-   Accessing your application client from other devices in your local network
-
-   One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
-
-   Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+   > **Accessing your application client from other devices in your local network**
+   >
+   > One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
+   >
+   > Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
    **Mobile**
 
@@ -358,9 +334,9 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
    Now, let's explore how to run the application on a mobile device:
 
-   Requirements
-
-   Before running the application on a mobile device, make sure that the device is connected to the same network as your PC and the mobile is connected to the PC via USB or Wi-Fi.
+   > **Requirements**
+   >
+   > Before running the application on a mobile device, make sure that the device is connected to the same network as your PC and the mobile is connected to the PC via USB or Wi-Fi.
 
    **Android device**
 
@@ -382,15 +358,9 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
    Once the mobile device has been selected, the script will launch the application on the device and you will see a screen like this:
 
-   URL configuration of the Ionic tutorial app
-
    This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
    Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.
-
-   Join screen of the Ionic tutorial app on a mobile device
-
-   Video call room of the Ionic tutorial app on a mobile device
 
 For more information, check the [Ionic tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/ionic/index.md).
 
@@ -403,19 +373,13 @@ To run the client application tutorial, you need [Android Studio](https://develo
 
 The application will initiate as a native Android program. Once the application is opened, you should see a screen like this:
 
-URL configuration of the Android tutorial app
-
 This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
-Connecting real Android device to application server running in you local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real Android device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Connecting real Android device to application server running in you local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real Android device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.
-
-Join screen of the Android tutorial app
-
-Video call room of the Android tutorial app
 
 For more information, check the [Android tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/android/index.md).
 
@@ -426,27 +390,21 @@ To run the client application tutorial, you need [Xcode](https://apps.apple.com/
 1. Launch Xcode and open the `OpenViduIOS.xcodeproj` that you can find under `openvidu-livekit-tutorials/application-client/openvidu-ios`.
 1. Run the application in an emulator or a physical device by clicking on the menu Product > Run or by ⌘R.
 
-Emulator limitations
-
-Publishing the camera track is not supported by iOS Simulator.
+> **Emulator limitations**
+>
+> Publishing the camera track is not supported by iOS Simulator.
 
 If you encounter code signing issues, make sure you change the **Team** and **bundle id** from the previous step.
 
 The application will initiate as a native iOS application. Once the app is opened, you should see a screen like this:
 
-URL configuration of the iOS tutorial app
-
 This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
-Connecting real iOS device to application server running in you local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real iOS device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Connecting real iOS device to application server running in you local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real iOS device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.
-
-Join screen of the iOS tutorial app
-
-Video call room of the iOS tutorial app
 
 For more information, check the [iOS tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-client/ios/index.md).
 
@@ -458,6 +416,8 @@ The application is a simple Ruby app using the popular Sinatra web library. It h
 - `/livekit/webhook` : receive LiveKit webhook events.
 
 Let's see the code of the `app.rb` file:
+
+[app.rb](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/ruby/app.rb#L1-L17)
 
 ```ruby
 require 'sinatra'
@@ -498,12 +458,14 @@ Finally the application configures the port, sets the CORS configuration for Sin
 
 ______________________________________________________________________
 
-#### Create token endpoint
+### Create token endpoint
 
 The endpoint `/token` accepts `POST` requests with a payload of type `application/json`, containing the following fields:
 
 - `roomName`: the name of the Room where the user wants to connect.
 - `participantName`: the name of the participant that wants to connect to the Room.
+
+[app.rb](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/ruby/app.rb#L19-L34)
 
 ```ruby
 post '/token' do
@@ -540,9 +502,11 @@ If required fields are available, a new JWT token is created. For that we use th
 
 ______________________________________________________________________
 
-#### Receive webhook
+### Receive webhook
 
 The endpoint `/livekit/webhook` accepts `POST` requests with a payload of type `application/webhook+json`. This is the endpoint where LiveKit Server will send [webhook events](https://openvidu.io/latest/docs/reference/webhooks/#events) .
+
+[app.rb](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/ruby/app.rb#L36-L47)
 
 ```ruby
 post '/livekit/webhook' do
@@ -571,6 +535,6 @@ If the verification is successful, we can parse the request JSON body and consum
 
 Remember to return a `200` OK response at the end to let LiveKit Server know that the webhook was received correctly.
 
-Configure Webhooks
-
-If you are using a [production deployment](#deploy-openvidu), remember to configure the webhook URL to point to your local application server as explained in the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/#send-webhooks-to-a-local-application-server) section.
+> **Configure Webhooks**
+>
+> If you are using a [production deployment](#deploy-openvidu), remember to configure the webhook URL to point to your local application server as explained in the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/#send-webhooks-to-a-local-application-server) section.

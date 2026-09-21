@@ -1,8 +1,8 @@
 # iOS Tutorial
 
-Running OpenVidu?
-
-OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-client/ios/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
+> **Running OpenVidu?**
+>
+> OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-client/ios/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
 
 [Source code](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-ios)
 
@@ -64,31 +64,31 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
 To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
 
 **Run LiveKit locally**
 
 Follow the official instructions to run [LiveKit locally](https://docs.livekit.io/transport/self-hosting/local/) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
 **Use LiveKit Cloud**
 
 Use your account in [LiveKit Cloud](https://cloud.livekit.io/) .
 
-Configure Webhooks
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
-
-Expose your local application server
-
-In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
-
-These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
+> **Expose your local application server**
+>
+> In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
+>
+> These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
 
 ### 2. Download the tutorial code
 
@@ -272,9 +272,9 @@ To run this server application, you need [PHP](https://www.php.net/manual/en/ins
    composer start
    ```
 
-Warning
-
-LiveKit PHP SDK requires library [BCMath](https://www.php.net/manual/en/book.bc.php) . This is available out-of-the-box in PHP for Windows, but a manual installation might be necessary in other OS. Run **`sudo apt install php-bcmath`** or **`sudo yum install php-bcmath`**
+> **Warning**
+>
+> LiveKit PHP SDK requires library [BCMath](https://www.php.net/manual/en/book.bc.php) . This is available out-of-the-box in PHP for Windows, but a manual installation might be necessary in other OS. Run **`sudo apt install php-bcmath`** or **`sudo yum install php-bcmath`**
 
 For more information, check the [PHP tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/php/index.md).
 
@@ -294,9 +294,9 @@ To run this server application, you need [.NET](https://dotnet.microsoft.com/en-
    dotnet run
    ```
 
-Warning
-
-This .NET server application needs the `LIVEKIT_API_SECRET` env variable to be at least 32 characters long. Make sure to update it [here](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/dotnet/appsettings.json#L11) and in your [LiveKit Server](#1-run-livekit-server).
+> **Warning**
+>
+> This .NET server application needs the `LIVEKIT_API_SECRET` env variable to be at least 32 characters long. Make sure to update it [here](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/dotnet/appsettings.json#L11) and in your [LiveKit Server](#1-run-livekit-server).
 
 For more information, check the [.NET tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/dotnet/index.md).
 
@@ -307,27 +307,21 @@ To run the client application tutorial, you need [Xcode](https://apps.apple.com/
 1. Launch Xcode and open the `OpenViduIOS.xcodeproj` that you can find under `openvidu-livekit-tutorials/application-client/openvidu-ios`.
 1. Run the application in an emulator or a physical device by clicking on the menu Product > Run or by ⌘R.
 
-Emulator limitations
-
-Publishing the camera track is not supported by iOS Simulator.
+> **Emulator limitations**
+>
+> Publishing the camera track is not supported by iOS Simulator.
 
 If you encounter code signing issues, make sure you change the **Team** and **bundle id** from the previous step.
 
 The application will initiate as a native iOS application. Once the app is opened, you should see a screen like this:
 
-URL configuration of the iOS tutorial app
-
 This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
-Connecting real iOS device to application server running in you local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real iOS device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Connecting real iOS device to application server running in you local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real iOS device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.
-
-Join screen of the iOS tutorial app
-
-Video call room of the iOS tutorial app
 
 ## Understanding the Code
 
@@ -424,9 +418,9 @@ You should configure these URLs according to your deployment settings. If you ar
 
 If these URLs are left empty, the user will be prompted to enter them when the application starts. This configuration is managed in the `ConfigureUrlsView.swift` file:
 
-URL configuration of the iOS tutorial app
-
 When the user clicks the `Save` button, the `LKButton` action triggers the validation and saves the URLs into the `AppContext` and `RoomContext`. The `ConfigureUrlsView` handles this logic:
+
+[ConfigureUrlsView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConfigureUrlsView.swift#L50-L64)
 
 ```swift
 LKButton(title: "Save") {
@@ -454,9 +448,9 @@ ______________________________________________________________________
 
 Before joining a room, the `ConnectView.swift` defines the view for the connection screen. It includes a logo, text fields for participant name and room name, and buttons for joining the room and resetting URLs.
 
-Join screen of the iOS tutorial app
-
 After define the participant and room name, the user can click the `Join` button to connect to the room. This action triggers the `connectToRoom` method asynchronously:
+
+[ConnectView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ConnectView.swift#L93-L122)
 
 ```swift
 func connectToRoom() async {
@@ -509,7 +503,7 @@ func enableCameraAndMicrophone() async {
 
 The `OpenViduApp.swift` handle the navigation page. When room status is `connected`, the user is redirected to the `RoomView`:
 
-<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/OpenViduApp.swift' target='_blank'>OpenViduApp.swift</a>
+[OpenViduApp.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/OpenViduApp.swift)
 
 ```swift
 struct RoomSwitchView: View {
@@ -557,7 +551,7 @@ ______________________________________________________________________
 
 To display the video tracks of participants in the room, the `RoomView.swift` uses various SwiftUI views and custom components. This approach allows the application to dynamically load and display the video tracks as they are received.
 
-<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift' target='_blank'>RoomView.swift</a>
+[RoomView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift)
 
 ```swift
 struct RoomView: View {
@@ -601,7 +595,7 @@ The `ParticipantView` component is responsible for rendering the video track of 
 
 The **LiveKit Swift SDK** includes a VideoView class, based on UIKit, specifically designed for rendering video tracks. Additionally, subscribed audio tracks are automatically played by default.
 
-<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ParticipantView.swift' target='_blank'>ParticipantView.swift</a>
+[ParticipantView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/ParticipantView.swift)
 
 ```swift
 struct ParticipantView: View {
@@ -644,6 +638,8 @@ ______________________________________________________________________
 ### Leaving the room
 
 To leave the room, the user can click the `Leave` button in the `RoomView`. This action triggers the `leaveRoom` method asynchronously:
+
+[RoomView.swift](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ios/Shared/Views/RoomView.swift#L49-L108)
 
 ```swift
 func content(geometry: GeometryProxy) -> some View {

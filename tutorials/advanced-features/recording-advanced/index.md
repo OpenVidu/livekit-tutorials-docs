@@ -1,8 +1,8 @@
 # Advanced Recording Tutorial
 
-Running OpenVidu?
-
-OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-s3/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
+> **Running OpenVidu?**
+>
+> OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/advanced-features/recording-advanced-s3/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
 
 [Source code](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/advanced-features/openvidu-recording-advanced-node)
 
@@ -68,31 +68,31 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
 To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step) .
 
-Configure Webhooks
-
-This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
+> **Configure Webhooks**
+>
+> This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
 
 **Run LiveKit locally**
 
 Follow the official instructions to run [LiveKit](https://docs.livekit.io/transport/self-hosting/local/) and [Egress](https://docs.livekit.io/transport/self-hosting/egress/) locally.
 
-Configure Webhooks
-
-This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
+> **Configure Webhooks**
+>
+> This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
 **Use LiveKit Cloud**
 
 Use your account in [LiveKit Cloud](https://cloud.livekit.io/) .
 
-Configure Webhooks
+> **Configure Webhooks**
+>
+> This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
-This tutorial have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
-
-Expose your local application server
-
-In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
-
-These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
+> **Expose your local application server**
+>
+> In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
+>
+> These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
 
 ### 2. Download the tutorial code
 
@@ -124,17 +124,13 @@ npm start
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:6080`](http://localhost:6080). You should see a screen like this:
 
-Video call room of the recording tutorial app with recording controls
-
-List of recordings of the room in the recording tutorial app
-
-Accessing your application from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application with other devices in your local network very easily without worrying about SSL certificates.
-
-Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
-
-**Limitation**: Playing recordings with the `S3` strategy from other devices in your local network is not possible due to MinIO not being exposed. To play recordings from other devices, you need to change the environment variable `RECORDING_PLAYBACK_STRATEGY` to `PROXY`.
+> **Accessing your application from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application with other devices in your local network very easily without worrying about SSL certificates.
+>
+> Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+>
+> **Limitation**: Playing recordings with the `S3` strategy from other devices in your local network is not possible due to MinIO not being exposed. To play recordings from other devices, you need to change the environment variable `RECORDING_PLAYBACK_STRATEGY` to `PROXY`.
 
 ## Enhancements
 
@@ -150,6 +146,8 @@ The backend has been refactored to prevent code duplication and improve readabil
 
 - The `index.js` file now simply sets the route for each controller:
 
+  [index.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/index.js#L21-L23)
+
   ```javascript
   app.use("/token", roomController);
   app.use("/recordings", recordingController);
@@ -157,6 +155,8 @@ The backend has been refactored to prevent code duplication and improve readabil
   ```
 
 - The configuration of environment variables and constants has been moved to the `config.js` file:
+
+  [config.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/config.js)
 
   ```javascript
   export const SERVER_PORT = process.env.SERVER_PORT || 6080;
@@ -206,6 +206,8 @@ ______________________________________________________________________
 
 In order to store the recording status in the room metadata, we have to create the room explicitly the first time a user joins it, setting the metadata field with an object that contains the recording status. This object also contains the app name, which is used to identify webhook events related to the application. This is done in the `POST /token` endpoint:
 
+[room.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/room.controller.js#L10-L38)
+
 ```javascript
 roomController.post("/", async (req, res) => {
     const roomName = req.body.roomName;
@@ -245,6 +247,8 @@ After generating the access token with the required permissions, this endpoint d
 
 1. Checks if the room exists by calling the `exists` method of the `RoomService` with the `roomName` as a parameter. This method returns a boolean indicating whether the room obtained from the `getRoom` method is not `null`. This other method lists all active rooms that match the `roomName` by calling the `listRooms` method of the `RoomServiceClient` with an array containing the `roomName` as a parameter, and returns the first element of the list if it exists:
 
+   [room.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/room.service.js#L30-L38)
+
    ```javascript
    async getRoom(roomName) {
        const rooms = await this.roomClient.listRooms([roomName]); // (1)!
@@ -261,6 +265,8 @@ After generating the access token with the required permissions, this endpoint d
    1. Return the first element of the list if it exists.
 
 1. Creates the room if it doesn't exist by calling the `createRoom` method of the `RoomService` with the `roomName` as a parameter. This method creates a room with the `roomName` and sets the metadata field with an object that contains the app name (defined in the `config.js` file) and the recording status initialized to `STOPPED`. To achieve this, the method calls the `createRoom` method of the `RoomServiceClient` with an object indicating the room name and metadata:
+
+   [room.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/room.service.js#L19-L28)
 
    ```javascript
    async createRoom(roomName) {
@@ -284,6 +290,8 @@ ______________________________________________________________________
 ### Handling webhook events
 
 In previous tutorials, we listened to all webhook events and printed them in the console without doing anything else. In this tutorial, we have to first check if the webhook is related to the application and then act accordingly depending on the event type. This is done in the `POST /livekit/webhook` endpoint:
+
+[webhook.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/webhook.controller.js#L14-L38)
 
 ```javascript
 webhookController.post("/", async (req, res) => {
@@ -322,6 +330,8 @@ After receiving the webhook event, this endpoint does the following:
 
 1. Checks if the webhook is related to the application by calling the `checkWebhookRelatedToMe` function with the webhook event as a parameter. This function returns a boolean indicating whether the app name obtained from the metadata field of the room related to the webhook event is equal to the app name defined in the `config.js` file:
 
+   [webhook.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/webhook.controller.js#L40-L55)
+
    ```javascript
    const checkWebhookRelatedToMe = async (webhookEvent) => {
        const { room, egressInfo, ingressInfo } = webhookEvent; // (1)!
@@ -354,6 +364,8 @@ After receiving the webhook event, this endpoint does the following:
 
 1. If the event type is `egress_ended`, calls the `handleEgressEnded` function with the egress info as a parameter. This function saves the recording metadata in a separate file (see the [Saving recording metadata](#saving-recording-metadata) section) and notifies all participants in the room related to the egress info that the recording has been stopped:
 
+   [webhook.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/webhook.controller.js#L57-L65)
+
    ```javascript
    const handleEgressEnded = async (egressInfo) => {
        try {
@@ -375,6 +387,8 @@ ______________________________________________________________________
 
 When the recording status changes, all participants in the room have to be notified. This is done by updating the metadata field of the room with the new recording status, which will trigger the `RoomEvent.RoomMetadataChanged` event in the client side. This is implemented in the `notifyRecordingStatusUpdate` function:
 
+[webhook.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/webhook.controller.js#L67-L76)
+
 ```javascript
 const notifyRecordingStatusUpdate = async (egressInfo) => {
     const roomName = egressInfo.roomName; // (1)!
@@ -395,6 +409,8 @@ const notifyRecordingStatusUpdate = async (egressInfo) => {
 After getting the room name from the egress info, this function does the following:
 
 1. Gets the recording status by calling the `getRecordingStatus` method of the `RecordingService` with the egress info status as a parameter. This method returns the recording status based on the egress info status:
+
+   [recording.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/recording.service.js#L135-L148)
 
    ```javascript
    getRecordingStatus(egressStatus) {
@@ -423,6 +439,8 @@ After getting the room name from the egress info, this function does the followi
 
 1. Updates the room metadata with the new recording status by calling the `updateRoomMetadata` method of the `RoomService` with the `roomName` and `recordingStatus` as parameters. This method updates the metadata field of the room with an object that contains the app name and the new recording status by calling the `updateRoomMetadata` method of the `RoomServiceClient` with the `roomName` and a stringified object as parameters:
 
+   [room.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/room.service.js#L40-L46)
+
    ```javascript
    async updateRoomMetadata(roomName, recordingStatus) {
        const metadata = {
@@ -442,6 +460,8 @@ ______________________________________________________________________
 
 When the recording ends, the metadata related to the recording has to be saved in a separate file. This is done in the `saveRecordingMetadata` function:
 
+[recording.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/recording.service.js#L116-L120)
+
 ```javascript
 async saveRecordingMetadata(egressInfo) {
     const recordingInfo = this.convertToRecordingInfo(egressInfo); // (1)!
@@ -458,6 +478,8 @@ This method does the following:
 
 1. Converts the egress info to a recording info object by calling the `convertToRecordingInfo` method:
 
+   [recording.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/recording.service.js#L122-L133)
+
    ```javascript
    convertToRecordingInfo(egressInfo) {
        const file = egressInfo.fileResults[0];
@@ -473,11 +495,13 @@ This method does the following:
    }
    ```
 
-   Getting recording metadata
-
-   In this tutorial, we can access detailed information about the recording directly from the metadata file stored in the S3 bucket, without needing to make additional requests. This is made possible by saving all the necessary data retrieved from the egress info object. Compared to the [basic recording tutorial](https://livekit-tutorials.openvidu.io/tutorials/advanced-features/recording-basic/index.md), we are now storing additional details such as the **recording name**, **duration** and **size**.
+   > **Getting recording metadata**
+   >
+   > In this tutorial, we can access detailed information about the recording directly from the metadata file stored in the S3 bucket, without needing to make additional requests. This is made possible by saving all the necessary data retrieved from the egress info object. Compared to the [basic recording tutorial](https://livekit-tutorials.openvidu.io/tutorials/advanced-features/recording-basic/index.md), we are now storing additional details such as the **recording name**, **duration** and **size**.
 
 1. Gets the metadata key from the recordings path and the recordings metadata path, both defined in the `config.js` file, and the recording name replacing the `.mp4` extension with `.json`:
+
+   [recording.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/recording.service.js#L154-L156)
 
    ```javascript
    getMetadataKey(recordingName) {
@@ -486,6 +510,8 @@ This method does the following:
    ```
 
 1. Uploads the recording metadata to the S3 bucket by calling the `uploadObject` method of the `S3Service` with the `key` and `recordingInfo` as parameters. This method uploads an object to the S3 bucket by sending a `PutObjectCommand` with the key and the stringified object as parameters:
+
+   [s3.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/s3.service.js#L34-L42)
 
    ```javascript
    async uploadObject(key, body) {
@@ -504,6 +530,8 @@ ______________________________________________________________________
 ### Notifying recording deletion
 
 When a recording is deleted, all participants in the room have to be notified. This is done by sending a data message to all participants in the room. To achieve this, the `DELETE /recordings/:recordingName` endpoint has been modified as follows:
+
+[recording.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/recording.controller.js#L129-L154)
 
 ```javascript
 recordingController.delete("/:recordingName", async (req, res) => {
@@ -540,6 +568,8 @@ recordingController.delete("/:recordingName", async (req, res) => {
 
 Before deleting the recording, we get the room name from the recording metadata. After deleting the recording, we check if the room exists and, if it does, send a data message to the room indicating that the recording was deleted. This is done by calling the `sendDataToRoom` method of the `RoomService` with the `roomName` and an object containing the `recordingName` as parameters:
 
+[room.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/room.service.js#L48-L60)
+
 ```javascript
 async sendDataToRoom(roomName, rawData) {
     const data = encoder.encode(JSON.stringify(rawData)); // (1)!
@@ -573,6 +603,8 @@ ______________________________________________________________________
 ### Accessing recording files directly from the S3 bucket
 
 In this tutorial, we have added an additional method to allow access to recording files directly from the S3 bucket by creating a presigned URL. To accomplish this, we have created a new endpoint (`GET /recordings/:recordingName/url`) to get the recording URL depending on the playback strategy defined in the environment variable `RECORDING_PLAYBACK_STRATEGY`, whose value can be `PROXY` or `S3`:
+
+[recording.controller.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/controllers/recording.controller.js#L104-L127)
 
 ```javascript
 recordingController.get("/:recordingName/url", async (req, res) => {
@@ -615,6 +647,8 @@ This endpoint does the following:
 
 1. If the playback strategy is `S3`, it creates a presigned URL to access the recording directly from the S3 bucket by calling the `getRecordingUrl` method of the `RecordingService` with the `recordingName` as a parameter. This method simply calls the `getObjectUrl` method of the `S3Service` with the key of the recording as a parameter:
 
+   [s3.service.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/src/services/s3.service.js#L78-L85)
+
    ```javascript
    async getObjectUrl(key) {
        const params = {
@@ -628,17 +662,19 @@ This endpoint does the following:
 
    This method creates a presigned URL to access the object in the S3 bucket by calling the `getSignedUrl` function from the [@aws-sdk/s3-request-presigner](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-s3-request-presigner/) package, indicating the `S3Client`, `GetObjectCommand` and the expiration time in seconds as parameters. In this case, the expiration time is set to 24 hours.
 
-   Presigned URLs
-
-   Presigned URLs are URLs that provide access to an S3 object for a limited time. This is useful when you want to share an object with someone for a limited time without providing them with your AWS credentials.
-
-   Compared to the proxy strategy, accessing recording files directly from the S3 bucket via presigned URLs is more efficient, as it reduces server load. However, it presents a security risk, as the URL, once generated, can be used by anyone until it expires.
+   > **Presigned URLs**
+   >
+   > Presigned URLs are URLs that provide access to an S3 object for a limited time. This is useful when you want to share an object with someone for a limited time without providing them with your AWS credentials.
+   >
+   > Compared to the proxy strategy, accessing recording files directly from the S3 bucket via presigned URLs is more efficient, as it reduces server load. However, it presents a security risk, as the URL, once generated, can be used by anyone until it expires.
 
 ______________________________________________________________________
 
 ### Handling new room events in the client side
 
 In the client side, we have to handle the new room events related to the recording status and the recording deletion. This is done by listening to the `RoomEvent.RoomMetadataChanged` and `RoomEvent.DataReceived` events in the `joinRoom` method:
+
+[app.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/public/app.js#L44-L57)
 
 ```javascript
 async function joinRoom() {
@@ -664,6 +700,8 @@ async function joinRoom() {
 When a new `RoomEvent.RoomMetadataChanged` event is received, we parse the metadata to get the recording status and update the recording info accordingly. The `updateRecordingInfo` function has been updated to handle the new recording statuses.
 
 In addition to handling this event, we need to update the recording info in the UI the first time a user joins the room. Once the user has joined, we retrieve the current room metadata and update the UI accordingly. Recordings will be listed unless the recording status is `STOPPED` or `FAILED`, to prevent listing recordings twice:
+
+[app.js](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/advanced-features/openvidu-recording-advanced-node/public/app.js#L80-L87)
 
 ```javascript
 async function joinRoom() {

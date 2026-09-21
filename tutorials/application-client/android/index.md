@@ -1,8 +1,8 @@
 # Android Tutorial
 
-Running OpenVidu?
-
-OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-client/android/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
+> **Running OpenVidu?**
+>
+> OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-client/android/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
 
 [Source code](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-android)
 
@@ -64,31 +64,31 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
 To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
 
 **Run LiveKit locally**
 
 Follow the official instructions to run [LiveKit locally](https://docs.livekit.io/transport/self-hosting/local/) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
 **Use LiveKit Cloud**
 
 Use your account in [LiveKit Cloud](https://cloud.livekit.io/) .
 
-Configure Webhooks
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
-
-Expose your local application server
-
-In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
-
-These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
+> **Expose your local application server**
+>
+> In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
+>
+> These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
 
 ### 2. Download the tutorial code
 
@@ -272,9 +272,9 @@ To run this server application, you need [PHP](https://www.php.net/manual/en/ins
    composer start
    ```
 
-Warning
-
-LiveKit PHP SDK requires library [BCMath](https://www.php.net/manual/en/book.bc.php) . This is available out-of-the-box in PHP for Windows, but a manual installation might be necessary in other OS. Run **`sudo apt install php-bcmath`** or **`sudo yum install php-bcmath`**
+> **Warning**
+>
+> LiveKit PHP SDK requires library [BCMath](https://www.php.net/manual/en/book.bc.php) . This is available out-of-the-box in PHP for Windows, but a manual installation might be necessary in other OS. Run **`sudo apt install php-bcmath`** or **`sudo yum install php-bcmath`**
 
 For more information, check the [PHP tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/php/index.md).
 
@@ -294,9 +294,9 @@ To run this server application, you need [.NET](https://dotnet.microsoft.com/en-
    dotnet run
    ```
 
-Warning
-
-This .NET server application needs the `LIVEKIT_API_SECRET` env variable to be at least 32 characters long. Make sure to update it [here](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/dotnet/appsettings.json#L11) and in your [LiveKit Server](#1-run-livekit-server).
+> **Warning**
+>
+> This .NET server application needs the `LIVEKIT_API_SECRET` env variable to be at least 32 characters long. Make sure to update it [here](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/dotnet/appsettings.json#L11) and in your [LiveKit Server](#1-run-livekit-server).
 
 For more information, check the [.NET tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/dotnet/index.md).
 
@@ -309,19 +309,13 @@ To run the client application tutorial, you need [Android Studio](https://develo
 
 The application will initiate as a native Android program. Once the application is opened, you should see a screen like this:
 
-URL configuration of the Android tutorial app
-
 This screen allows you to configure the URLs of the application server and the LiveKit server. You need to set them up for requesting tokens to your application server and connecting to the LiveKit server.
 
-Connecting real Android device to application server running in you local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real Android device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Connecting real Android device to application server running in you local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client in a real Android device and be able to reach the application server very easily without worrying about SSL certificates if they are both running in the same local network. For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 Once you have configured the URLs, you can join a video call room by providing a room name and a user name. After joining the room, you will be able to see your own video and audio tracks, as well as the video and audio tracks of the other participants in the room.
-
-Join screen of the Android tutorial app
-
-Video call room of the Android tutorial app
 
 ## Understanding the code
 
@@ -337,7 +331,7 @@ The activity layout files are located in the `app/src/main/res/layout` directory
 
 To use LiveKit in an Android application, you need to add the [LiveKit Android Kotlin SDK](https://docs.livekit.io/reference/client-sdk-android/) as a dependency in the `build.gradle.kts` file. This dependecy provides the necessary classes and methods to interact with the LiveKit server:
 
-<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43' target='_blank'>build.gradle.kts</a>
+[build.gradle.kts](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/build.gradle.kts#L43)
 
 ```text
 dependencies {
@@ -347,7 +341,7 @@ dependencies {
 
 You will also need JitPack as a repository in the `settings.gradle.kts` file:
 
-<a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/settings.gradle.kts#L19' target='_blank'>settings.gradle.kts</a>
+[settings.gradle.kts](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/settings.gradle.kts#L19)
 
 ```text
 dependencyResolutionManagement {
@@ -368,6 +362,8 @@ In order to be able to test the application on an Android device, the applicatio
 
 First, you need to add the following permissions to the `AndroidManifest.xml` file located in the `app/src/main` directory:
 
+[AndroidManifest.xml](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/AndroidManifest.xml#L9-L12)
+
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.CAMERA" />
@@ -376,6 +372,8 @@ First, you need to add the following permissions to the `AndroidManifest.xml` fi
 ```
 
 Then, the app need to request these permissions when the user joins the video call room. This is done in the `RoomLayoutActivity.kt` file by calling the `requestNeededPermissions` method in the `onCreate` method:
+
+[RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L175-L208)
 
 ```kotlin
 private fun requestNeededPermissions(onHasPermissions: () -> Unit) {
@@ -427,9 +425,9 @@ You should configure these URLs according to your deployment settings. In case y
 
 If these URLs are left empty, the user will be prompted to enter the URLs when the application starts. This configuration is managed in the `ConfigureUrlsActivity.kt` file:
 
-URL configuration of the Android tutorial app
-
 When the user clicks the `Save` button, the `onSaveUrls()` method is called, which saves the URLs in the `Urls` object and finishes the activity, returning to the MainActivity:
+
+[ConfigureUrlsActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ConfigureUrlsActivity.kt#L24-L35)
 
 ```kotlin
 private fun onSaveUrls() {
@@ -452,6 +450,8 @@ ______________________________________________________________________
 
 Before joining a room, the user must provide a room name and a user name. After the user specifies them, when they click the `Join` button, the `navigateToRoomLayoutActivity()` method of the `MainActivity.kt` file is called, which simply set the values of the participant name and room name in the intent and starts the `RoomLayoutActivity`:
 
+[MainActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/MainActivity.kt#L33-L49)
+
 ```kotlin
 private fun navigateToRoomLayoutActivity() {
     binding.joinButton.isEnabled = false
@@ -473,6 +473,8 @@ private fun navigateToRoomLayoutActivity() {
 ```
 
 Now let's see the code of the `RoomLayoutActivity.kt` file:
+
+[RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L32-L50)
 
 ```kotlin
 data class TrackInfo( // (1)!
@@ -510,6 +512,8 @@ The `RoomLayoutActivity.kt` file defines the following variables:
 
 When the activity is created, the `onCreate` method is called. This method initializes the activity layout, create a `Room` object, initializes the `RecyclerView` and request needed permissions:
 
+[RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L52-L69)
+
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -532,6 +536,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 
 After the application check if the user has granted permissions, the `connectToRoom()` method is called:
+
+[RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L77-L134)
 
 ```kotlin
 private fun connectToRoom() {
@@ -613,6 +619,8 @@ The `connectToRoom()` method performs the following actions:
 
    - **`RoomEvent.TrackSubscribed`**: This event is triggered when a new track is received in the room. It manages the storage of the new track in the `participantTracks` list if it is a video track and notify the Adapter that a new item has been inserted.
 
+   [RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L136-L144)
+
    ```kotlin
    private fun onTrackSubscribed(event: RoomEvent.TrackSubscribed) {
        val track = event.track
@@ -626,6 +634,8 @@ The `connectToRoom()` method performs the following actions:
    ```
 
    - **`RoomEvent.TrackUnsubscribed`**: This event occurs when a track is destroyed, and it takes care of removing the video track from the `participantTracks` list and notify the Adapter that an item has been removed.
+
+   [RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L146-L158)
 
    ```kotlin
    private fun onTrackUnsubscribed(event: RoomEvent.TrackUnsubscribed) {
@@ -645,11 +655,13 @@ The `connectToRoom()` method performs the following actions:
 
    These event handlers are essential for managing the behavior of tracks within the video call.
 
-   Take a look at all events
-
-   You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events)
+   > **Take a look at all events**
+   >
+   > You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events)
 
 1. It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` method:
+
+   [RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L210-L229)
 
    ```kotlin
    /**
@@ -690,6 +702,8 @@ In order to display the video tracks of the participants in the room, the `RoomL
 
 Whenever a new video track is added to the `participantTracks` list, the `ParticipantAdapter` is notified that a new item has been inserted. The `ParticipantAdapter` then updates the `RecyclerView` to display the new video track by calling the `render` method of the `ParticipantViewHolder`:
 
+[ParticipantViewHolder.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/ParticipantViewHolder.kt#L12-L28)
+
 ```kotlin
 fun render(trackInfo: TrackInfo, room: Room) {
     val participantIdentity = if (trackInfo.isLocal) {
@@ -725,6 +739,8 @@ ______________________________________________________________________
 ### Leaving the room
 
 When the user wants to leave the room, they can click the `Leave Room` button. This action calls the `leaveRoom()` method:
+
+[RoomLayoutActivity.kt](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-android/app/src/main/java/io/openvidu/android/RoomLayoutActivity.kt#L160-L173)
 
 ```kotlin
 private fun leaveRoom() {

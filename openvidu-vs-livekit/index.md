@@ -73,8 +73,6 @@ You can use OpenVidu Call to help develop your own application, joining particip
 
 Testing WebRTC applications can be challenging because devices require a secure context (HTTPS) to access the camera and microphone. When using LiveKit Open Source, this isn't an issue if you access your app from the same computer where the LiveKit Server is running, as `localhost` is considered a secure context even over plain HTTP. Consider the following architecture:
 
-Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs
-
 The simplest way to test your application is:
 
 1. Run LiveKit Server on your computer.
@@ -98,14 +96,14 @@ When using OpenVidu Local Deployment, you can access OpenVidu Server (which is 1
 | Application Server (backend)      | <http://localhost:6080>                  | `https://xxx-yyy-zzz-www.openvidu-local.dev:6443`                                                                                                                                                                                                                                                           |
 | OpenVidu (LiveKit Compatible) URL | <http://localhost:7880>                  | `https://xxx-yyy-zzz-www.openvidu-local.dev:7443`                                                                                                                                                                                                                                                           |
 
-Info
+> **Info**
+>
+> - If you are developing locally, use `localhost` to access the services, but if you want to test your application from other devices on your network, use the `openvidu-local.dev` URLs.
+> - Replace `xxx-yyy-zzz-www` with your local IP address. You can find it in the `.env` file in the `LAN_PRIVATE_IP` variable.
 
-- If you are developing locally, use `localhost` to access the services, but if you want to test your application from other devices on your network, use the `openvidu-local.dev` URLs.
-- Replace `xxx-yyy-zzz-www` with your local IP address. You can find it in the `.env` file in the `LAN_PRIVATE_IP` variable.
-
-Warning
-
-If the URL isn't working because the IP address is incorrect or the installation script couldn't detect it automatically, you can update the `LAN_PRIVATE_IP` value in the `.env` file and restart the deployment with `docker compose up`.
+> **Warning**
+>
+> If the URL isn't working because the IP address is incorrect or the installation script couldn't detect it automatically, you can update the `LAN_PRIVATE_IP` value in the `.env` file and restart the deployment with `docker compose up`.
 
 When developing web applications with this deployment, you can use the following code snippet to dynamically determine the appropriate URLs for the application server and the LiveKit server based on the browser's current location. This approach allows you to seamlessly run your application on both your development machine and other devices within your local network without needing to manually adjust the URLs in your code.
 

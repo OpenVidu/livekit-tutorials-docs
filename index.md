@@ -12,8 +12,6 @@ With the power of LiveKit you can add video conferencing capabilities to your pl
 
 ## Architecture of a LiveKit application
 
-Architecture of a LiveKit application: the application client and application server both talk to LiveKit Server, using the client and server SDKs
-
 Architecture of a LiveKit application
 
 Any LiveKit application has 3 different parts:
@@ -96,18 +94,10 @@ Explore more advanced features of LiveKit! For now, we have implemented a basic 
 
 This site has been created and is maintained by the [OpenVidu](https://openvidu.io) team. OpenVidu developers have been working with real-time media for over a decade. We first developed [Kurento](https://kurento.openvidu.io/) as a powerful media server with low-level capabilities, and then built OpenVidu as a higher-level platform to simplify the development of real-time applications.
 
-Kurento logo
-
-OpenVidu logo
-
 As the years went by, we continued to improve OpenVidu, making it more efficient, more versatile and more feature-rich. We finally made the decision to embrace [mediasoup](https://mediasoup.org/) as the internal engine of the platform. mediasoup is an open source SFU designed down to the last detail to deliver the highest possible performance. We love this project: we are very close to it and have collaborated on it on several occasions.
-
-mediasoup logo
 
 We have helped thousands of developers, companies and organizations to build their real-time applications. Over the years we have seen a myriad of successful use cases built on top of OpenVidu: e-learning, telemedicine, video conferencing, live streaming, proctoring, real-time surveillance, remote assistance... The list goes on and on.
 
 We are now bringing our expertise to [LiveKit](https://livekit.com/) , and integrating its amazing WebRTC stack directly into OpenVidu.
-
-LiveKit logo
 
 Check out section [What is OpenVidu?](https://livekit-tutorials.openvidu.io/about-openvidu/index.md) to learn more about how OpenVidu can help you take your LiveKit applications to the next level.

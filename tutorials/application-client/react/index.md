@@ -1,8 +1,8 @@
 # React Tutorial
 
-Running OpenVidu?
-
-OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-client/react/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
+> **Running OpenVidu?**
+>
+> OpenVidu is a self-hosted, LiveKit-compatible platform. If that is what you are running, read the [OpenVidu version of this tutorial](https://openvidu.io/latest/docs/tutorials/application-client/react/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=tutorial-cross-link) .
 
 [Source code](https://github.com/OpenVidu/openvidu-livekit-tutorials/tree/master/application-client/openvidu-react)
 
@@ -64,31 +64,31 @@ Alternatively, you can use OpenVidu, which is a fully compatible LiveKit distrib
 
 To use a production-ready OpenVidu deployment, visit the official [OpenVidu deployment guide](https://openvidu.io/latest/docs/self-hosting/deployment-types/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using a production deployment you need to configure webhooks to point to your local application server in order to make it work. Check the [Send Webhooks to a Local Application Server](https://openvidu.io/latest/docs/self-hosting/how-to-guides/enable-webhooks/?utm_source=livekit-tutorials&utm_medium=referral&utm_campaign=deploy-step#send-webhooks-to-a-local-application-server) section for more information.
 
 **Run LiveKit locally**
 
 Follow the official instructions to run [LiveKit locally](https://docs.livekit.io/transport/self-hosting/local/) .
 
-Configure Webhooks
-
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit locally you need to configure webhooks to point to your application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
 **Use LiveKit Cloud**
 
 Use your account in [LiveKit Cloud](https://cloud.livekit.io/) .
 
-Configure Webhooks
+> **Configure Webhooks**
+>
+> All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
 
-All [application servers](https://livekit-tutorials.openvidu.io/tutorials/application-server/index.md) have an endpoint to receive webhooks from LiveKit. For this reason, when using LiveKit Cloud you need to configure webhooks to point to your local application server in order to make it work. Check the [Webhooks](https://openvidu.io/latest/docs/reference/webhooks/) section from the official documentation and follow the instructions to configure webhooks.
-
-Expose your local application server
-
-In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
-
-These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
+> **Expose your local application server**
+>
+> In order to receive webhooks from LiveKit Cloud on your local machine, you need to expose your local application server to the internet. Tools like [Ngrok](https://ngrok.com/) , [LocalTunnel](https://localtunnel.github.io/www/) , [LocalXpose](https://localxpose.io/) and [Zrok](https://zrok.io/) can help you achieve this.
+>
+> These tools provide you with a public URL that forwards requests to your local application server. You can use this URL to receive webhooks from LiveKit Cloud, configuring it as indicated above.
 
 ### 2. Download the tutorial code
 
@@ -272,9 +272,9 @@ To run this server application, you need [PHP](https://www.php.net/manual/en/ins
    composer start
    ```
 
-Warning
-
-LiveKit PHP SDK requires library [BCMath](https://www.php.net/manual/en/book.bc.php) . This is available out-of-the-box in PHP for Windows, but a manual installation might be necessary in other OS. Run **`sudo apt install php-bcmath`** or **`sudo yum install php-bcmath`**
+> **Warning**
+>
+> LiveKit PHP SDK requires library [BCMath](https://www.php.net/manual/en/book.bc.php) . This is available out-of-the-box in PHP for Windows, but a manual installation might be necessary in other OS. Run **`sudo apt install php-bcmath`** or **`sudo yum install php-bcmath`**
 
 For more information, check the [PHP tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/php/index.md).
 
@@ -294,9 +294,9 @@ To run this server application, you need [.NET](https://dotnet.microsoft.com/en-
    dotnet run
    ```
 
-Warning
-
-This .NET server application needs the `LIVEKIT_API_SECRET` env variable to be at least 32 characters long. Make sure to update it [here](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/dotnet/appsettings.json#L11) and in your [LiveKit Server](#1-run-livekit-server).
+> **Warning**
+>
+> This .NET server application needs the `LIVEKIT_API_SECRET` env variable to be at least 32 characters long. Make sure to update it [here](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-server/dotnet/appsettings.json#L11) and in your [LiveKit Server](#1-run-livekit-server).
 
 For more information, check the [.NET tutorial](https://livekit-tutorials.openvidu.io/tutorials/application-server/dotnet/index.md).
 
@@ -324,15 +324,11 @@ To run the client application tutorial, you need [Node.js](https://nodejs.org/en
 
 Once the server is up and running, you can test the application by visiting [`http://localhost:5080`](http://localhost:5080). You should see a screen like this:
 
-Join screen of the React tutorial app
-
-Video call room of the React tutorial app
-
-Accessing your application client from other devices in your local network
-
-One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
-
-Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
+> **Accessing your application client from other devices in your local network**
+>
+> One advantage of [running OpenVidu locally](#run-openvidu-locally) is that you can test your application client with other devices in your local network very easily without worrying about SSL certificates.
+>
+> Access your application client through `https://xxx-yyy-zzz-www.openvidu-local.dev:5443`, where `xxx-yyy-zzz-www` part of the domain is your LAN private IP address with dashes (-) instead of dots (.). For more information, see section [Accessing your app from other devices in your network](https://livekit-tutorials.openvidu.io/openvidu-vs-livekit/#accessing-your-app-from-other-devices-in-your-network).
 
 ## Understanding the code
 
@@ -350,6 +346,8 @@ npm install livekit-client
 ```
 
 Now let's see the code of the `App.tsx` file:
+
+[App.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L14-L51)
 
 ```typescript
 type TrackInfo = { // (1)!
@@ -411,15 +409,17 @@ The `App.tsx` file defines the following variables:
 - `participantName`: The participant's name.
 - `roomName`: The room name.
 
-Configure the URLs
-
-When [running OpenVidu locally](#run-openvidu-locally), leave `APPLICATION_SERVER_URL` and `LIVEKIT_URL` variables empty. The function `configureUrls()` will automatically configure them with default values. However, for other deployment type, you should configure these variables with the correct URLs depending on your deployment.
+> **Configure the URLs**
+>
+> When [running OpenVidu locally](#run-openvidu-locally), leave `APPLICATION_SERVER_URL` and `LIVEKIT_URL` variables empty. The function `configureUrls()` will automatically configure them with default values. However, for other deployment type, you should configure these variables with the correct URLs depending on your deployment.
 
 ______________________________________________________________________
 
 ### Joining a Room
 
 After the user specifies their participant name and the name of the room they want to join, when they click the `Join` button, the `joinRoom()` function is called:
+
+[App.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L53-L89)
 
 ```typescript
 async function joinRoom() {
@@ -474,9 +474,9 @@ The `joinRoom()` function performs the following actions:
 
 1. It creates a new `Room` object. This object represents the video call room.
 
-   Info
-
-   When the room object is defined, the HTML template is automatically updated hiding the "Join room" page and showing the "Room" layout.
+   > **Info**
+   >
+   > When the room object is defined, the HTML template is automatically updated hiding the "Join room" page and showing the "Room" layout.
 
 1. Event handling is configured for different scenarios within the room. These events are fired when new tracks are subscribed to and when existing tracks are unsubscribed.
 
@@ -485,11 +485,13 @@ The `joinRoom()` function performs the following actions:
 
    These event handlers are essential for managing the behavior of tracks within the video call. You can further extend the event handling as needed for your application.
 
-   Take a look at all events
-
-   You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events)
+   > **Take a look at all events**
+   >
+   > You can take a look at all the events in the [Room events reference](https://openvidu.io/latest/docs/reference/client-sdk/#room-events)
 
 1. It requests a token from the application server using the room name and participant name. This is done by calling the `getToken()` function:
+
+   [App.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L101-L133)
 
    ```typescript
    /**
@@ -539,6 +541,8 @@ ______________________________________________________________________
 
 In order to display participants' video and audio tracks, the main component integrates the `VideoComponent` and `AudioComponent`.
 
+[App.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L187-L205)
+
 ```html
 <div id="layout-container">
     {localTrack && (
@@ -565,13 +569,15 @@ This code snippet does the following:
 
 - If the property `localTrack` is defined, we display the local video track using the `VideoComponent`. The `local` property is set to `true` to indicate that the video track belongs to the local participant.
 
-  Info
-
-  The audio track is not displayed for the local participant because there is no need to hear one's own audio.
+  > **Info**
+  >
+  > The audio track is not displayed for the local participant because there is no need to hear one's own audio.
 
 - Then, we iterate over the `remoteTracks` array and, for each remote track, we create a `VideoComponent` or an `AudioComponent` depending on the track's kind (video or audio). The `participantIdentity` property is set to the participant's identity, and the `track` property is set to the video or audio track.
 
 Let's see now the code of the `VideoComponent.txs` file:
+
+[VideoComponent.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/components/VideoComponent.tsx#L5-L32)
 
 ```typescript
 interface VideoComponentProps {
@@ -627,6 +633,8 @@ The `VideoComponent` does the following:
 
 Finally, let's see the code of the `AudioComponent.tsx` file:
 
+[AudioComponent.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/components/AudioComponent.tsx#L4-L22)
+
 ```typescript
 interface AudioComponentProps {
     track: LocalAudioTrack | RemoteAudioTrack; // (1)!
@@ -661,6 +669,8 @@ ______________________________________________________________________
 ### Leaving the Room
 
 When the user wants to leave the room, they can click the `Leave Room` button. This action calls the `leaveRoom()` function:
+
+[App.tsx](https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-react/src/App.tsx#L91-L99)
 
 ```typescript
 async function leaveRoom() {

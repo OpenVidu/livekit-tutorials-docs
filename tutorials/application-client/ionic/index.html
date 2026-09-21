@@ -155,6 +155,8 @@
 }
 </script>
 
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 
   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
@@ -1971,7 +1973,7 @@
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>npm<span class="w"> </span>install<span class="w"> </span>livekit-client
 </code></pre></div>
 <p>Now let's see the code of the <code>app.component.ts</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L33-L123' target='_blank'&gt;app.component.ts&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-33"> 33</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L33-L123" target="_blank" rel="noopener">app.component.ts</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-33"> 33</a></span>
 <span class="normal"><a href="#__codelineno-36-34"> 34</a></span>
 <span class="normal"><a href="#__codelineno-36-35"> 35</a></span>
 <span class="normal"><a href="#__codelineno-36-36"> 36</a></span>
@@ -2185,7 +2187,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a Room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>After the user specifies their participant name and the name of the room they want to join, when they click the <code>Join</code> button, the <code>joinRoom()</code> method is called:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L131-L180' target='_blank'&gt;app.component.ts&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-131">131</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L131-L180" target="_blank" rel="noopener">app.component.ts</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-131">131</a></span>
 <span class="normal"><a href="#__codelineno-37-132">132</a></span>
 <span class="normal"><a href="#__codelineno-37-133">133</a></span>
 <span class="normal"><a href="#__codelineno-37-134">134</a></span>
@@ -2324,7 +2326,7 @@
 </li>
 <li>
 <p>It requests a token from the application server using the room name and participant name. This is done by calling the <code>getToken()</code> method:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L197-L215' target='_blank'&gt;app.component.ts&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-197">197</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L197-L215" target="_blank" rel="noopener">app.component.ts</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-197">197</a></span>
 <span class="normal"><a href="#__codelineno-38-198">198</a></span>
 <span class="normal"><a href="#__codelineno-38-199">199</a></span>
 <span class="normal"><a href="#__codelineno-38-200">200</a></span>
@@ -2372,7 +2374,7 @@
 <hr>
 <h3 id="displaying-video-and-audio-tracks">Displaying Video and Audio Tracks<a class="headerlink" href="#displaying-video-and-audio-tracks" title="Anchor link to this section for reference">#</a></h3>
 <p>In order to display participants' video and audio tracks, the <code>app.component.html</code> file integrates the <code>VideoComponent</code> and <code>AudioComponent</code>.</p>
-<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.html#L108-L125' target='_blank'&gt;app.component.html&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-108">108</a></span>
+<div class="language-html highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.html#L108-L125" target="_blank" rel="noopener">app.component.html</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-108">108</a></span>
 <span class="normal"><a href="#__codelineno-39-109">109</a></span>
 <span class="normal"><a href="#__codelineno-39-110">110</a></span>
 <span class="normal"><a href="#__codelineno-39-111">111</a></span>
@@ -2424,7 +2426,7 @@
 </li>
 </ul>
 <p>Let's see now the code of the <code>video.component.ts</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/video/video.component.ts#L4-L27' target='_blank'&gt;video.component.ts&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-3"> 3</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/video/video.component.ts#L4-L27" target="_blank" rel="noopener">video.component.ts</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-40-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-40-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-40-6"> 6</a></span>
@@ -2500,7 +2502,7 @@
 <li>It detaches the video track when the component is destroyed.</li>
 </ul>
 <p>Finally, let's see the code of the <code>audio.component.ts</code> file:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/audio/audio.component.ts#L4-L25' target='_blank'&gt;audio.component.ts&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/audio/audio.component.ts#L4-L25" target="_blank" rel="noopener">audio.component.ts</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-41-4"> 4</a></span>
 <span class="normal"><a href="#__codelineno-41-5"> 5</a></span>
 <span class="normal"><a href="#__codelineno-41-6"> 6</a></span>
@@ -2557,7 +2559,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>When the user wants to leave the room, they can click the <code>Leave Room</code> button. This action calls the <code>leaveRoom()</code> method:</p>
-<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L182-L195' target='_blank'&gt;app.component.ts&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-182">182</a></span>
+<div class="language-typescript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/src/app/app.component.ts#L182-L195" target="_blank" rel="noopener">app.component.ts</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-182">182</a></span>
 <span class="normal"><a href="#__codelineno-42-183">183</a></span>
 <span class="normal"><a href="#__codelineno-42-184">184</a></span>
 <span class="normal"><a href="#__codelineno-42-185">185</a></span>
@@ -2603,7 +2605,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The application must include the following permissions in the <code>AndroidManifest.xml</code> file located in the <code>android/app/src/main</code> directory:</p>
-<div class="language-xml highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/android/app/src/main/AndroidManifest.xml#L41-L43' target='_blank'&gt;AndroidManifest.xml&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-41">41</a></span>
+<div class="language-xml highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/android/app/src/main/AndroidManifest.xml#L41-L43" target="_blank" rel="noopener">AndroidManifest.xml</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-41">41</a></span>
 <span class="normal"><a href="#__codelineno-43-42">42</a></span>
 <span class="normal"><a href="#__codelineno-43-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-41" name="__codelineno-43-41"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.CAMERA"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <a id="__codelineno-43-42" name="__codelineno-43-42"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.RECORD_AUDIO"</span><span class="w"> </span><span class="nt">/&gt;</span>
@@ -2612,7 +2614,7 @@
 </div>
 <div class="tabbed-block">
 <p>The application must include the following permissions in the <code>Info.plist</code> file located in the <code>ios/App/App</code> directory:</p>
-<div class="language-xml highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/ios/App/App/Info.plist#L48-L51' target='_blank'&gt;Info.plist&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-48">48</a></span>
+<div class="language-xml highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-ionic/ios/App/App/Info.plist#L48-L51" target="_blank" rel="noopener">Info.plist</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-48">48</a></span>
 <span class="normal"><a href="#__codelineno-44-49">49</a></span>
 <span class="normal"><a href="#__codelineno-44-50">50</a></span>
 <span class="normal"><a href="#__codelineno-44-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-48" name="__codelineno-44-48"></a><span class="nt">&lt;key&gt;</span>NSCameraUsageDescription<span class="nt">&lt;/key&gt;</span>
@@ -2826,10 +2828,9 @@
             
             <div style="width:100%; padding-top: .4rem;">
                 <div id="mc_embed_signup">
-                    <form action="//openvidu.us16.list-manage.com/subscribe/post?u=5cccadc0d9ef9bab689a3c70f&amp;id=43f63ba2f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-                      <div class="form-validation alert"></div>
+                    <form action="//openvidu.us16.list-manage.com/subscribe/post?u=5cccadc0d9ef9bab689a3c70f&amp;id=43f63ba2f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                       <div id="mc_embed_signup_scroll" class="form-group subscribe-form-input" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                          <input type="email" value="" name="EMAIL" class="email footer-subscribe-input" id="mce-EMAIL" placeholder="Email Address" required="" style="flex: 1 1 120px; min-width: 0;">
+                          <input type="email" value="" name="EMAIL" class="footer-subscribe-input" id="mce-EMAIL" placeholder="Email Address" aria-label="Email address" required="" style="flex: 1 1 120px; min-width: 0;">
                           
                           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5cccadc0d9ef9bab689a3c70f_43f63ba2f8" tabindex="-1" value=""></div>
                           <div class="md-typeset" style="flex-shrink: 0;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="md-button"></div>

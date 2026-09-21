@@ -4,7 +4,7 @@
 
 It is based on [LiveKit](https://livekit.com/) and [mediasoup](https://mediasoup.org/) , bringing the best of both worlds to provide a performant, fault-tolerant, scalable and observable solution.
 
-- **and** mediasoup logo **based**
+- **and** **based**
 
   ______________________________________________________________________
 

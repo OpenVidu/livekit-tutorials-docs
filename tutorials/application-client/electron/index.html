@@ -155,6 +155,8 @@
 }
 </script>
 
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 
   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
@@ -1843,7 +1845,7 @@
 <div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>npm<span class="w"> </span>install<span class="w"> </span>livekit-client
 </code></pre></div>
 <p>Now let's see the code of the <code>app.js</code> file:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L1-L7' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L1-L7" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
 <span class="normal"><a href="#__codelineno-34-2">2</a></span>
 <span class="normal"><a href="#__codelineno-34-3">3</a></span>
 <span class="normal"><a href="#__codelineno-34-4">4</a></span>
@@ -1876,7 +1878,7 @@
 <hr>
 <h3 id="joining-a-room">Joining a Room<a class="headerlink" href="#joining-a-room" title="Anchor link to this section for reference">#</a></h3>
 <p>After the user specifies their participant name and the name of the room they want to join, when they click the <code>Join</code> button, the <code>joinRoom()</code> function is called:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L9-L57' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L9-L57" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-35-10">10</a></span>
 <span class="normal"><a href="#__codelineno-35-11">11</a></span>
 <span class="normal"><a href="#__codelineno-35-12">12</a></span>
@@ -1994,7 +1996,7 @@
 <ul>
 <li><strong><code>RoomEvent.TrackSubscribed</code></strong>: This event is triggered when a new track is received in the room. It handles the attachment of the track to the HTML page, assigning an ID, and appending it to the <code>layout-container</code> element. If the track is of kind <code>video</code>, a <code>video-container</code> is created and participant data is appended as well.</li>
 </ul>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L59-L72' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-59">59</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L59-L72" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-59">59</a></span>
 <span class="normal"><a href="#__codelineno-36-60">60</a></span>
 <span class="normal"><a href="#__codelineno-36-61">61</a></span>
 <span class="normal"><a href="#__codelineno-36-62">62</a></span>
@@ -2025,7 +2027,7 @@
 <ol>
 <li>Attach the track to an HTML element.</li>
 </ol>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L101-L121' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-101">101</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L101-L121" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-101">101</a></span>
 <span class="normal"><a href="#__codelineno-37-102">102</a></span>
 <span class="normal"><a href="#__codelineno-37-103">103</a></span>
 <span class="normal"><a href="#__codelineno-37-104">104</a></span>
@@ -2070,7 +2072,7 @@
 <ul>
 <li><strong><code>RoomEvent.TrackUnsubscribed</code></strong>: This event occurs when a track is destroyed, and it takes care of detaching the track from the HTML page and removing it from the DOM. If the track is a <code>video</code> track, <code>video-container</code> with the participant's identity is removed as well.</li>
 </ul>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L123-L126' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-123">123</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L123-L126" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-123">123</a></span>
 <span class="normal"><a href="#__codelineno-38-124">124</a></span>
 <span class="normal"><a href="#__codelineno-38-125">125</a></span>
 <span class="normal"><a href="#__codelineno-38-126">126</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-123" name="__codelineno-38-123"></a><span class="kd">function</span><span class="w"> </span><span class="nx">removeVideoContainer</span><span class="p">(</span><span class="nx">participantIdentity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2089,7 +2091,7 @@
 </li>
 <li>
 <p>It requests a token from the application server using the room name and participant name. This is done by calling the <code>getToken()</code> function:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L135-L167' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-135">135</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L135-L167" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-135">135</a></span>
 <span class="normal"><a href="#__codelineno-39-136">136</a></span>
 <span class="normal"><a href="#__codelineno-39-137">137</a></span>
 <span class="normal"><a href="#__codelineno-39-138">138</a></span>
@@ -2166,7 +2168,7 @@
 <hr>
 <h3 id="leaving-the-room">Leaving the Room<a class="headerlink" href="#leaving-the-room" title="Anchor link to this section for reference">#</a></h3>
 <p>When the user wants to leave the room, they can click the <code>Leave Room</code> button. This action calls the <code>leaveRoom()</code> function:</p>
-<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename">&lt;a href='https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L74-L92' target='_blank'&gt;app.js&lt;/a&gt;</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-74">74</a></span>
+<div class="language-javascript highlight"><table class="highlighttable"><tbody><tr><th colspan="2" class="filename"><span class="filename"><a href="https://github.com/OpenVidu/openvidu-livekit-tutorials/blob/master/application-client/openvidu-electron/src/app.js#L74-L92" target="_blank" rel="noopener">app.js</a></span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-74">74</a></span>
 <span class="normal"><a href="#__codelineno-40-75">75</a></span>
 <span class="normal"><a href="#__codelineno-40-76">76</a></span>
 <span class="normal"><a href="#__codelineno-40-77">77</a></span>
@@ -2422,10 +2424,9 @@
             
             <div style="width:100%; padding-top: .4rem;">
                 <div id="mc_embed_signup">
-                    <form action="//openvidu.us16.list-manage.com/subscribe/post?u=5cccadc0d9ef9bab689a3c70f&amp;id=43f63ba2f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-                      <div class="form-validation alert"></div>
+                    <form action="//openvidu.us16.list-manage.com/subscribe/post?u=5cccadc0d9ef9bab689a3c70f&amp;id=43f63ba2f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                       <div id="mc_embed_signup_scroll" class="form-group subscribe-form-input" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                          <input type="email" value="" name="EMAIL" class="email footer-subscribe-input" id="mce-EMAIL" placeholder="Email Address" required="" style="flex: 1 1 120px; min-width: 0;">
+                          <input type="email" value="" name="EMAIL" class="footer-subscribe-input" id="mce-EMAIL" placeholder="Email Address" aria-label="Email address" required="" style="flex: 1 1 120px; min-width: 0;">
                           
                           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5cccadc0d9ef9bab689a3c70f_43f63ba2f8" tabindex="-1" value=""></div>
                           <div class="md-typeset" style="flex-shrink: 0;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="md-button"></div>
