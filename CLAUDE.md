@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Source of <https://livekit-tutorials.openvidu.io> — MkDocs Material (pinned 9.7.7), one branch
+Source of <https://livekit-tutorials.openvidu.io> — MkDocs Material (pinned 9.8.0), one branch
 (`main`), deployed by `mkdocs gh-deploy` from a **manual** workflow run. There is no versioning,
 no `mike`, no publish tool and no redirect map here; if you are looking for those, you are
 thinking of [openvidu.io](https://github.com/OpenVidu/openvidu.io).
@@ -70,8 +70,8 @@ unique `description` (100–160 chars). Checked by `tools/sync-check.py --frontm
   listed in the llmstxt sections without both **fails the build**.
 - Pins live in four places — `Dockerfile` and the `pip install` line of `publish-web.yaml`,
   `validate-web.yaml` and `check-external-links.yaml` — and **must match openvidu.io's**
-  (mkdocs 1.6.1, material 9.7.7, pymdown-extensions 12.1, pygments 2.21.0, glightbox 0.5.2,
-  llmstxt 0.5.0): the two sites render the same Markdown, so a version drift is a rendering
+  (mkdocs 1.6.1, material 9.8.0, pymdown-extensions 12.3, pygments 2.21.0, glightbox 0.5.3,
+  llmstxt 0.5.1): the two sites render the same Markdown, so a version drift is a rendering
   drift.
 
 ## The build rule

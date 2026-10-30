@@ -34,7 +34,7 @@ jobs:
         uses: OpenVidu/actions/install-safe-chain@26a149ff32c72503a7c7ce4fb5fa4d000cb3262d # 1.0.25
 
       - name: Install dependencies
-        run: pip install mkdocs==1.6.1 mkdocs-material==9.7.7 pymdown-extensions==12.1 pygments==2.21.0 mkdocs-glightbox==0.5.2 mkdocs-llmstxt==0.5.0
+        run: pip install mkdocs==1.6.1 mkdocs-material==9.8.0 pymdown-extensions==12.3 pygments==2.21.0 mkdocs-glightbox==0.5.3 mkdocs-llmstxt==0.5.1
 
       - name: Build documentation
         env:
